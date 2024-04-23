@@ -1,3 +1,6 @@
+
+// TEMPORIZADOR
+
 let countdownTimer = document.querySelector('#countdownBtn');
 let timer = document.querySelector('#timer');
 let intervalID;
@@ -34,4 +37,17 @@ function countdown(minutes, seconds){
     }
     }, 1000)
     
+}
+
+// ---------------------------------------------------------------------------------------
+// MODAL
+
+let modal = document.getElementById('quiz_modal');
+let closeButton = document.getElementsByClassName('close')[0];
+function openModal() {
+    modal.style.display = 'block';
+    displayNextQuestion();
+}
+function closeModal() {
+    modal.style.display = 'none';
 }

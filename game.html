@@ -17,9 +17,30 @@
         }
     </style>
 
+    <!-- TEMPORIZADOR -->
     <h1 id="timer">----</h1>
-
     <button type="button" id="countdownBtn">Começar temporizador</button>
+
+    <!-- DESAFIOS COM MODAIS -->
+    <button id="challenge1" class="btn-challenge" onclick="openModal()">1</button>
+    <div id="quiz_modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enunciado</h2>
+            <p>Enunciado</p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Opção</label><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Opção</label><br>
+        </div>
+    </div>
+    <button id="challenge2" class="btn-challenge">2</button>
+    <button id="challenge3" class="btn-challenge">3</button>
+    <button id="challenge4" class="btn-challenge">4</button>
+    <button id="challenge5" class="btn-challenge">5</button>
+    <button id="challenge6" class="btn-challenge">6</button>
+    <button id="challenge7" class="btn-challenge">7</button>
+
 
     <script src="./scripts/game.js"></script>
 </body>
