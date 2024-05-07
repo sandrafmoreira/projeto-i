@@ -1,0 +1,158 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-blue);
+    color: white;
+    height: 45vh;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px 50px;
+}
+
+.font-weight{
+    font-weight: 50;
+}
+
+#video{
+    height: 45vh;
+    width: 40vw;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+h6{
+    color: var(--color-blue);
+    margin-left: 8%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.lightblue-pixel1{
+    background-color: var(--color-lightblue);
+    width: 3vw;
+    height: 6vh;
+    margin-left: 8%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    border-radius: 2px;
+}
+
+.course-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.section1{
+    display: flex;
+    flex-direction: row;
+}
+
+.graduate-posters{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 10%;
+}
+
+.project-poster{
+    width: 15vw;
+    height: 40vh;
+}
+
+.course-about1{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.course-about1 h6, .course-about2 h6{
+    color: var(--color-blue);
+    line-height: 150%;
+}
+
+.lightblue-pixel2{
+    background-color: var(--color-lightblue);
+    width: 3vw;
+    height: 6vh;
+    margin-left: 43%;
+    margin-top: 2%;
+    border-radius: 2px;
+
+}
+
+.section2{
+    display: flex;
+    flex-direction: row;
+}
+
+.section2 img{
+    margin-right: 20%;
+}
+
+.section2 h6{
+    margin-right: 15%;
+}
+
+.lightblue-pixel3{
+    background-color: var(--color-lightblue);
+    width: 10vw;
+    height: 20vh;
+    margin-left: 60%;
+    margin-top: -11%;
+    border-radius: 5px;
+}
+
+.course-about2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.how-to-enter{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    padding: 20px 2px;
+}
+
+h6 a{
+    text-decoration: none;
+    color: var(--color-orange);
+}
+
+.classes-info{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-blue);
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 5%;
+}
+
+.btn-group{
+    gap: 200px;
+}
+
+.btn-group button{
+    font-size: 2.2rem;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+}
+
+.dropdown-item-group {
+    flex: 1 0 50%; /* Distribute available space evenly among item groups */
+    max-width: 50%; /* Limit each group to 50% width */
+    padding-right: 10px; /* Add spacing between item groups */
+    box-sizing: border-box; /* Include padding and border in the total width */
+}

@@ -1,0 +1,32 @@
+/* INDEX */
+@import url();
+
+/* PAGES */
+@import url(./course.css);
+@import url();
+@import url();
+@import url();
+
+
+/* COMPONENTS */
+@import url();
+@import url();
+@import url();
+
+/* FONT LINKS */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --color-blue: #104C64;
+    --color-orange: #C94D24;
+    --color-lightblue: #9ECCFA;
+    --color-yellow: #FFF36A;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-orange);
+}
