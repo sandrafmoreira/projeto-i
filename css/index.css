@@ -1,0 +1,55 @@
+/* main section */
+.index-main-blue {
+    width: 100vw;
+    height: 45vh;
+    background-color: var(--color-blue);
+}
+
+.index-main-blue > h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-left: 6vw;
+}
+
+.index-main > h2 {
+    color: var(--color-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 35px;
+    margin: 50px 0 0 6vw;
+}
+.index-main > h3 {
+    color: var(--color-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 20px 0 0 6vw;
+}
+.index-main > button {
+    color: #fff;
+    background-color: var(--color-orange);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 20px 0 0 6vw;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+}
+
+/* escape room section */
+.index-esc-room-levels {
+    width: 400px;
+}
+
+.index-esc-room-info {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    background-color: pink;
+}
+
+

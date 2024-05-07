@@ -3,7 +3,7 @@
 
 /* PAGES */
 @import url(./course.css);
-@import url();
+@import url(./index.css);
 @import url();
 @import url();
 
@@ -29,4 +29,8 @@
 a{
     text-decoration: none;
     color: var(--color-orange);
+}
+
+body {
+    margin: 0;
 }
