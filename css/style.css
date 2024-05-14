@@ -3,7 +3,7 @@
 
 /* PAGES */
 @import url(./course.css);
-@import url();
+@import url(./navbar.css);
 @import url(./game.css);
 @import url();
 @import url(./sign-up.css);
@@ -35,4 +35,6 @@ a{
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
+

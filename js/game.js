@@ -43,11 +43,10 @@ function countdown(minutes, seconds){
 // MODAL
 
 let modal = document.getElementById('quiz_modal');
-modal.style.display = 'none';
 let closeButton = document.getElementsByClassName('close')[0];
 function openModal() {
     modal.style.display = 'block';
-    // displayNextQuestion();
+    displayNextQuestion();
 }
 function closeModal() {
     modal.style.display = 'none';
