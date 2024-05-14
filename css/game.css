@@ -1,0 +1,63 @@
+body{
+    background-color: var(--color-blue);
+}
+h1{
+    font-size: 1.5rem;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+button{
+    background-color: var(--color-blue);
+    border: none;
+}
+
+button img{
+    width: 64px;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#tsiw_maze_logo{
+    width: 150px;
+}
+
+.game{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#pause_and_timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+#pause_and_timer h2{
+    display: flex;
+    align-items: center;
+}
+
+.collectibles{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.collectibles div{
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-lightblue);
+}
