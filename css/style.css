@@ -1,10 +1,10 @@
 /* INDEX */
-@import url();
+@import url(./index.css);
 
 /* PAGES */
 @import url(./course.css);
-@import url(./index.css);
 @import url(./navbar.css);
+@import url(./game.css);
 @import url();
 
 
@@ -36,3 +36,4 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
