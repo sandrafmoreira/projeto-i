@@ -1,53 +1,89 @@
 p,h3, label{
     color: #fff;
+    
+} 
+
+p,label{
+    font-weight: 300;
+   
 }
+
+a{
+    font-weight: 500;
+}
+
+
 
 .sign_content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     margin: auto;
-    width: 100%;
+    width: 50%;
     padding: 20px ;
-    height: auto;
    
-  
+    
+}
+
+.sign_form_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-top:auto;
+    margin-bottom: 5rem;
+    
+}
+
+.sign_form_text p {
+    margin-top:auto; 
+    width: 80%;
     
 }
 
 .sign_form_text h1 {
     color: #fff; ;
     text-align: center;
-    margin:0%;
     padding: 0;
     font-size: 2.0rem;
+    margin: 0.8rem 0px;
+    font-family: var( --font-montserrat);
+    font-weight:800;
 }
-.sign_form_text p {
-    text-align: center;
-    margin-top:25px;
-    margin-bottom: 40px;
-    
-}
+
 
 
 .sign_form_credential{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* margin-bottom: 10px; */
-    width: 100%;
+    margin-bottom: 2rem;
+    width: 60%;
     gap: 5px;
+    border: none;
+    
+}
 
- }
+.form_input{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color:var( --color-blue) ;
+    padding: 8px 0px;
+    margin: auto 0;
+    font-size: 1rem;
+    color: #fff;
+}
  
 
 .sign_form_credential_wrapper{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
     gap: 20px;
-    width: inherit;
- }
+    /* width: inherit; */
+}
 
  .sign_form_credential_input{
     border-radius: 5px;
@@ -55,9 +91,71 @@ p,h3, label{
     padding: 10px;
     font-size: 14px;
     margin-top: 0px;
+    padding: 12px;
+    
  }
 
 
  .form_btn {
-    margin-top: -15px;
+    margin-top: 15px;
+    background-color: #fff;
+    width: 60%;
+    padding: 12px;
+    border-radius: 0.1rem;
+    color: var(--color-orange);
+    font-weight: 700;
+    font-size: 1rem;
+
+    
  }
+
+ .form_btn:hover {
+    background-color: var(--color-orange);
+    color:  #fff;
+    /* border:1rem ,solid ,#fff;
+    color: var(--color-orange) ;
+    background-color: var(--color-blue); */
+  }
+ .sign_up_alternative{
+   
+    margin: 2rem 0px 0px 0px;
+ }
+ .sign_up_alternative p{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    margin: 0.1rem;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+ .login_form_text{
+    background-color: var( --color-lightblue);
+    width: 20%;
+    text-align: center;
+    border-radius: 0.1rem;
+    padding: 0.6rem;
+    position: relative;
+    top: -500px;
+ }
+
+ .login_form_text p, h3{
+    color: var(--color-blue);
+    margin: 0.5rem 0px;
+    
+
+
+ }
+ .login_form_text h3{
+    font-family: var( --font-montserrat);
+    font-weight:700;
+   
+ }
+
+.login_form_text p{
+    font-size: 0.85rem;
+    margin-left: 0.8rem;
+}
+
+/* medias queries  */

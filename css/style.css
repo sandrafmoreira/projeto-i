@@ -27,7 +27,7 @@
     --color-yellow: #FFF36A;
     --color-grey: #F5F5F5;
     --font-montserrat: 'Montserrat', sans-serif;
-    --font-source: 'Source Sans 3', sans-serif;
+    --font-source: 'Source Sans Pro', sans-serif;
 }
 
 a{
@@ -40,3 +40,7 @@ body {
     overflow-x: hidden;
 }
 
+p, label{
+    font-family: var(--font-source);
+    
+}
