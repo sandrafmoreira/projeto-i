@@ -131,16 +131,16 @@ body{
 
 /*Titles and subtitles*/
 
-h1{
+.header1{
     position: absolute; /*For the spacing between the header and the video*/
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     padding: 20px 40px;
     margin-right: 70%;
     font-weight: 900;
 }
 
-h2, h3, h4, h5, h6, p{
-    font-family: 'Source Sans 3', sans-serif;
+.header3, .header4, .header5, .header6, .paragraph{
+    font-family: var(--font-source);
     line-height: 150%;
     text-align: center;
 }
@@ -155,7 +155,7 @@ h6 a{
 }
 
 .subtitle{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
@@ -283,7 +283,7 @@ h6 a{
 
 
 .classes_info{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     text-align: center;
     margin-top: 5%;
 }
@@ -355,13 +355,16 @@ h6 a{
 }
 
 .job_description h4{
-    font-size: 1.3rem;
+    font-family: var(--font-monsterrat);
+    font-size: 1.2rem;
     font-weight: 600;
     margin: 5% 3%;
 }
 
 .job_description p{
+    color: var(--color-blue);
     margin: 0 5%;
+    font-size: 0.9rem;
 }
 
 .ui_ux_definitions{
@@ -379,14 +382,14 @@ h6 a{
 }
 
 .ui h4, .ux h4{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     color: var(--color-blue);
     font-weight: 600;
     font-size: 1.2rem;
 }
 
 .ui p, .ux p{
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--font-source);
     color: var(--color-blue);
     font-size: 0.9rem;
     margin-left: 10%;
@@ -531,7 +534,7 @@ h6 a{
 }
 
 .testimony1_graduate h4, .testimony2_graduate h4, .testimony3_graduate h4{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -599,11 +602,12 @@ h6 a{
     width: 60%;
     height: 170px;
     margin-top: 10%;
+    border-radius: 6px;
     background-color: var(--color-lightblue);
 }
 
 .quiz_suggestion h3{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
@@ -615,7 +619,7 @@ h6 a{
     margin: 10px;
     border: 3px solid var(--color-orange);
     border-radius: 6px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-monsterrat);
     font-weight: 600;
     background-color: var(--color-orange);
     color: white;
