@@ -6,6 +6,8 @@
 @import url(./navbar.css);
 @import url(./game.css);
 @import url(./footer.css);
+@import url();
+@import url(./sign-up.css);
 
 
 /* COMPONENTS */
@@ -26,6 +28,8 @@
     --color-yellow: #FFF36A;
     --color-grey: #F5F5F5;
     --color-dark: #333333
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-source: 'Source Sans Pro', sans-serif;
 }
 
 a{
@@ -38,3 +42,7 @@ body {
     overflow-x: hidden;
 }
 
+p, label{
+    font-family: var(--font-source);
+    
+}

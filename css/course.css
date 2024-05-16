@@ -1,126 +1,148 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    background-color: var(--color-blue);
-    color: white;
-    height: 45vh;
-    box-sizing: border-box;
-    margin: 0;
+body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
+/*Pixel colors and positions*/
 
-h1{
-    font-family: 'Montserrat', sans-serif;
-    padding: 0px 50px;
-}
-
-.font-weight{
-    font-weight: 50;
-}
-
-#video{
-    height: 45vh;
-    width: 40vw;
-    margin-left: 15%;
-    margin-top: 5%;
-}
-
-h6{
-    color: var(--color-blue);
-    margin-left: 8%;
-    font-family: 'Source Sans 3', sans-serif;
-}
-
-.lightblue-pixel1{
+.lightblue_pixel{
+    position: absolute;
     background-color: var(--color-lightblue);
-    width: 3vw;
-    height: 6vh;
-    margin-left: 8%;
-    margin-top: 6%;
-    margin-bottom: 3%;
     border-radius: 2px;
 }
 
-.course-info{
-    display: flex;
-    flex-direction: column;
+.blue_pixel{
+    position: absolute;
+    background-color: var(--color-blue);
+    border-radius: 2px;
 }
 
-.section1{
-    display: flex;
-    flex-direction: row;
+.orange_pixel{
+    position: absolute;
+    background-color: var(--color-orange);
+    border-radius: 2px;
 }
 
-.graduate-posters{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    margin-left: 10%;
+.yellow_pixel{
+    position: absolute;
+    background-color: var(--color-yellow);
+    border-radius: 2px;
 }
 
-.project-poster{
-    width: 15vw;
-    height: 40vh;
+#pixel1{
+    width: 3vw;
+    height: 6vh;
+    margin-left: 8%;
+    margin-top: 8%;
 }
 
-.course-about1{
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.course-about1 h6, .course-about2 h6{
-    color: var(--color-blue);
-    line-height: 150%;
-}
-
-.lightblue-pixel2{
-    background-color: var(--color-lightblue);
+#pixel2{
     width: 3vw;
     height: 6vh;
     margin-left: 43%;
-    margin-top: 2%;
-    border-radius: 2px;
-
+    margin-top: 20%;
 }
 
-.section2{
-    display: flex;
-    flex-direction: row;
-}
-
-.section2 img{
-    margin-right: 20%;
-}
-
-.section2 h6{
-    margin-right: 15%;
-}
-
-.lightblue-pixel3{
-    background-color: var(--color-lightblue);
+#pixel3{
+    z-index: -1;
     width: 10vw;
     height: 20vh;
     margin-left: 60%;
-    margin-top: -11%;
-    border-radius: 5px;
+    margin-top: -8%;
 }
 
-.course-about2{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+#pixel4{
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    margin-left: 5.5%;
+    margin-top: 26%;
 }
 
-.how-to-enter{
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: row;
+#pixel5{
+    width: 90px;
+    height: 90px;
+    margin-left: 60%;
+    margin-top: 20%;
+}
+
+#pixel6{
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    margin-left: 49.5%;
+    margin-top: 13%;
+}
+
+#pixel7{
+    width: 60px;
+    height: 60px;
+    margin-left: 70%;
+    margin-top: 6%;
+}
+
+#pixel8{
+    width: 90px;
+    height: 90px;
+    margin-left: 85%;
+    margin-top: 15%;
+}
+
+#pixel9{
+    width: 90px;
+    height: 90px;
+    margin-top: -12%;
+    margin-left: 9%;
+}
+
+#pixel10{
+    width: 70px;
+    height: 70px;
+    margin-left: 50%;
+    margin-top: 10%;
+}
+
+#pixel11{
+    width: 65px;
+    height: 65px;
+    margin-top: -8%;
+    margin-left: 36%;
+}
+
+#pixel12{
+    width: 65px;
+    height: 65px;
+    margin-left: 80%;
+    margin-top: 8%;
+}
+
+#pixel13{
+    width: 70px;
+    height: 70px;
+    margin-left: 23%;
+    margin-top: -20%;
+}
+
+#pixel14{
+    width: 100px;
+    height: 100px;
+    margin-left: 70%;
+    margin-top: 20%;
+}
+
+/*Titles and subtitles*/
+
+.header1{
+    position: absolute; /*For the spacing between the header and the video*/
+    font-family: var(--font-monsterrat);
+    padding: 20px 40px;
+    margin-right: 70%;
+    font-weight: 900;
+}
+
+.header3, .header4, .header5, .header6, .paragraph{
+    font-family: var(--font-source);
+    line-height: 150%;
     text-align: center;
-    align-items: center;
-    margin-top: 5%;
-    padding: 20px 2px;
 }
 
 h6 a{
@@ -128,31 +150,483 @@ h6 a{
     color: var(--color-orange);
 }
 
-.classes-info{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-blue);
+.header_font_weight{
+    font-weight: 50;
+}
+
+.subtitle{
+    font-family: var(--font-monsterrat);
+    font-size: 2.2rem;
     font-weight: 800;
-    font-size: 3rem;
+    text-align: center;
+}
+
+#section4_subtitle{
+    color: var(--color-blue);
+    padding: 80px;
+}
+
+#section5_subtitle{
+    color: white;
+    padding: 10px;
+}
+
+#section6_subtitle{
+    color: var(--color-blue);
+}
+
+#section7_subtitle{
+    color: var(--color-blue);
+    padding: 100px;
+}
+
+/*Section 1 - Welcome message */
+
+.welcome_section{
+    background-color: var(--color-blue);
+    color: white;
+    height: 45vh;
+}
+
+/*Placeholder for the promotional video!!*/
+#video{
+    height: 45vh;
+    width: 40vw;
+    margin-top: 5%;
+    margin-left: 50%;
+}
+
+
+/* Section 2 - Graduate posters & course info */
+
+
+#motivating_sentence{
+    color: var(--color-blue);
+    margin-right: 50%;
+    margin-top: 2%;
+}
+
+.course_info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%; /*To have more spacing between this section and the section above*/
+    color: var(--color-blue);
+}
+
+.course_info_section1{
+    display: flex;
+    flex-direction: row;
+}
+    
+.graduate_posters{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 10%;
+}
+
+#project-posters{
+    width: 15vw;
+    height: 45vh;
+}
+
+.course_about1{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.course_info_section2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+}
+
+.course_info_section2 img{
+    margin-right: 20%;
+}
+
+.course_about2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.course_about2 h6{
+    margin-right: 15%;
+}
+
+.how_to_enter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 90px;
+    padding: 20px 5px;
+    margin-top: 5%;
+    background-color: #f5f5f5;
+}
+
+.how_to_enter h5{
+    font-size: 1rem;
+}
+
+#more_info{
+    margin-right: 5%;
+}
+
+
+/*Section 3 - Info about the course's classes*/
+
+
+.classes_info{
+    font-family: var(--font-monsterrat);
+    text-align: center;
     margin-top: 5%;
 }
 
-.btn-group{
-    gap: 200px;
+.classes_info button{
+    padding: 10px 96px;
+    margin-top: 5%;
+    border: 4px solid #F0F0F0;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    background-color: #f0f0f0;
 }
 
-.btn-group button{
-    font-size: 2.2rem;
+.classes_info button:hover{
+    border: 4px solid #F0F0F0;
+    background-color: #ffffff;
 }
 
-.dropdown-menu {
+.collapse{
+    background-color: #333333;
+    color: white;
+}
+
+.classes_info h2{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.first_semester, .second_semester{
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 3% 2%;
 }
 
-.dropdown-item-group {
-    flex: 1 0 50%; /* Distribute available space evenly among item groups */
-    max-width: 50%; /* Limit each group to 50% width */
-    padding-right: 10px; /* Add spacing between item groups */
-    box-sizing: border-box; /* Include padding and border in the total width */
+.class h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.class p{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/*Section 4 - Professional outings */
+
+
+.first_row, .second_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.first_row img, .second_row img{
+    height: 220px;
+    width: 337px;
+}
+
+.job_description{
+    width: 341.5px;
+    text-align: center;
+    color: var(--color-blue);
+}
+
+.job_description h4{
+    font-family: var(--font-monsterrat);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5% 3%;
+}
+
+.job_description p{
+    color: var(--color-blue);
+    margin: 0 5%;
+    font-size: 0.9rem;
+}
+
+.ui_ux_definitions{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 619px;
+    height: 160px;
+    margin-left: 54.1%;
+    margin-top: 12%;
+    margin-bottom: -3%;
+    background-color: var(--color-lightblue);
+}
+
+.ui h4, .ux h4{
+    font-family: var(--font-monsterrat);
+    color: var(--color-blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.ui p, .ux p{
+    font-family: var(--font-source);
+    color: var(--color-blue);
+    font-size: 0.9rem;
+    margin-left: 10%;
+}
+
+
+/*Section 5 - Employability*/
+
+
+.employability{
+    background-color: var(--color-blue);
+    color: white;
+    padding: 80px;
+}
+
+.employability h2{
+    font-weight: 800;
+}
+
+.employability h4{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.percentages{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 10px;
+    padding: 4% 0;
+}
+
+.progress_bars{
+    width: 200px;
+    padding: 8px 80px;
+    background-color: #0C394B;
+    border-radius: 2px;
+}
+
+.bar1_filled, .bar2_filled, .bar3_filled{
+    padding: 8px;
+    margin-top: -8%;
+}
+
+.bar1_filled{
+    background-color: var(--color-orange);
+    width: 156px;
+}
+
+.bar2_filled{
+    background-color: var(--color-lightblue);
+    width: 26px;
+}
+
+.bar3_filled{
+    background-color: var(--color-yellow);
+    width: 18px;
+}
+
+.percentages h4{
+    font-size: 1.2rem;
+    margin-top: 5%;
+}
+
+
+/*Section 6 - Graduate testimonals*/
+
+
+.testimonals h2{
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5%;
+    color: var(--color-blue);
+}
+
+.testimony1, .testimony2, .testimony3{
+    width: 300px;
+    height: 300px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: var(--color-blue);
+    color: white;
+}
+
+.testimony1 img, .testimony2 img, .testimony3 img{
+    border-radius: 2px;
+}
+
+.testimony1{
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+.testimony1 p{
+    margin-top: 5%;
+}
+
+.testimony1 img, .testimony3 img{
+    margin-left: -50%;
+    margin-top: -60%;
+}
+
+.testimony2{
+    margin-left: 70%;
+    margin-top: 3%;
+}
+
+.testimony2 p{
+    margin-top: 3%;
+}
+
+.testimony2 img{
+    margin-left: 70%;
+    margin-top: -65%;
+}
+
+.testimony3{
+    margin-left: 10%;
+    margin-top: 12%;
+}
+
+.testimony3 p{
+    margin-top: 5%;
+}
+
+.testimony1_graduate, .testimony3_graduate{
+    height: 230px;
+
+}
+
+.testimony2_graduate{
+    height: 300px;
+}
+
+.testimony1_graduate, .testimony2_graduate, .testimony3_graduate{
+    padding: 20px;
+    width: 270px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #F5F5F5;
+    color: var(--color-blue);
+}
+
+.testimony1_graduate h4, .testimony2_graduate h4, .testimony3_graduate h4{
+    font-family: var(--font-monsterrat);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.testimony1_graduate li, .testimony2_graduate li, .testimony3_graduate li{
+    margin-top: 10%;
+    font-size: 1em;
+}
+
+.testimony1_graduate{
+    margin-left: 33%;
+    margin-top: -14%;
+}
+
+.testimony2_graduate{
+    margin-left: 48%;
+    margin-top: -17%;
+}
+
+.testimony3_graduate{
+    margin-left: 34%;
+    margin-top: -10%;
+}
+
+
+/* Section 7 - ESMAD's partners & Course quiz*/
+
+
+.slideshow{
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+}
+
+.slider{
+    width: 2400px; /*So all the companies show up white the animation is running*/
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+    animation: slideshow 30s linear infinite;
+}
+
+.slide img{
+    height: 90px;
+    padding: 0 50px;
+}
+
+@keyframes slideshow{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateX(-1200px);
+    }
+}
+
+
+.quiz_suggestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 170px;
+    margin-top: 10%;
+    border-radius: 6px;
+    background-color: var(--color-lightblue);
+}
+
+.quiz_suggestion h3{
+    font-family: var(--font-monsterrat);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-blue);
+}
+
+.quiz_suggestion button{
+    padding: 15px 40px;
+    margin: 10px;
+    border: 3px solid var(--color-orange);
+    border-radius: 6px;
+    font-family: var(--font-monsterrat);
+    font-weight: 600;
+    background-color: var(--color-orange);
+    color: white;
+}
+
+.quiz_suggestion button:hover{
+    background-color: white;
+    color: var(--color-orange);
+    border: 3px solid var(--color-orange);
 }

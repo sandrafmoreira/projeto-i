@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+    <nav></nav>
+
+
+
+    <!--sign up_form -->
+    <section class="form_box">
+        <form class=" sign_form" name="sign_form" >
+            <div class="sign_content">
+                <div class=" sign_form_text">
+                    <h1>Cria uma conta</h1>
+                    <p>Junta-te a comunidade de TSIW e descobre mais sobre o teu curso de sonho </p>
+                </div>
+                <div class=" sign_form_credential_wrapper">
+
+                    <div class=" sign_form_credential">
+                        <label for="Fname" class="form_label"> Nome</label>
+                        <input type="text" placeholder="nome..." name="Fname" class="form_input" id="Fname" required>
+                    </div>
+
+                    <div class=" sign_form_credential">
+                        <label for="Lname" class="form_label"> Apelido</label>
+                        <input type="text" placeholder="apelido..." name="Lname" class="form_input" id="Lname" required>
+                    </div>
+                </div>
+
+                <div class=" sign_form_credential">
+                    <label for="email" class="form_label"> E-mail</label>
+                    <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
+                    
+                </div>
+                <div class=" sign_form_credential">
+                    <label for="password" class="form_label">Palavra-passe</label>
+                    <input type="password" placeholder="****** " name="password" class="form_input" required>
+            
+                </div>
+
+                <div class=" sign_form_credential">
+                    <label for="password" class="form_label">Confirmação da palavra-passe</label>
+                    <input type="password" placeholder="****** " name="password" class="form_input" required>
+            
+                </div>
+           
+                <button type="submit" value="SIGN UP" class="form_btn" onclick="sign_form_upValidate()">
+                    Criar conta 
+                </button>
+                 
+                <div class="sign_up_alternative">
+                    <p> ou</p>
+                    <p>Continuar com o Google</p>
+                    <p>Continuar com o Facebook</p>
+                </div>
+            </div>
+        </form>
+
+        <div class=" login_form_text">
+            <h3>Já tens uma conta?</h3>
+            <p>Se já fazes parte da nossa comunidade, não percas tempo e faz <a href="" onclick="login_pop_up()">login </a>  </p>
+        </div>
+
+        <!-- pixels -->
+        <div class="sign_up_page_pixel_1"></div>
+        <div class="sign_up_page_pixel_2"></div>
+        <div class="sign_up_page_pixel_3"></div>
+       
+    </section>
+
+    <footer></footer>
+
+    <script src="/js/sign-up.js"></script>
 </body>
 </html>
