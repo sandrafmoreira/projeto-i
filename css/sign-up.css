@@ -82,7 +82,7 @@ a{
     justify-content: space-between;
     width: 60%;
     gap: 20px;
-    /* width: inherit; */
+   
 }
 
  .sign_form_credential_input{
@@ -116,11 +116,11 @@ a{
     color: var(--color-orange) ;
     background-color: var(--color-blue); */
   }
- .sign_up_alternative{
+ .alternative_validation{
    
     margin: 2rem 0px 0px 0px;
  }
- .sign_up_alternative p{
+ .alternative_validation p{
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -194,9 +194,33 @@ a{
 /* medias queries  */
 
 @media only screen and (max-width: 768px) {
-    
-  }
+    .sign_content{
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px; */
+        margin: auto;
+        width: 100%;
+        padding: 20px ;
+        height: 100%;
+       
+        
+    }
+}
 
 @media only screen and (max-width: 480px) {
     /* Estilos aqui */
+    .sign_content{
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px; */
+        margin: auto;
+        width: 100%;
+        padding: 20px ;
+        height: 100%;
+       
+        
+    }
+
   }
