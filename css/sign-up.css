@@ -137,7 +137,7 @@ a{
     border-radius: 0.1rem;
     padding: 0.6rem;
     position: relative;
-    top: -500px;
+    top: -600px;
  }
 
  .login_form_text p, h3{
@@ -158,4 +158,45 @@ a{
     margin-left: 0.8rem;
 }
 
+/* --------------Pixels ---------*/
+
+.sign_up_page_pixel_1{
+    background-color: var(--color-yellow);
+    border-radius: 0.05rem;
+    position: relative;
+    right: -1300px;
+    top: -760px;
+    width: 0.1%;
+    padding: 1.5rem;
+}
+.sign_up_page_pixel_2{
+    background-color: var(--color-grey);
+    border-radius: 0.05rem;
+    position: relative;
+    left: 150px;
+    bottom: 40px;
+    width: 5%;
+    padding-top: 4.5rem;
+    
+}
+.sign_up_page_pixel_3{
+    background-color: var(--color-lightblue);
+    border-radius: 0.1rem;
+    position: relative;
+    right: -1150px;
+    bottom: 260px;
+    width: 6%;
+    padding-top: 5rem;
+}
+
+
+
 /* medias queries  */
+
+@media only screen and (max-width: 768px) {
+    
+  }
+
+@media only screen and (max-width: 480px) {
+    /* Estilos aqui */
+  }
