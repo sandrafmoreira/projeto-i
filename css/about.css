@@ -1,0 +1,275 @@
+.about_hero_section{
+    background-color: #fff;
+    display:grid;
+    grid-template-columns: 45% 55%   ;
+   justify-content: space-between;
+   padding-top: 2rem;
+   padding-bottom: 20rem;
+}
+
+.about_hero_section_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_hero_section_text h1, .about_hero_section_text p,.about_hero_section_text h4{
+    color: var(--color-blue);
+    margin: 1.5rem 3rem;
+    
+
+}
+.about_hero_section_text h4{
+   font-size: 1.4rem;
+   font-family: var(--font-raleway);
+    font-weight: 600;
+    
+}
+
+.about_hero_section_text h1{
+    font-size: 6rem;
+    font-family: var(--font-raleway);
+    font-weight: 800;
+    line-height:5rem;
+    
+}
+.about_hero_section_text p{
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: justify;
+ }
+
+
+.about_hero_section_img{
+    width: 100%;
+    
+}
+
+.about_hero_section_text button{
+    background-color: var(--color-orange);
+    color: #fff;
+    width: 40%;
+    padding: 18px;
+    border-radius: 0.1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    /* margin: 1.5rem 3rem; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* goal section */
+.goals_section{
+    background-color:var(--color-blue);
+   /* padding-top: 2rem; */
+   padding-bottom: 10rem;
+   width: 100%;
+
+}
+
+/* team section*/
+.team_section{
+    background-color:var(--color-grey);
+  
+}
+.team_section h1{ 
+    text-align: center;
+    color: var(--color-blue);
+    font-family: var(--font-raleway);
+    font-size: 3.8rem;
+    font-weight: 800;
+}
+
+.team_section_description{
+    background-color: var(--color-blue);
+}
+
+
+
+
+
+/* contact us section */
+
+.contact_us_section{
+    height: 50rem;
+    background-color:var(--color-lightblue);
+   /* padding-top: 2rem; */
+   
+}
+
+.contac_us_content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    /* border-radius: 15px; */
+    margin: auto;
+    width: 50%;
+    /* padding: 20px ; */
+    position: relative;
+    right: 18rem;
+    top: 6rem;
+   
+}
+.contac_us_form_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-top:auto;
+    margin-bottom: 3rem;
+}
+
+.contac_us_form_text h1{
+   
+    color: var(--color-blue); ;
+    text-align: center;
+    padding: 0;
+    font-size: 3.0rem;
+    margin: 0.8rem 0px;
+    font-family: var( --font-raleway);
+    font-weight:800;
+}
+
+.contac_us_form_text p{
+    color: var(--color-blue);
+    margin-top:auto; 
+    width: 60%;
+    font-weight: 100;
+}
+
+.contac_us_form_credential ,.contac_us_form_message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    width: 60%;
+    /* gap: 0.25rem; */
+    border: none;
+}
+
+.contac_us_form_credential label, .contac_us_form_message label, 
+.contac_us_form_credential ::placeholder, 
+.contac_us_form_message ::placeholder{
+    color: var(--color-blue);
+}
+.contac_us_form_credential_input{
+    border: none;
+    border-bottom: 2px solid var(--color-blue);
+    background-color:var( --color-lightblue) ;
+    padding: 8px 0px;
+    margin: auto 0;
+    font-size: 1rem;
+    color:var(--color-blue);
+    font-weight: 100;
+    
+ }
+
+
+
+ .contac_us_form_textarea{
+    border: none;
+    border-bottom: 2px solid var(--color-blue);
+    background-color:var( --color-lightblue) ;
+    padding: 8px  0px 0px 0px;
+    margin: auto 0;
+    font-size: 1rem;
+    color:var(--color-blue);
+    font-weight: 100;
+    resize:vertical;
+    overflow: auto;
+ }
+
+ .contac_us_content .form_btn {
+    margin-top: 15px;
+    background-color: var(--color-orange);
+    width: 60%;
+    padding: 12px;
+    border-radius: 0.1rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+
+    
+ }
+
+ .contac_us_content .form_btn :hover {
+    color: var(--color-orange);
+    background-color:  #fff;
+   
+  }
+
+
+
+/* contacts information */
+
+  .contac_us_info_content{
+    width: 40%;
+    background-color: var(--color-blue);
+    border-radius: 0.1rem;
+    padding:3rem 2rem;
+    position: relative;
+    left: 59rem;
+    bottom: 23rem;
+    gap: 6rem;
+  }
+  .contac_us_info_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 2rem;
+   
+    
+  }
+
+  .contac_us_info_wrapper img{
+    width: 6%;
+    height: 6%;
+    margin: 0;
+
+  }
+  .contac_us_info_wrapper p{
+    text-align: left;
+    font-weight: 200;
+  }
+
+  /* contacts information-social media */
+  .contac_us_social_media_conteiner{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-orange);
+    border-radius:0.1rem ;
+    width: 70%;
+    gap: 1rem;
+    margin: 0px;
+    position: relative;
+    left: 5.1rem;
+    top: 5rem;
+    padding: 1rem 0rem 0rem 5rem;
+    
+  }
+
+  .contac_us_social_media_Wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .contac_us_social_media_Wrapper p {
+    font-size: 0.7rem;
+    font-weight: 200;
+    margin-top: 0.3rem;
+  }
+ 

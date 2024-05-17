@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav>
         
     </nav>
-    <section  class="hero_section">
-        <div>
+    <section  class="about_hero_section">
+        <div class="about_hero_section_text">
             <h4>Quem somos...</h4>
            <h1>Ajudamos-te a descobrir o mundo da web</h1> 
-           <p>Estás indeciso sobre o próximo passo? Sabemos como é , mas não desesperes já! <br>
+           <p>Estás indeciso sobre o próximo passo?<br> Sabemos como é , mas não desesperes já! <br>
             Como ex-candidatos queremos facilitar a tua escolha, por isso continua a explorar o nosso site e verás que as respostas estão mesmo na frente do teu nariz.</p>
     
             <button type="button" value="SIGN UP" class="form_btn" src="./sign-up.html">
@@ -22,7 +23,7 @@
             
            
         </div>
-        <div><img src="" alt=""></div>
+        <div class="about_hero_section_img"><img src="/img/Avatars/caloiro.png" alt=""></div>
     </section>
     <section class="goals_section">
         <h1>Nossos objetivos</h1>
@@ -47,9 +48,31 @@
     <section class="team_section">
         <h1>Nossa Equipa</h1>
         <!-- team section -->
-
-
-
+        <div class="team_section_scrum_avatar">
+            <img src="/img/Avatars/Scrum.png" alt="srum master avatar">
+        </div>
+        <div id="team_section_scrum_description" class="team_section_description">
+            <h5>Ken Lukau</h5>
+            <p class="team_role"> Scr. Master</p>
+            <p class="more_info">Aluna do 1º ano de licenciatura em TSIW.
+               Gosta de: Front-end development </p>
+        </div>
+        <div class="team_section_expert_avatar">
+            <img src="/img/Avatars/expert.png" alt="dev expert avatar">
+        </div>
+        <div id="team_section_expert_description" class="team_section_description">
+            <h5>Nuno Nogueira</h5>
+            <p class="team_role"> Dev. Expert</p>
+            <p class="more_info">Gosta de: Back-end development</p>
+        </div>
+        <div class="team_section_dev_avatar">
+            <img src="/img/Avatars/dev.png" alt="dev master avatar">
+        </div>
+        <div id="team_section_dev_description" class="team_section_description">
+            <h5>Sandra Moreira</h5>
+            <p class="team_role"> Dev. Master</p>
+            <p class="more_info">Gosta de: Full-Stack</p>
+        </div>
         <div><p>Queres fazer parte de uma equipa como a nossa?
             Então, <a href="">candidata-te!</a></p></div>
     </section>
@@ -60,22 +83,22 @@
                     <h1>Contacta-nos</h1>
                     <p>Entra em contacto connosco para esclareceres as tuas dúvidas e curiosidades</p>
                 </div>
-                <div class=" contac_us_form_credential_wrapper">
+                
 
-                    <div class=" contac_us_form_credential">
-                        <label for="Fname" class="form_label"> Nome</label>
-                        <input type="text" placeholder="nnnn" name="Fname" class="contac_us_form_credential_input"  required>
-                    </div>
-
-                    <div class=" contac_us_form_credential">
-                        <label for="email" class="form_label"> E-mail</label>
-                        <input type="email" placeholder="eeeee@gmail.com" name="email" class="contac_us_form_credential_input"  required>
-                    </div>
+                <div class=" contac_us_form_credential">
+                    <label for="Fname" class="form_label"> Nome</label>
+                    <input type="text" placeholder="nnnn" name="Fname" class="contac_us_form_credential_input"  required>
                 </div>
+
+                <div class=" contac_us_form_credential">
+                    <label for="email" class="form_label"> E-mail</label>
+                    <input type="email" placeholder="eeeee@gmail.com" name="email" class="contac_us_form_credential_input"  required>
+                </div>
+                
 
                 <div class=" contac_us_form_message">
                     <label for="email" class="form_label"> Mensagem</label>
-                    <textarea name="contac_us_form_textarea"  cols="30" rows="10" placeholder="Escreve aqui a tua mensagem..." class="contac_us_form_textarea"></textarea>
+                    <textarea name="contac_us_form_textarea"    placeholder="Escreve aqui a tua mensagem..." class="contac_us_form_textarea"></textarea>
                    
                 </div>
 
@@ -86,15 +109,40 @@
 
         </form>
 
-        <div class="contac_us_info">
-              <!--  colocar icons -->
-            <p>nossaequipa@esmad</p>
-            <p>+351 961338256</p>
-            <p>Rua Dr.Carlos Barreiros, Vila do conde</p>
-            <p> Segunda a Sexta, 9:00 - 19:00</p>
-
-            <div class="contac_us_social_media">
-                <!-- colocar icons -->
+        <div class="contac_us_info_content">
+            <div class="contac_us_info_wrapper"> 
+                <img src="/img/Icons/grommet-icons_mail-option.png" alt="icon e-mail">
+                <p>nossaequipa@esmad</p>
+            </div>   
+            <div class="contac_us_info_wrapper"> 
+                <img src="/img/Icons/guidance_phone.png" alt="icon contactos">
+                <p>+351 961338256</p>
+            </div>  
+            <div class="contac_us_info_wrapper"> 
+                <img src="/img/Icons/system-uicons_location.png" alt="icon localização">
+                <p>Rua Dr.Carlos Barreiros, Vila do conde</p>
+            </div>  
+            <div class="contac_us_info_wrapper"> 
+                <img src="/img/Icons/ic_baseline-access-time.png" alt="icon dispunibilidade">
+                <p> Segunda a Sexta, 9:00 - 19:00</p>
+            </div>  
+        
+            <div class="contac_us_social_media_conteiner">
+                <div class="contac_us_social_media_Wrapper">
+                    <img src="/img/Icons/iconoir_instagram.png" alt="Instagram" class="contac_us_social_media_icons">
+                    <p>Instagram</p>
+                </div>
+                <div class="contac_us_social_media_Wrapper">
+                    <img src="/img/Icons/iconoir_facebook.png" alt="Facebook" class="contac_us_social_media_icons">
+                    <p>Facebook</p>
+                </div>
+                <div class="contac_us_social_media_Wrapper">
+                    <img src="/img/Icons/iconoir_github.png" alt="Github" class="contac_us_social_media_icons">
+                    <p>GitHub</p>
+                </div>
+                
+                
+                
             </div>
         </div>
     </section>

@@ -9,7 +9,7 @@
 @import url();
 @import url(./sign-up.css);
 @import url(./dashboard.css);
-
+@import url(./about.css);
 /* COMPONENTS */
 @import url();
 @import url();
@@ -18,8 +18,8 @@
 /* FONT LINKS */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --color-blue: #104C64;
@@ -28,8 +28,9 @@
     --color-yellow: #FFF36A;
     --color-grey: #F5F5F5;
     --color-dark: #333333
-    --font-montserrat: 'Montserrat', sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
     --font-source: 'Source Sans Pro', sans-serif;
+    --font-raleway:"Raleway", sans-serif;
 }
 
 a{
