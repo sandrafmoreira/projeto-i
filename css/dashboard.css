@@ -1,0 +1,243 @@
+/* Modal: Edit profile */
+.modal_div_background{
+    background-color: var(--color-yellow);
+    width: 105%;
+    height: 100rem;
+    position: absolute;
+    opacity: 50%;
+    margin: -5% 0 0 -5%;
+   
+    
+}
+.modal_profile_form{
+    background-color: var(--color-blue);
+    width: 35%;
+    height: 50rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius:0.15rem ;
+    
+}
+
+.Profile_modal{
+    background-color: unset;
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    
+}
+
+.modal_Profile_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+}
+.modal_Profile_form_text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.modal_Profile_form_text h1{
+    color: #fff; ;
+    text-align: center;
+    padding: 0;
+    font-size: 1.6rem;
+    font-family: var( --font-montserrat);
+    font-weight:700;
+    margin: 0;
+   
+   
+}
+
+.profile_status_img{
+    width: 25%;
+   margin-top: 1rem;
+}
+
+.profile_status{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    /* text-decoration: underline; */
+}
+.modal_Profile_form_avatars {
+    
+    width: 85%;
+    height: 24%;
+    
+}
+
+.modal_Profile_form_avatars h4{
+    color: #fff;
+    margin: 0 0 1rem 1.5rem;
+    font-weight: 500;
+    text-align: left;
+}
+.modal_Profile_form_avatars p{
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+.avatars_grid{
+ display: grid;
+ grid-template-columns: 22.5% 22.5% 22.5% 22.5%  ;
+ /* column-gap: 0.5rem; */
+ justify-content: center;
+}
+.avatar_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.avatar_description img{
+    width: 50%;
+}
+.form_credential{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    width:60%;
+    gap: 5px;
+    border: none;
+}
+
+
+/* modal pixels */
+.modal_edit_pixel_1{
+    background-color: var(--color-lightblue);
+    border-radius: 0.05rem;
+    position: relative;
+    right: -40px;
+    bottom: 110px;
+    width: 6%;
+    padding-top: 1.8rem;
+}
+
+.modal_edit_pixel_2{
+    background-color: var(--color-yellow);
+    border-radius: 0.05rem;
+    position: relative;
+    left: 464px;
+    bottom: 454px;
+    width: 8%;
+    padding-top: 2.6rem;
+}
+
+
+
+
+
+/* Modal: Edit passWord */
+
+.modal_div_background{
+    background-color: var(--color-yellow);
+    width: 105%;
+    height: 100rem;
+    position: absolute;
+    opacity: 50%;
+    margin: -5% 0 0 -5%;
+   
+    
+}
+.modal_password_form{
+    background-color: var(--color-blue);
+    width: 35%;
+    height: 35rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius:0.15rem ;
+}
+
+.password_modal{
+    background-color: unset;
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    
+}
+.close_modal_btn{
+    background-color: #fff;
+    border-radius: 0.06rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative; 
+    left: -1px;
+    top: -1px;
+   
+}
+
+.close_modal_icon{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    left: -5px;
+    top: -2px;
+}
+
+.modal_password_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+   
+}
+.modal_form_text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.modal_form_text h1{
+    color: #fff; ;
+    text-align: center;
+    padding: 0;
+    font-size: 1.6rem;
+    font-family: var( --font-montserrat);
+    font-weight:700;
+    margin: 0;
+   
+   
+}
+
+.form_credential{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width:60%;
+    gap: 5px;
+    border: none;
+}
+
+/* modal pixels */
+.modal_edit_pixel_1{
+    background-color: var(--color-lightblue);
+    border-radius: 0.05rem;
+    position: relative;
+    right: -40px;
+    bottom: 110px;
+    width: 6%;
+    padding-top: 1.8rem;
+}
+
+.modal_edit_pixel_2{
+    background-color: var(--color-yellow);
+    border-radius: 0.05rem;
+    position: relative;
+    left: 464px;
+    bottom: 454px;
+    width: 8%;
+    padding-top: 2.6rem;
+}

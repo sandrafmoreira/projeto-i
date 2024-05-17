@@ -4,7 +4,7 @@ p,h3, label{
 } 
 
 p,label{
-    font-weight: 300;
+    font-weight: 400;
    
 }
 
@@ -54,25 +54,15 @@ a{
 
 
 
-.sign_form_credential{
+.form_credential{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 2rem;
     width: 60%;
-    gap: 5px;
+    /* gap: 0.25rem; */
     border: none;
     
-}
-
-.form_input{
-    border: none;
-    border-bottom: 2px solid #fff;
-    background-color:var( --color-blue) ;
-    padding: 8px 0px;
-    margin: auto 0;
-    font-size: 1rem;
-    color: #fff;
 }
  
 
@@ -85,18 +75,23 @@ a{
    
 }
 
- .sign_form_credential_input{
-    border-radius: 5px;
-    border:none;
-    padding: 10px;
-    font-size: 14px;
-    margin-top: 0px;
-    padding: 12px;
+.form_input{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color:var( --color-blue) ;
+    padding: 8px 0px;
+    margin: auto 0;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 100;
     
  }
+.pass_min_caracters{
+    font-size: 0.6rem;
+    margin: 0;
+}
 
-
- .form_btn {
+.form_btn {
     margin-top: 15px;
     background-color: #fff;
     width: 60%;
