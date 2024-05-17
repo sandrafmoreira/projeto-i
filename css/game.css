@@ -1,25 +1,19 @@
-body{
-    background-color: var(--color-blue);
-}
-h1{
+.bye_chatgpt{
     font-size: 1.5rem;
     color: white;
 }
 
-h2{
-    color: white;
-}
-
-button{
+.pause_btn{
     background-color: var(--color-blue);
     border: none;
 }
 
-button img{
+.pause_btn img{
     width: 64px;
 }
 
 #nav{
+    background-color: var(--color-blue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,9 +25,13 @@ button img{
 }
 
 .game{
+    background-color: var(--color-blue);
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    text-align: center; /*To align the image*/
+    align-items: center; /*To align the collectibles */
 }
 
 #pause_and_timer{
@@ -48,16 +46,91 @@ button img{
     align-items: center;
 }
 
-.collectibles{
+#timer{
+    color: white;
+}
+
+#escape_room{
     width: 100%;
+}
+
+.collectibles{
+    position: absolute;
+    width: 10%;
     margin-top: 2%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 5px;
+    flex-direction: column;
+    gap: 40px;
+    right: 80%;
 }
 
 .collectibles div{
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     background-color: var(--color-lightblue);
+}
+
+@media only screen and (max-width: 768px){
+    .bye_chatgpt{
+        font-size: 1.2rem;
+    }
+
+    #tsiw_maze_logo{
+        width: 100px;
+    }
+
+    .pause_btn img{
+        width: 44px;
+    }
+
+
+    .collectibles div{
+        width: 55px;
+        height: 55px;
+    }
+
+    #escape_room{
+        width: 80%;
+    }
+
+    
+    .collectibles{
+        right: 88%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .bye_chatgpt{
+        font-size: 0.8rem;
+    }
+
+    #tsiw_maze_logo{
+        width: 60px;
+    }
+
+    .pause_btn img{
+        width: 22px;
+    }
+
+    #timer{
+        font-size: 1rem;
+    }
+
+    #pause_and_timer{
+        width: 150px;
+    }
+
+    .collectibles div{
+        width: 30px;
+        height: 30px;
+    }
+
+    #escape_room{
+        width: 80%;
+    }
+    
+    .collectibles{
+        right: 88.2%;
+    }
+
 }
