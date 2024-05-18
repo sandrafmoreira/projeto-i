@@ -16,15 +16,15 @@ a{
 .form_box{
     background-color: var(--color-blue);
 }
+
 .sign_content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border-radius: 15px; */
     margin: auto;
     width: 50%;
     padding: 20px ;
-   background-color: var(--color-blue);
+    background-color: var(--color-blue);
     
 }
 
@@ -120,9 +120,9 @@ a{
     margin: 2rem 0px 0px 0px;
  }
  .alternative_validation p{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0.1rem;
     font-weight: 100;
     font-size: 0.9rem;
@@ -141,9 +141,7 @@ a{
 
  .login_form_text p, h3{
     color: var(--color-blue);
-    margin: 0.5rem 0px;
-    
-
+    margin: 0.5rem 0;
 
  }
  .login_form_text h3{
@@ -154,7 +152,6 @@ a{
 
 .login_form_text p{
     font-size: 0.85rem;
-    margin-left: 0.8rem;
 }
 
 /* --------------Pixels ---------*/
@@ -194,32 +191,60 @@ a{
 
 @media only screen and (max-width: 768px) {
     .sign_content{
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 15px; */
         margin: auto;
         width: 100%;
         padding: 20px ;
         height: 100%;
-       
+    }
+
+    .login_form_text{
+        top: -100px;
+    }
+
+    .sign_up_page_pixel_1{
+        right: -617px;
+    }
+
+    .sign_up_page_pixel_2{
+        left: 152px;
+        bottom: 148px;
+        padding-top: 2rem;
+    }
         
+    .sign_up_page_pixel_3{
+        right: -587px;
+        width: 12%;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    /* Estilos aqui */
     .sign_content{
         /* display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 15px; */
-        margin: auto;
+        margin: 0;
         width: 100%;
         padding: 20px ;
         height: 100%;
-       
-        
     }
 
+    .sign_form_credential_wrapper{
+        flex-wrap: wrap;
+    }
+    
+    .sign_up_page_pixel_1{
+        right: -431px;
+    }
+
+    .sign_up_page_pixel_2{
+        left: 116px;
+        bottom: 148px;
+        padding-top: 1.5rem;
+    }
+        
+    .sign_up_page_pixel_3{
+        right: -391px;
+        width: 18%;
+    }
   }
