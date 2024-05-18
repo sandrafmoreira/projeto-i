@@ -13,7 +13,9 @@ a{
 }
 
 
-
+.form_box{
+    background-color: var(--color-blue);
+}
 .sign_content{
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ a{
     margin: auto;
     width: 50%;
     padding: 20px ;
-   
+   background-color: var(--color-blue);
     
 }
 
@@ -48,7 +50,7 @@ a{
     padding: 0;
     font-size: 2.0rem;
     margin: 0.8rem 0px;
-    font-family: var( --font-);
+    font-family: var( --font-raleway);
     font-weight:800;
 }
 
@@ -89,6 +91,7 @@ a{
 .pass_min_caracters{
     font-size: 0.6rem;
     margin: 0;
+    font-weight: 200;
 }
 
 .form_btn {
@@ -96,6 +99,7 @@ a{
     background-color: #fff;
     width: 60%;
     padding: 12px;
+    border: none;
     border-radius: 0.1rem;
     color: var(--color-orange);
     font-weight: 700;
