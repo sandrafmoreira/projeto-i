@@ -1,6 +1,6 @@
 p,h3, label{
     color: #fff;
-    
+    font-size: 1.2rem;
 } 
 
 p,label{
@@ -83,7 +83,7 @@ a{
     background-color:var( --color-blue) ;
     padding: 8px 0px;
     margin: auto 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     font-weight: 100;
     

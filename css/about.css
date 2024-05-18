@@ -80,7 +80,9 @@
 
 /* team section*/
 .team_section{
-    background-color:var(--color-grey);
+    padding-top: 2rem;
+    background-color:#fff;
+    height: 70rem;
   
 }
 .team_section h1{ 
@@ -88,21 +90,108 @@
     color: var(--color-blue);
     font-family: var(--font-raleway);
     font-size: 3.8rem;
-    font-weight: 800;
+    font-weight: 850;
+    margin-bottom: 2rem;
 }
 
 .team_section_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color-blue);
+    width: 20%;
+    height: 16rem;
+    border-radius: 0.15rem;
+    margin: 0px;
+}
+.team_section_description h5{
+    font-family: var(  --font-source);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem 0rem 0rem 0rem;
 }
 
+.team_role{
+    margin-top: 0.1rem 0rem 0.1rem 0rem;
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin: 0px;
+}
 
+.more_info{
+    font-size: 1.2rem;
+    font-weight: 330;
+    margin: 1rem 0.2rem;
+    text-align: center;
+
+}
+.Application_incentive{
+    position: relative;
+    bottom: 45rem;
+    left: 69rem;  
+    margin: 0px;
+}
+
+.Application_incentive p{
+    color: var(--color-blue);
+    font-size: 1.2rem;
+    font-weight: 250;
+    width: 15%;
+    text-align: center;
+  
+}
+/* team section-blocks position */
+
+.team_section_scrum_avatar{
+    position: relative;
+    top:3rem;
+    left: 19rem;
+    z-index: 1;
+    width: 13rem;
+}
+
+#team_section_scrum_description{
+    position: relative;
+    left: 4.8rem;
+    margin: 0px;
+}
+
+.team_section_expert_avatar{
+    position: relative;
+    left: 28rem;
+    top: 6rem;
+    z-index: 1;
+    width: 13rem;
+}
+#team_section_expert_description{
+    position: relative;
+    left: 36.6rem;
+    bottom: 20rem;
+    margin: 0px;
+    
+}
+
+.team_section_dev_avatar{
+    position: relative;
+    bottom: 54.6rem;
+    left: 57.6rem;
+    z-index: 1;
+    width: 13rem;
+}
+#team_section_dev_description{
+    position: relative;
+    bottom: 57.6rem;
+    left: 67.6rem;
+    margin: 0px;
+}
 
 
 
 /* contact us section */
 
 .contact_us_section{
-    height: 50rem;
+    height: 55rem;
     background-color:var(--color-lightblue);
    /* padding-top: 2rem; */
    
@@ -144,7 +233,7 @@
 .contac_us_form_text p{
     color: var(--color-blue);
     margin-top:auto; 
-    width: 60%;
+    width: 80%;
     font-weight: 100;
 }
 
@@ -169,7 +258,7 @@
     background-color:var( --color-lightblue) ;
     padding: 8px 0px;
     margin: auto 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color:var(--color-blue);
     font-weight: 100;
     
@@ -195,6 +284,7 @@
     background-color: var(--color-orange);
     width: 60%;
     padding: 12px;
+    border: none;
     border-radius: 0.1rem;
     color: #fff;
     font-weight: 700;
@@ -214,28 +304,32 @@
 /* contacts information */
 
   .contac_us_info_content{
-    width: 40%;
+    width: 28%;
+    height:45%;
     background-color: var(--color-blue);
     border-radius: 0.1rem;
-    padding:3rem 2rem;
+    padding:1rem 2rem 0rem 3rem;
     position: relative;
-    left: 59rem;
-    bottom: 23rem;
+    left: 59.8rem;
+    bottom: 20rem;
     gap: 6rem;
+    margin: 0px;
   }
   .contac_us_info_wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 1rem;
-    gap: 2rem;
+    gap: 1rem;
    
     
   }
+  .contac_us_info_wrapper:first-child{
+    margin-top: 2rem;
+  }
 
   .contac_us_info_wrapper img{
-    width: 6%;
-    height: 6%;
+    width: 7%;
+    height: 7%;
     margin: 0;
 
   }
@@ -250,12 +344,12 @@
     flex-direction: row;
     background-color: var(--color-orange);
     border-radius:0.1rem ;
-    width: 70%;
+    width: 50%;
     gap: 1rem;
     margin: 0px;
     position: relative;
-    left: 5.1rem;
-    top: 5rem;
+    left: 9.6rem;
+    top: 2rem;
     padding: 1rem 0rem 0rem 5rem;
     
   }

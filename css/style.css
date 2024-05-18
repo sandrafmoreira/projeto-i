@@ -43,7 +43,8 @@ a{
 
 body {
     margin: 0px;
-    overflow-x: hidden;
+    overflow-x:none;
+    
 }
 
 p, label{
