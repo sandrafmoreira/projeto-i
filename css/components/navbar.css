@@ -1,0 +1,73 @@
+.nav-logo {
+    width: 80px;
+}
+
+.nav-maze {
+    width: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #cecece;
+}
+
+.nav-width {
+    width: 80vw;
+}
+
+.nav-esc {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--color-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.nav-orange-divider {
+    width: 3px;
+    height: 15px;
+    background-color: var(--color-orange);
+}
+
+.white-nav {
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.white-nav > a, .white-nav > button, .nav_profile_pic  {
+    width: 150px;
+    color: var(--color-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/* navbar after login */
+.nav_after_login {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_profile_pic {
+    width: 100px;
+    height: 100px;
+}
+

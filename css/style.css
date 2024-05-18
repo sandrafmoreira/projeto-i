@@ -3,17 +3,20 @@
 
 /* PAGES */
 @import url(./course.css);
-@import url(./navbar.css);
 @import url(./game.css);
-@import url(./footer.css);
 @import url(./maze.css);
 @import url(./sign-up.css);
 @import url(./dashboard.css);
 @import url(./about.css);
+
+
+/* MODALS */
+@import url(./login.css);
+
 /* COMPONENTS */
-@import url();
-@import url();
-@import url();
+@import url(./components/footer.css);
+@import url(./components/navbar.css);
+@import url(./components/dropdownMenu.css);
 
 /* FONT LINKS */
 
@@ -47,3 +50,10 @@ p, label{
     font-family: var(--font-source);
     
 }
+
+
+/* background of modal */
+::backdrop {
+    background-color: var(--color-blue);
+    opacity: 0.75;
+  }

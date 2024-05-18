@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>TSIW</title>
+    
 </head>
 <body>
 
     <!-- Navbar -->
     <nav>
-        <div class="nav-width white-nav">
+        <!-- NAVBAR BEFORE LOGIN -->
+        <!-- <div class="nav-width white-nav">
             <a href="./html/about.html">SOBRE NÓS</a>
             <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
             <a href="./html/course.html">CURSO</a>
@@ -21,202 +23,54 @@
                 <a href="./html/game.html">MAZE</a>
                 <img src="./assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
             </div>
-            <button onclick="openLoginModal()">INICIAR SESSÃO</button>
+            <a href="./html/login.html" id="open-login-modal" class="nav-login-btn">INICIAR SESSÃO</a>
             <div class="nav-orange-divider"></div>
             <a href="./html/sign-up.html">CRIAR CONTA</a>
+        </div> -->
+    </nav> 
+        <!-- Login Modal -->
+        <div id="login-modal-div" class="modal">
+            <div class="modal-content">
+                <div id="loginModalContent"></div>
+            </div>
         </div>
 
-        <!-- login Modal -->
-    
-        <dialog open class="login_modal">
-
-            <div class="modal_div_background"></div>
-                <form class=" modal_login_form" name="login_form" >
-
-                    <button class="close_modal_btn">
-                        <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
-                    </button>
-                    <div class="modal_login_content">
-                        <div class=" modal_login_form_text">
-                            <h1>Iniciar sessão</h1>
-                            <p>Descobre mais sobre teu curso de sonho  </p>
-                        </div>
+        <!-- NAVBAR AFTER LOGIN -->
+        <nav>
+            <div class="nav-width white-nav nav_user_logged">
+                <a href="./html/about.html">SOBRE NÓS</a>
+                <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
+                <a href="./html/course.html">CURSO</a>
+                <a href="#">
+                    <img src="./assets/logo.png" alt="tsiw logo" class="nav-logo">
+                </a>
+                <div class="nav-esc">
+                    <a href="./html/game.html">MAZE</a>
+                    <img src="./assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
+                </div>
+                <a href="./html/dashboard.html">DASHBOARD</a>
+                <div class="nav_orange_divider"></div>
+                <div class="nav_after_login">
+                    <img id="nav_profile_pic" src="./assets/navbar/default user pic.png" alt="profile pic on navbar">
+                    <a href="" id="nav_dropdown_icon"><img src="./assets/navbar/nav_dropdown_icon.png" alt="dropwdown icon on navbar"></a>
+                </div>
+            </div> 
+        </nav>
         
-                        <div class=" form_credential">
-                            <label for="email" class="form_label"> E-mail</label>
-                            <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
-                            
-                        </div>
-                        <div class=" form_credential">
-                            <label for="password" class="form_label">Palavra-passe</label>
-                            <input type="password" placeholder="****** " name="password" class="form_input" required>
-                    
-                        </div>
-                
-                        <button type="submit" value="LOGIN" class="form_btn" onclick="Login_form_upValidate()">
-                            Iniciar Sessão
-                        </button>
-                        
-                        <div class="alternative_validation">
-                            <p> ou</p>
-                            <p>Continuar com o Google</p>
-                            <p>Continuar com o Facebook</p>
-                        </div>
-                    </div>
-    
-                    <!-- pixels -->
-                    <div class="modal_login_pixel_1"></div>
-                    <div class="modal_login_pixel_2"></div>
-                    
-                </form>
-            
-        </dialog>
-    
-    
-    </nav>
-
-
-    <!-- Section Main -->
-    <section class="index-main">
-        <div class="index-main-blue">
-            <h1>Constrói <br>o teu próprio <br>Website!</h1>
-        </div>
-        <h2>Tecnologias e Sistemas <br>de Informação para a Web</h2>
-        <h3>1º Ano de Licenciatura</h3>
-        <button>Ver mais informação</button>
-    </section>
-
-    <!-- Section Escape Room -->
-    <section>
-        <div class="index-esc-room-info">
-            <div>
-               <h2>Maze</h2> 
-               <h3>Professor Cyberino</h3>
-               <p>Professor veterano de TSIW que tem como objetivo impedir os Tsiwers de se tornarem finalistas. Ele está a planear destruir todas as ferramentas de ajuda que os Tsiwers utilizam. Por isto, precisamos de alguém com conhecimentos profundos de tecnologias, como tu.</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <img src="./img/index/níveis.png" alt="" class="index-esc-room-levels">
-            </div>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <button>Modo Competitivo</button>
-                    <button>Modo Passivo</button>
-                </div>
+        <!-- Dropdown Menu user logged Modal -->
+        <div id="drop-menu-modal-div" class="modal">
+            <div class="modal-content">
+                <div id="dropMenuModalContent"></div>
             </div>
         </div>
-        <div class="index-esc-room-tools"></div>
-    </section>
-
-    <!-- Section Testemunhos -->
-    <section class="index-testemunhos">
-        <div class="index-testemunho-grid">
-            <div class="index-testemunho primeiro">
-                <img style="width: 70px;" src="./assets/index/testemunho1.png" alt="testemunho">
-                <div>
-                    <p class="index-testemunho-p">“Não posso deixar de referir que até ao entrar na ESMAD não sabia nada de programação e design, pelo que, além do meu esforço, o excelente acompanhamento dos professores e a sua experiência tanto a nível do ensino como também profissional foi sem dúvida o impulsionador disto tudo. ”</p>
-                </div>
-                <div class="index-testemunho-perfil">
-                    <h3>Nuno Sousa</h3>
-                    <ul>
-                        <li>Front-end developer na Carbmee</li>
-                        <li>Governo Britânico</li>
-                        <li>Young Juries do Awwwards</li>
-                        <li>8 prémios internacionais</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index-testemunho segundo">
-                <img style="width: 70px;" src="./assets/index/testemunho3.png" alt="testemunho">
-                <div>
-                    <p class="index-testemunho-p">“Ingressar em TSIW preparou-me para os desafios do mundo profissional. Os diferentes projetos de grupo e o foco nas tecnologias mais recentes proporcionaram-me uma base sólida de conhecimentos e habilidades práticas, como o trabalho de equipa e resolução de problemas.”</p>
-                </div>
-                <div class="index-testemunho-perfil">
-                    <h3>Nuno Costa</h3>
-                    <ul>
-                        <li>Software Developer na MOG Technologies</li>
-                        <li>Assistente convidado na ESMAD</li>
-                        <li>1º lugar no concurso internacional de programação I Juezlti Contest of EU Code Week</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index-testemunho terceiro">
-                <img style="width: 70px;" src="./assets/index/testemunho2.png" alt="testemunho">
-                <div>
-                    <p class="index-testemunho-p">“Avancei com a candidatura em TSIW, sem saber ao certo o que ia aprender. Quando percebi que era programação, fiquei em estado de choque. Ainda assim não desisti! Enquanto ainda estava no segundo ano, tive a oportunidade de aplicar a minha aprendizagem numa startup, a IOTECH, onde descobri outra paixão: a criação de conteúdos para redes sociais.</p>
-                </div>
-                <div class="index-testemunho-perfil">
-                    <h3>Joana Crasto</h3>
-                    <ul>
-                        <li>Social Media KuantoKusta</li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <h4>Hey! Já fazes parte da nossa comunidade?</h4>
-                <h3>Não percas tempo e <span>segue-nos nas redes sociais</span></h3>
-                <div>
-                    <img src="" alt="instagram logo">
-                    <img src="" alt="facebook logo">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Eventos -->
-    <section>
-        <div>
-            <img src="" alt="">
-            <button>VER EVENTO</button>
-        </div>
-        <div>
-            <img src="" alt="">
-            <button>VER EVENTO</button>
-        </div>
-    </section>
 
 
 
-    <footer>
-        <div class="footer_logo">
-            <img src="./assets/logo branco trans.png" alt="">
-            <h3>Junta-te à nossa comunidade!</h3>
-        </div>
-        <div class="footer_sitemap">
-            <h2>Sitemap</h2>
-            <a href="">Início</a>
-            <a href="">Curso</a>
-            <a href="">Sobre Nós</a>
-            <a href="">Maze</a>
-            <a href="">Iniciar Sessão</a>
-            <a href="">Criar Conta</a>
-        </div>
-        <div class="footer_info">
-            <h2>Informações</h2>
-            <a href="">Eventos</a>
-            <a href="">Projetos</a>
-            <a href="">ECOescolas</a>
-        </div>
-        <div class="footer_contactos">
-            <h2>Contactos</h2>
-            <p>nossaequipa@esmad</p>
-            <p>+351 961 338 256</p>
-            <div class="footer_contactos_icons">
-                <div>
-                    <img src="" alt="">
-                    <p>Instagram</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Facebook</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Github</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+
+
+    <script type="module" src="./js/modals/loginModal.js"></script>
+    <script type="module" src="./js/modals/dropdownMenu.js"></script>
+
 </body>
 </html>
