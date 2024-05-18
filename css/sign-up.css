@@ -1,12 +1,11 @@
-p,h3, label{
+label{
     color: #fff;
     font-size: 1.2rem;
 } 
 
 p,label{
     font-weight: 400;
-   
-}
+} 
 
 a{
     font-weight: 500;
@@ -41,7 +40,8 @@ a{
 .sign_form_text p {
     margin-top:auto; 
     width: 80%;
-    
+    color: #fff;
+    font-weight: 400;
 }
 
 .sign_form_text h1 {
@@ -147,7 +147,7 @@ a{
  .login_form_text h3{
     font-family: var( --font-montserrat);
     font-weight:700;
-   
+    color: #fff;
  }
 
 .login_form_text p{
