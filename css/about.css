@@ -117,6 +117,7 @@
     font-weight: 100;
     font-size: 1.2rem;
     margin: 0px;
+    color: #fff;
 }
 
 .more_info{
@@ -124,6 +125,7 @@
     font-weight: 330;
     margin: 1rem 0.2rem;
     text-align: center;
+    color: #fff;
 
 }
 .Application_incentive{
@@ -197,7 +199,7 @@
    
 }
 
-.contac_us_content{
+.contact_us_content{
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -210,7 +212,7 @@
     top: 6rem;
    
 }
-.contac_us_form_text{
+.contact_us_form_text{
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -219,7 +221,7 @@
     margin-bottom: 3rem;
 }
 
-.contac_us_form_text h1{
+.contact_us_form_text h1{
    
     color: var(--color-blue); ;
     text-align: center;
@@ -230,14 +232,14 @@
     font-weight:800;
 }
 
-.contac_us_form_text p{
+.contact_us_form_text p{
     color: var(--color-blue);
     margin-top:auto; 
     width: 80%;
     font-weight: 100;
 }
 
-.contac_us_form_credential ,.contac_us_form_message{
+.contact_us_form_credential ,.contact_us_form_message{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -247,12 +249,12 @@
     border: none;
 }
 
-.contac_us_form_credential label, .contac_us_form_message label, 
-.contac_us_form_credential ::placeholder, 
-.contac_us_form_message ::placeholder{
+.contact_us_form_credential label, .contact_us_form_message label, 
+.contact_us_form_credential ::placeholder, 
+.contact_us_form_message ::placeholder{
     color: var(--color-blue);
 }
-.contac_us_form_credential_input{
+.contact_us_form_credential_input{
     border: none;
     border-bottom: 2px solid var(--color-blue);
     background-color:var( --color-lightblue) ;
@@ -266,7 +268,7 @@
 
 
 
- .contac_us_form_textarea{
+ .contact_us_form_textarea{
     border: none;
     border-bottom: 2px solid var(--color-blue);
     background-color:var( --color-lightblue) ;
@@ -279,7 +281,7 @@
     overflow: auto;
  }
 
- .contac_us_content .form_btn {
+ .contact_us_content .form_btn {
     margin-top: 15px;
     background-color: var(--color-orange);
     width: 60%;
@@ -293,7 +295,7 @@
     
  }
 
- .contac_us_content .form_btn :hover {
+ .contact_us_content .form_btn :hover {
     color: var(--color-orange);
     background-color:  #fff;
    
@@ -303,7 +305,7 @@
 
 /* contacts information */
 
-  .contac_us_info_content{
+  .contact_us_info_content{
     width: 28%;
     height:45%;
     background-color: var(--color-blue);
@@ -315,7 +317,7 @@
     gap: 6rem;
     margin: 0px;
   }
-  .contac_us_info_wrapper{
+  .contact_us_info_wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -323,23 +325,25 @@
    
     
   }
-  .contac_us_info_wrapper:first-child{
+  .contact_us_info_wrapper:first-child{
     margin-top: 2rem;
   }
 
-  .contac_us_info_wrapper img{
+  .contact_us_info_wrapper img{
     width: 7%;
     height: 7%;
     margin: 0;
 
   }
-  .contac_us_info_wrapper p{
+  .contact_us_info_wrapper p{
     text-align: left;
     font-weight: 200;
+    color: #fff;
+    
   }
 
   /* contacts information-social media */
-  .contac_us_social_media_conteiner{
+  .contact_us_social_media_conteiner{
     display: flex;
     flex-direction: row;
     background-color: var(--color-orange);
@@ -354,16 +358,17 @@
     
   }
 
-  .contac_us_social_media_Wrapper{
+  .contact_us_social_media_Wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
 
   }
 
-  .contac_us_social_media_Wrapper p {
+  .contact_us_social_media_Wrapper p {
     font-size: 0.7rem;
     font-weight: 200;
     margin-top: 0.3rem;
+    color: #fff;
   }
  
