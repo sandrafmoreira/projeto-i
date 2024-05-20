@@ -15,7 +15,8 @@ function openLoginModal() {
       })
 }
 
-document.querySelector(".close_modal_btn").addEventListener("click", function() {
+let btnCloseLogin = document.querySelector(".close_modal_btn");
+btnCloseLogin.addEventListener("click", function() {
   let loginModal = document.getElementById('login-modal');
   loginModal.style.display = 'none';
 });
