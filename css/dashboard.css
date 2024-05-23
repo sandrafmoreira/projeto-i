@@ -267,6 +267,13 @@
     font-family: var(--font-source);
 }
 
+#escape_message{
+    display: flex;
+    background-color: var(--color-lightblue);
+    border-radius: 5px;
+    text-align: center;
+    height: 150px;
+}
 
 .esc_message1, .esc_message2, .esc_message3{
     display: flex;
@@ -278,14 +285,6 @@
     justify-content: center;
 }
 
-#escape_message{
-    display: flex;
-    background-color: var(--color-lightblue);
-    border-radius: 5px;
-    text-align: center;
-    height: 150px;
-}
-
 #escape_message h3{
     font-family: var(--font-raleway);
     color: var(--color-blue);
@@ -294,11 +293,11 @@
 #escape_message p{
     font-family: var(--font-source);
     color: var(--color-blue);
+    font-size: 1.1rem;
 }
 
 .esc_message1 h3{
     font-weight: 800;
-    margin-top: -10px;
 }
 
 .play_level2{
@@ -400,6 +399,7 @@
 #record{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #record img{
@@ -407,7 +407,7 @@
 }
 
 #record h3{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .challenges_complete, .quizzes_complete{
@@ -473,6 +473,7 @@
     transform: rotate(-90deg);
 }
 
+/*Keyframe to make the player's status bounce*/
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -482,6 +483,7 @@
     }
 }
 
+/*Animation for the badge using the keyframe above*/
 #badge{
     animation: bounce 2s ease-in-out infinite;
     
@@ -520,7 +522,6 @@
 
 .challenge_medals_unlocked, .content_medals_unlocked, .esc_medals_unlocked{
     display: flex;
-    justify-content: start;
     gap: 10px;
 }
 
@@ -659,4 +660,229 @@
 
 #bar_color5{
     background-color: #3A9B95;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px){
+
+    #welcome_user{
+        padding: 20px 0;
+    }
+
+    #escape_message{
+        height: 170px;
+    }
+
+    .esc_message1 h3{
+        font-size: 1.3rem;
+    }
+
+    .blue_line{
+        width: 80px;
+        margin-top: -30px;
+    }
+
+    .esc_message2{
+        margin: auto;
+    }
+
+    #escape_message p{
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+
+    .play_level2 h5{
+        font-size: 1.1rem;
+    }
+
+    .play_level2 img{
+        width: 50px;
+    }
+
+    #first_col, #second_col{
+        width: 50%;
+    }
+
+    .time_info p span{
+        font-size: 1rem;
+    }
+
+    .time_info p{
+        font-size: 0.9rem;
+    }
+
+    .time_info h3 span{
+        font-size: 3rem;
+    }
+
+    .time_info h3{
+        font-size: 1.5rem;
+    }
+
+    #ranking_title{
+        font-size: 1rem;
+    }
+
+    .user_ranking p{
+        font-size: 1.1rem;
+    }
+
+    .user_ranking div{
+        width: 50px;
+    }
+
+    .quiz_time_record p span{
+        font-size: 1rem;
+    }
+
+    .quiz_time_record p{
+        font-size: 0.9rem;
+    }
+
+    #record h3{
+        font-size: 1.8rem;
+    }
+
+    .challenges_complete p, .quizzes_complete p{
+        font-size: 0.9rem;
+    }
+
+    .challenges_complete h3, .quizzes_complete h3{
+        font-size: 2rem;
+    } 
+
+    .bar{
+        width: 200px;
+    }
+
+    .challenge_bar_complete{
+        width: 24px;
+    }
+
+    .quiz_bar_complete{
+        width: 136px;
+    }
+
+    #badge{
+        width: 50px;
+    }
+
+    #confetti1, #confetti2{
+        width: 70px;
+    }
+
+    .status_icon p, .challenges_medals p, .content_medals p, .esc_medals p{
+        font-size: 1rem;
+    }
+
+    .challenge_medals_unlocked div, .content_medals_unlocked div, .esc_medals_unlocked div{
+        width: 48px;
+        height: 48px;
+    }
+
+    #challenge_medal_place1, #content_medal_place1, #esc_medal_place1{
+        width: 50px;
+    }
+
+    .status_name h3{
+        font-size: 1rem;
+    }
+
+    #level1_complete, #new_avatar_unlocked{
+        font-size: 1rem;
+    }
+
+    #content_acessed{
+        margin-top: 5%;
+    }
+
+    #content_acessed h3{
+        font-size: 1.3rem;
+    }
+
+    .content_acessed_graphs_info div p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    #welcome_user h1{
+        font-size: 2rem;
+    }
+
+    #welcome_user h4{
+        font-size: 1rem;
+    }
+
+    .esc_message1 h3{
+        font-size: 0.9rem;
+    }
+
+    .blue_line{
+        width: 50px;
+        margin-top: 0;
+    }
+
+    .orange_line{
+        height: 70px;
+    }
+
+    .rankings p{
+        font-size: 0.9rem;
+    }
+
+    #record h3{
+        font-size: 1.2rem;
+    }
+
+    #record img{
+        width: 40px;
+    }
+
+    .challenges_complete h3, .quizzes_complete h3{
+        font-size: 1.5rem;
+    }
+
+    .bar{
+        width: 175px;
+    }
+
+    .challenge_bar_complete{
+        width: 21px;
+    }
+
+    .quiz_bar_complete{
+        width: 119px;
+    }
+
+    #badge{
+        width: 40px;
+    }
+
+    #confetti1, #confetti2{
+        width: 60px;
+    }
+
+    #challenge_medal_place1, #content_medal_place1, #esc_medal_place1{
+        width: 40px;
+    }
+
+    .status_name h3{
+        font-size: 0.9rem;
+    }
+
+    .challenge_medals_unlocked div, .content_medals_unlocked div, .esc_medals_unlocked div{
+        width: 35px;
+        height: 35px;
+    }
+
+    #content_acessed_text h3{
+        font-size: 1.1rem;
+    }
+
+    #content_acessed_text p{
+        font-size: 0.9rem;
+    }
 }
