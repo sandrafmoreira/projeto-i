@@ -10,69 +10,7 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <!-- NAVBAR BEFORE LOGIN -->
-        <!-- <div class="nav-width white-nav">
-            <a href="./html/about.html">SOBRE NÓS</a>
-            <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
-            <a href="./html/course.html">CURSO</a>
-            <a href="#">
-                <img src="./assets/logo.png" alt="tsiw logo" class="nav-logo">
-            </a>
-            <div class="nav-esc">
-                <a href="./html/game.html">MAZE</a>
-                <img src="./assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
-            </div>
-            <a href="./html/login.html" id="open-login-modal" class="nav-login-btn">INICIAR SESSÃO</a>
-            <div class="nav-orange-divider"></div>
-            <a href="./html/sign-up.html">CRIAR CONTA</a>
-        </div> -->
-    </nav> 
-        <!-- Login Modal -->
-        <div id="login-modal-div" class="modal">
-            <div class="modal-content">
-                <div id="loginModalContent"></div>
-            </div>
-        </div>
-
-        <!-- NAVBAR AFTER LOGIN -->
-        <nav>
-            <div class="nav-width white-nav nav_user_logged">
-                <a href="./html/about.html">SOBRE NÓS</a>
-                <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
-                <a href="./html/course.html">CURSO</a>
-                <a href="#">
-                    <img src="./assets/logo.png" alt="tsiw logo" class="nav-logo">
-                </a>
-                <div class="nav-esc">
-                    <a href="./html/game.html">MAZE</a>
-                    <img src="./assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
-                </div>
-                <a href="./html/dashboard.html">DASHBOARD</a>
-                <div class="nav_orange_divider"></div>
-                <div class="nav_after_login">
-                    <img id="nav_profile_pic" src="./assets/navbar/default user pic.png" alt="profile pic on navbar">
-                    <a href="" id="nav_dropdown_icon">
-                        <img src="./assets/navbar/nav_dropdown_icon.png" alt="dropwdown icon on navbar">
-                    </a>
-                </div>
-            </div> 
-        </nav>
-        
-        <!-- Dropdown Menu user logged Modal -->
-        <div id="drop-menu-modal-div">
-            
-                <div id="dropMenuModalContent"></div>
-            
-        </div>
-
-        <!-- Edit Profile Modal -->
-        <div id="edit-profile-modal-div" class="modal">
-            <div class="modal-content">
-                <div id="editProfileModalContent"></div>
-            </div>
-        </div>
+    <nav id="navbar"></nav>
 
     <!-- Section Main-->
     <section class="index-main">
@@ -217,8 +155,10 @@
         </div>
     </footer>
 
+
     <script type="module" src="./js/modals/loginModal.js"></script>
     <script type="module" src="./js/modals/dropdownMenu.js"></script>
     <script type="module" src="./js/modals/editProfile.js"></script>
+    <script type="module" src="./js/views/navbarView.js"></script>
 </body>
 </html>
