@@ -13,6 +13,8 @@
 /* MODALS */
 @import url(./login.css);
 @import url(./dropdownMenu.css);
+@import url(./editProfile.css);
+@import url(./editPassword.css);
 
 /* COMPONENTS */
 @import url(./components/footer.css);

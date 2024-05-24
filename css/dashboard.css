@@ -1,25 +1,31 @@
 /* Modal: Edit profile */
-.modal_div_background{
-    background-color: var(--color-yellow);
-    width: 105%;
-    height: 100rem;
-    position: absolute;
-    opacity: 50%;
-    margin: -5% 0 0 -5%;
-   
-    
-}
+/* .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    width: 100%; 
+    height: 60vh; 
+  }
+
+.modal_div_background{ */
+    /* background-color: var(--color-yellow); */
+    /* width: 100vw; */
+    /* height: 1000vh; */
+    /* position: absolute; */
+    /* opacity: 10%; */
+    /* margin: -5% 0 0 -5%; */
+    /* overflow-y: hidden; */
+/* }
 .modal_profile_form{
     background-color: var(--color-blue);
-    width: 35%;
-    height: 50rem;
-    position: fixed;
-    top: 50%;
+    width: 55%;
+    height: 80vh; */
+    /* position: fixed; */
+    /* top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    border-radius:0.15rem ;
-    
-}
+    border-radius:0.15rem ; */
+/* }
 
 .Profile_modal{
     background-color: unset;
@@ -66,7 +72,7 @@
     font-weight: 400;
     font-size: 1rem;
     /* text-decoration: underline; */
-}
+/* }
 .modal_Profile_form_avatars {
     
     width: 85%;
@@ -86,9 +92,9 @@
 }
 .avatars_grid{
  display: grid;
- grid-template-columns: 22.5% 22.5% 22.5% 22.5%  ;
+ grid-template-columns: 22.5% 22.5% 22.5% 22.5%  ; */ 
  /* column-gap: 0.5rem; */
- justify-content: center;
+ /* justify-content: center;
 }
 .avatar_description{
     display: flex;
@@ -107,11 +113,11 @@
     width:60%;
     gap: 5px;
     border: none;
-}
+} */
 
 
 /* modal pixels */
-.modal_edit_pixel_1{
+/* .modal_edit_pixel_1{
     background-color: var(--color-lightblue);
     border-radius: 0.05rem;
     position: relative;
@@ -129,7 +135,7 @@
     bottom: 454px;
     width: 8%;
     padding-top: 2.6rem;
-}
+} */
 
 
 
@@ -137,17 +143,17 @@
 
 /* Modal: Edit passWord */
 
-.modal_div_background{
+/* .modal_div_background{
     background-color: var(--color-yellow);
     width: 105%;
     height: 100rem;
     position: absolute;
     opacity: 50%;
     margin: -5% 0 0 -5%;
-   
+   ov
     
-}
-.modal_password_form{
+} */
+/* .modal_password_form{
     background-color: var(--color-blue);
     width: 35%;
     height: 35rem;
@@ -220,10 +226,10 @@
     width:60%;
     gap: 5px;
     border: none;
-}
+} */
 
 /* modal pixels */
-.modal_edit_pixel_1{
+/* .modal_edit_pixel_1{
     background-color: var(--color-lightblue);
     border-radius: 0.05rem;
     position: relative;
@@ -241,7 +247,7 @@
     bottom: 454px;
     width: 8%;
     padding-top: 2.6rem;
-}
+} */
 
 /*   MAIN PAGE      */
 #main_messages, #dashboard_info{

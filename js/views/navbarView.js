@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             
                             <div>
                                 <img src="/assets/navbar/dropdownMenu/pw.png" alt="icon editar password">
-                                <a href="">Editar Palavra-Passe</a>
+                                <a id="editPasswordLink" href="">Editar Palavra-Passe</a>
                             </div>
                             <div>
                                 <img src="/assets/navbar/dropdownMenu/ajuda.png" alt="icon ajuda">
@@ -136,9 +136,33 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (editProfileModal.style.display = 'block'){
             editProfileModal.style.display = 'none'; 
         }
-    
+    });
+
+    // clicar no button para Editar a Password 
+    let editPasswordLink = document.getElementById("editPasswordLink");
+    editPasswordLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        let editPasswordModal = document.getElementById('edit-password-modal-div');
+        
+        fetch('/html/editPassword.html') 
+        .then(editPasswordPage => editPasswordPage.text()) 
+        .then(content => {
+            document.getElementById('editPasswordModalContent').innerHTML = content;
+        })
+
+        if (editPasswordModal.style.display === 'none') {
+        editPasswordModal.style.display = 'block'; 
+        } else if (editPasswordModal.style.display = 'block'){
+            editPasswordModal.style.display = 'none'; 
+        }
         
     });
+
+    let closebtn = document.getElementById("close_password_modal_btn");
+    closebtn.addEventListener("click", () => {
+        alert("asdmas")
+        editPasswordModal.style.display = "none";
+    })
 })
 
 
