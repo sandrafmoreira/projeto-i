@@ -31,6 +31,7 @@
     --color-blue: #104C64;
     --color-orange: #C94D24;
     --color-lightblue: #9ECCFA;
+    --color-lightblue-opacity: rgba(158, 204, 250, 0.5);
     --color-yellow: #FFF36A;
     --color-grey: #F5F5F5;
     --color-dark: #333333
@@ -47,6 +48,7 @@ a{
 
 body {
     margin: 0px;
+    
     overflow-x:none;
     
 }
