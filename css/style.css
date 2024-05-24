@@ -12,6 +12,7 @@
 
 /* MODALS */
 @import url(./login.css);
+@import url(./dropdownMenu.css);
 
 /* COMPONENTS */
 @import url(./components/footer.css);
@@ -40,6 +41,7 @@
 a{
     text-decoration: none;
     color: var(--color-orange);
+    cursor: pointer;
 }
 
 body {

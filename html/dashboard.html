@@ -9,122 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <!-- Modal: Edit profile  -->
-<!-- 
-        <dialog open class="Profile_modal">
 
-            <div class="modal_div_background"></div>
-                <form class=" modal_profile_form" name="login_form" >
+    <nav id="navbar"></nav>
 
-                    <button class="close_modal_btn">
-                        <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
-                    </button>
-                    <div class="modal_Profile_content">
-                        <div class=" modal_Profile_form_text">
-                            <h1>Editar perfil</h1> -->
-                            <!-- alterar estatuto com js -->
-                            <!-- <img src="/img/Avatars/caloiro.png" alt="meu estatuto" class="profile_status_img"> 
-                            <p class="profile_status">Caloiro de TSIW</p>
-                        </div>
-                        <div class=" modal_Profile_form_avatars">
-                            <h4>Meus avatares</h4>
-                            <div class="avatars_grid">
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Caloiro">
-                                    <p>Caloiro de TSIW</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Programador novato - primeiro ano - primeiro nível escape room">
-                                    <p>Programador novato</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Sherlock dos Dados - segundo ano - segundo nível escape room">
-                                    <p>Sherlock dos Dados</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar Finalista no recurso - terceiro ano - terceiro nível escape room">
-                                    <p>Finalista no recurso</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" form_credential">
-                            <label for="Fname" class="form_label"> Nome de utilizador</label>
-                            <input type="text" placeholder="nome..." name="Fname" class="form_input" id="Fname" required>
-                        </div>
-                        <div class=" form_credential">
-                            <label for="email" class="form_label"> E-mail</label>
-                            <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
-                            
-                        </div>
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editProfileModalContent"></div>
+        </div>
+    </div>
 
-                        <button type="submit" value="submit" class="form_btn">
-                            Alterar
-                        </button>
-                    
-                    </div> -->
     
-                    <!-- pixels -->
-                    <!-- <div class="modal_edit_pixel_1"></div>
-                    <div class="modal_edit_pixel_2"></div>
-                    
-                </form>
-            
-        </dialog> -->
-
-
-
-
-
-
-
-         <!-- Modal: Edit passWord  -->
-
-        <!-- <dialog open class="password_modal">
-
-            <div class="modal_div_background"></div>
-                <form class=" modal_password_form" name="login_form" >
-
-                    <button class="close_modal_btn">
-                        <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
-                    </button>
-                    <div class="modal_password_content">
-                        <div class=" modal_form_text">
-                            <h1>Editar Palavra-Passe</h1>
-                        </div>
-        
-                        <div class=" form_credential">
-                            <label for="password" class="form_label">Palavra-passe antiga</label>
-                            <input type="password" placeholder="****** " name="password" class="form_input" required>
-                    
-                        </div>
-                        <div class=" form_credential">
-                            <label for="password" class="form_label">Palavra-passe nova</label>
-                            <input type="password" placeholder="****** " name="password" class="form_input" required>
-                            <p class="pass_min_caracters">*No mínimo 8 caracteres</p>
-                    
-                        </div>
-                        <div class=" form_credential">
-                            <label for="password" class="form_label">Confirmar</label>
-                            <input type="password" placeholder="****** " name="password" class="form_input" required>
-                    
-                        </div>
-                
-                        <button type="submit" value="submit" class="form_btn" >
-                            Alterar
-                        </button>
-                        
-                    </div>
-
-                    pixels
-                    <div class="modal_edit_pixel_1"></div>
-                    <div class="modal_edit_pixel_2"></div>
-                    
-                </form>
-            
-        </dialog> -->
-    </nav>
-
     <section class="row" id="main_messages">
         <div class="col-lg-3" id="welcome_user">
             <h1>Olá ...</h1>
@@ -144,7 +39,7 @@
             </div>
             <div class="orange_line"></div>
             <div class="esc_message3">
-                <p>Rápido o relógio esta a contar...tic tac..!</p>
+                <p>Rápido o relógio está a contar...tic tac..!</p>
                 <div class="play_level2">
                     <h5>Jogar o <br> Nível 2</h5>
                     <img src="/assets/index/Labyrinth.png" alt="Icone ilustrativo de um labirinto">
@@ -308,5 +203,8 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="module" src="/js/views/navbarView.js"></script>
+
 </body>
 </html>

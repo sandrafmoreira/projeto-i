@@ -8,10 +8,9 @@
 </head>
 <body>
     <!-- login Modal -->
-    <div class="login_modal" id="login-modal">
-        <div class="modal_div_background"></div>
+    <!-- <div class="login_modal" id="login-modal">
             <form class=" modal_login_form" name="login_form" >
-                <button class="close_modal_btn">
+                <button type="button" id="close_modal_login_btn">
                     <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
                 </button>
                 <div class="modal_login_content">
@@ -22,16 +21,16 @@
     
                     <div class=" form_credential">
                         <label for="email" class="form_label"> E-mail</label>
-                        <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
+                        <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="login-email" required>
                         
                     </div>
                     <div class=" form_credential">
                         <label for="password" class="form_label">Palavra-passe</label>
-                        <input type="password" placeholder="****** " name="password" class="form_input" required>
+                        <input type="password" placeholder="****** " name="password" class="form_input" id="login-password" required>
                 
                     </div>
             
-                    <button type="submit" value="LOGIN" class="form_btn" onclick="Login_form_upValidate()">
+                    <button type="submit" value="LOGIN" class="form_btn" id="login-form-btn">
                         Iniciar Sessão
                     </button>
                     
@@ -43,11 +42,63 @@
                 </div>
 
                 <!-- pixels -->
-                <div class="modal_login_pixel_1"></div>
+                <!--<div class="modal_login_pixel_1"></div>
                 <div class="modal_login_pixel_2"></div>
             </form>
     </div>
-    <script src="../js/modals/loginModal.js"></script>
-    
+
+     Editar Perfil Modal 
+    <div id="edit-profile-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editProfileContent"></div>
+        </div>
+    </div> -->
+
+
+    <nav id="navbar"></nav>
+    <form class="login_form" name="login_form" >
+        <div class="login_content">
+            <div class="login_form_text">
+                <h1>Iniciar sessão</h1>
+                <p>Descobre mais sobre teu curso de sonho</p>
+            </div>
+
+            <div class=" form_credential">
+                <label for="email" class="form_label"> E-mail</label>
+                <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="login-email" required>
+                
+            </div>
+            <div class=" form_credential">
+                <label for="password" class="form_label">Palavra-passe</label>
+                <input type="password" placeholder="****** " name="password" class="form_input" id="login-password" required>
+        
+            </div>
+
+            <!-- button submit to login -->
+            <button type="submit" value="LOGIN" class="form_btn" id="login-form-btn">
+                Iniciar Sessão
+            </button>
+            
+            <div class="alternative_validation">
+                <p> ou</p>
+                <p>Continuar com o Google</p>
+                <p>Continuar com o Facebook</p>
+            </div>
+        </div>
+
+        <!-- pixels -->
+        <div class="modal_login_pixel_1"></div>
+        <div class="modal_login_pixel_2"></div>
+    </form>
+
+     <!-- Editar Perfil Modal  -->
+    <div id="edit-profile-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editProfileContent"></div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/modals/loginModal.js"></script>
+    <script type="module" src="../js/views/navbarView.js"></script>
 </body>
 </html>
