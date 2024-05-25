@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="./html/about.html">SOBRE NÓS</a>
                 <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
                 <a href="./html/course.html">CURSO</a>
-                <a href="#">
+                <a href="/index.html">
                     <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
                 </a>
                 <div class="nav-esc">
@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("HEHEHEHEH")
             User.logout();
             navbarView();
+            window.location.href ="/index.html"
           });
       
         // Function to add event listener to login form button after content is loaded
@@ -119,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // clicar no button para Editar o Perfil 
+    // clicar no button para abrir modal de Editar o Perfil 
     let editProfileLink = document.getElementById("editProfileLink");
     editProfileLink.addEventListener("click", (event) => {
         event.preventDefault();
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // clicar no button para Editar a Password 
+    // clicar no button para para abrir modal de Editar a Password 
     let editPasswordLink = document.getElementById("editPasswordLink");
     editPasswordLink.addEventListener("click", (event) => {
         event.preventDefault();
