@@ -8,23 +8,7 @@ initdata();
 function initdata() {
 // Users
 if (!localStorage.users) {
-    const users = [
-      {
-        id: 1,
-        email: "sandra@123",
-        password: "123",
-      },
-      {
-        id: 2,
-        email: "nuno@123",
-        password: "123",
-      },
-      {
-        id: 3,
-        email: "ken@123",
-        password: "123",
-      },
-    ];
+    const users = [];
     users.forEach((user) => {
       User.add(user.username, user.password);
     });

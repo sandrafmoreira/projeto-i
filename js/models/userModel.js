@@ -15,6 +15,10 @@ export default class User {
 let users = [];
 let admin1 = new User("sandra@123", "123");
 users.push(admin1);
+let admin2 = new User("nuno@123", "123");
+users.push(admin1);
+let admin3 = new User("ken@123", "123");
+users.push(admin1, admin2, admin3);
 console.log(users);
 
 // Adicionar à local storage

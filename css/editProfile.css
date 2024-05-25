@@ -1,24 +1,12 @@
 /* Modal: Edit profile */
 
-.modal-content {
-    background-color: var(--color-blue);
-    width: 45vw;
-    height: 80vh;
-    position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius:0.15rem ;
-    padding: 0;
-}
-
 .modal_profile_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%; 
-}
+} 
 .modal_Profile_form_text{
     display: flex;
     flex-direction: column;
@@ -83,18 +71,7 @@
 }
 .avatar_description img{
     width: 50%;
-}
-
-/* .form_credential{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 5px;
-    width:60%;
-    gap: 5px;
-    border: none;
-} */
-
+} 
 
 /* modal pixels */
 /* .modal_edit_pixel_1{
