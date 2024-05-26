@@ -1,7 +1,6 @@
 #dropmenu-div {
-    /* display: none; */
     width: 300px;
-    height: 300px;
+    height: 250px;
     background-color: var(--color-orange);
     position: fixed;
     top: 50px;
@@ -15,12 +14,13 @@
 #dropmenu-div > div {
     display: flex;
     gap: 20px;
-    align-items: center;
 }
 #dropmenu-div img {
     width: 25px;
+    height: 25px;
 }
 #dropmenu-div a {
     color: white;
     font-family: 'Montserrat', sans-serif;
+    margin: 10px 0;
 }

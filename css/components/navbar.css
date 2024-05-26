@@ -1,5 +1,5 @@
 .nav-logo {
-    width: 80px;
+    width: 75px;
 }
 
 .nav-maze {
@@ -15,6 +15,7 @@ nav {
     height: 50px;
     background-color: #fff;
     border-bottom: 1px solid #cecece;
+    z-index: 2000;
 }
 
 .nav-width {
@@ -72,3 +73,11 @@ nav {
     height: 100px;
 }
 
+nav a:hover {
+    color: var(--color-orange);
+}
+
+nav a {
+    color: var(--color-blue);
+    text-decoration: none;
+}

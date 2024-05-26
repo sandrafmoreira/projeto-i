@@ -7,66 +7,59 @@
     <title>Editar Perfil</title>
 </head>
 <body>
-    <!-- Modal: Edit profile  -->
-        <div class="Profile_modal">
-
-            <div class="modal_div_background"></div>
-                <form class=" modal_profile_form" name="login_form" >
-
-                    <button class="close_modal_btn">
-                        <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
-                    </button>
-                    <div class="modal_Profile_content">
-                        <div class=" modal_Profile_form_text">
-                            <h1>Editar perfil</h1> 
-                            <!-- alterar estatuto com js -->
-                            <img src="/img/Avatars/caloiro.png" alt="meu estatuto" class="profile_status_img"> 
-                            <p class="profile_status">Caloiro de TSIW</p>
+ 
+        <form class="modal_profile_form">
+            <button class="close_modal_btn">
+                <img src="/img/Icons/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Fechar Login Pop up" class="close_modal_icon" >
+            </button>
+            <div class="modal_profile_content">
+                <div class="modal_Profile_form_text">
+                    <h1>Editar perfil</h1> 
+                    <!-- alterar estatuto com js -->
+                    <img src="/img/Avatars/caloiro.png" alt="meu estatuto" class="profile_status_img"> 
+                    <p class="profile_status">Caloiro de TSIW</p>
+                </div>
+                <div class="modal_Profile_form_avatars">
+                    <h4>Meus avatares</h4>
+                    <div class="avatars_grid">
+                        <div class="avatar_description">
+                            <img src="/img/Avatars/caloiro.png" alt="Avatar de Caloiro">
+                            <p>Caloiro de TSIW</p>
                         </div>
-                        <div class=" modal_Profile_form_avatars">
-                            <h4>Meus avatares</h4>
-                            <div class="avatars_grid">
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Caloiro">
-                                    <p>Caloiro de TSIW</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Programador novato - primeiro ano - primeiro nível escape room">
-                                    <p>Programador novato</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar de Sherlock dos Dados - segundo ano - segundo nível escape room">
-                                    <p>Sherlock dos Dados</p>
-                                </div>
-                                <div class="avatar_description">
-                                    <img src="/img/Avatars/caloiro.png" alt="Avatar Finalista no recurso - terceiro ano - terceiro nível escape room">
-                                    <p>Finalista no recurso</p>
-                                </div>
-                            </div>
+                        <div class="avatar_description">
+                            <img src="/img/Avatars/caloiro.png" alt="Avatar de Programador novato - primeiro ano - primeiro nível escape room">
+                            <p>Programador novato</p>
                         </div>
-                        <div class=" form_credential">
-                            <label for="Fname" class="form_label"> Nome de utilizador</label>
-                            <input type="text" placeholder="nome..." name="Fname" class="form_input" id="Fname" required>
+                        <div class="avatar_description">
+                            <img src="/img/Avatars/caloiro.png" alt="Avatar de Sherlock dos Dados - segundo ano - segundo nível escape room">
+                            <p>Sherlock dos Dados</p>
                         </div>
-                        <div class=" form_credential">
-                            <label for="email" class="form_label"> E-mail</label>
-                            <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
-                            
+                        <div class="avatar_description">
+                            <img src="/img/Avatars/caloiro.png" alt="Avatar Finalista no recurso - terceiro ano - terceiro nível escape room">
+                            <p>Finalista no recurso</p>
                         </div>
-
-                        <button type="submit" value="submit" class="form_btn">
-                            Alterar
-                        </button>
+                    </div>
+                </div>
+                <!-- <div class=" form_credential">
+                    <label for="Fname" class="form_label"> Nome de utilizador</label>
+                    <input type="text" placeholder="nome..." name="Fname" class="form_input" id="Fname" required>
+                </div>
+                <div class=" form_credential">
+                    <label for="email" class="form_label"> E-mail</label>
+                    <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
                     
-                    </div> 
-    
-                    <!-- pixels -->
-                    <div class="modal_edit_pixel_1"></div>
-                    <div class="modal_edit_pixel_2"></div>
-                    
-                </form>
-            
-        </div>
+                </div> -->
+
+                <button type="submit" value="submit" class="form_btn">
+                    Alterar
+                </button>
+                
+
+                <!-- pixels -->
+                <div class="modal_edit_pixel_1"></div>
+                <div class="modal_edit_pixel_2"></div>
+            </div>
+        </form>
 
         <script type="module" src="../js/modals/editProfile.js"></script>
         <script type="module" src="../js/modals/dropdownMenu.js"></script>
