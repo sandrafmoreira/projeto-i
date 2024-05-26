@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #addTestimony{
+            display: none;
+        }
+        label, button{
+            display: block;
+        }
+    </style>
+    <button id="openDiv">Adicionar Testemunhos</button>
+
+    <div id="addTestimony">
+        <form action="" id="testimonyForm">
+            <label for="testimony_name">Nome do testemunho:</label>
+            <input type="text" name="testimony_name" id="testimony_name" required>
+
+            <label for="testimony_text">Texto do testemunho:</label>
+            <textarea name="testimony_text" id="testimony_text" rows="8" cols="25" style="resize: none;" required></textarea>
+
+            <label for="testimony_job_position">Local onde trabalha / Prémios</label>
+            <input type="text" name="testimony_job_position" id="testimony_job_position" required placeholder="colocar ; entre tópicos!">
+
+            <label for="testimony_image">Imagem do testemunho:</label>
+            <input type="file" name="testimony_image" id="testimony_image" required>
+
+            <button type="submit" id="submitBtn">Submeter</button>
+            <button id="closeDiv">X</button>
+        </form>
+    </div>
+
+    <script type="module" src="../js/models/testemoniesModel.js"></script>
+</body>
+</html>
