@@ -23,9 +23,13 @@ footer > div {
     width: 250px;
 }
 .footer_logo > h3 {
+    font-size:2rem ;
     font-weight: 500;
 }
-
+footer h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
 .footer_sitemap > a {
     color: #fff;
     margin: 10px 0;
