@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: var(--color-blue);
 }
 
 .maze-page-title-and-desc {
@@ -71,6 +72,7 @@
     align-items: center;
     gap: 200px;
     position: relative;
+    background-color: var(--color-blue);
 }
 .maze-page-bloqueado {
     position: absolute;
