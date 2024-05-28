@@ -29,7 +29,15 @@
         <div class="collectible4"></div>
     </div>
     <div class="escape_game">
-        <img id="escape_room" src="/img/game/escape room.png" alt="">
+        <img id="escape_room" usemap="#escapeRoom" class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/escape room.png" alt="Imagem do Escape Room">
+
+        <map name="escapeRoom">
+            <area shape="poly" coords="75, 474, 115, 485, 116, 502, 70, 525, 17, 511, 17, 498" href="#" alt="Livro" id="book">
+            <area shape="poly" coords="360, 386, 468, 399, 467, 434, 360, 421, 360, 386" href="#" alt="Gaveta" id="drawer">
+            <area shape="poly" coords="180, 294, 209, 287, 238, 300, 206, 308, 179, 294" href="#" alt="Caderno" id="notebook">
+            <area shape="poly" coords="239, 312, 361, 326, 375, 313, 260, 299" href="#" alt="Teclado" id="keyboard">
+            <area shape="poly" coords="254, 247, 441, 264, 442, 157, 257, 148, 254, 247" href="#" alt="Ecrã" id="screen">
+        </map>
     </div>
 </section>
 
@@ -39,7 +47,7 @@
 
     <!-- DESAFIOS COM MODAIS -->
     <button id="challenge1" class="btn-challenge" onclick="openModal()">1</button>
-    <div id="quiz_modal" class="modal">
+    <div id="esc_modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Enunciado</h2>

@@ -557,8 +557,8 @@ h6 a{
 }
 
 .testimony2_graduate{
-    margin-left: 48%;
-    margin-top: -17%;
+    margin-left: -90%;
+    margin-top: -3%;
 }
 
 .testimony3_graduate{
@@ -873,15 +873,12 @@ h6 a{
 
     .testimony2_graduate{
         height: 230px;
+        margin-left: 4%;
     }
 
     .testimony1_graduate, .testimony3_graduate{
         margin-left: 50%;
         margin-top: -17%;
-    }
-
-    .testimony2_graduate{
-        margin-left: 4%;
     }
 
     .slideshow{
