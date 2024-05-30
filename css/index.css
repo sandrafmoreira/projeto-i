@@ -4,10 +4,10 @@
     position: relative;
     display: grid;
     width: 100%;
-    grid-template-columns: 70% 30%   ;
+    grid-template-columns: 70% 30%;
     justify-content: space-between;
     gap: 2rem;
-   align-content: center;
+    align-content: center;
     padding-top: 8rem;
     padding-bottom: 15rem;
     background-color: var(--color-blue);
@@ -175,7 +175,7 @@
     margin-top: 15px;
     background-color: var(--color-orange);
     padding: 12px;
-    border: none;
+    border: 0.15rem solid var(--color-orange);
     border-radius: 0.1rem;
     color: #fff;
     font-weight: 700;
@@ -459,7 +459,7 @@
 }
 #index_Testimonie_2_p{
     position: absolute;
-    bottom: 30rem;
+    bottom: 42rem;
     left: 40rem;
     z-index: -1;
 }
@@ -481,7 +481,7 @@
 }
 #index_Testimonie_3_p{
     position: absolute;
-    bottom: -16rem;
+    bottom: 0;
     left: 10rem;
     z-index: -1;
 }
@@ -543,8 +543,346 @@
     font-size: 1.4rem;
 }
 
-/* ------------------------- */
+/* ------------MEDIA QUERIES------------- */
 
+@media only screen and (max-width: 768px){
+    .index_main{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .index_main_img{
+        width: 40%;
+    }
+
+    .index_main_text h1{
+        font-size: 3rem;
+    }
+
+    .index_main_text h4{
+        font-size: 1.4rem;
+    }
+
+    .index_site_tour_section{
+        padding: 2rem 0;
+        height: 28rem;
+    }
+
+    .index_site_tour_section h2{
+        font-size: 2.1rem;
+    }
+
+    .video{
+        width: 70%;
+        height: 15rem;
+    }
+
+    .index_intel{
+        height: 18rem;
+
+    }
+
+    .index_intel h4{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .index_intel ul{
+        padding: 0 0 0 0.2rem;
+    }
+
+    .index_intel ul li{
+        font-size: 1rem;
+        margin: 0.2rem 0 0 1.4rem;
+        line-height: 180%;
+    }
+
+    .index_follow_us_incentive{
+        left: 70.5%;
+        bottom: -61.5%;
+    }
+
+    .index_follow_us_incentive p{
+        font-size: 1rem;
+    }
+
+    .index_follow_us_incentive_icons_wrapper{
+        width: 100%;
+    }
+
+    .index_about_tsiw_section{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 2rem 3rem 1rem;
+        width: 90%;
+    }
+
+    .index_about_tsiw_section_img{
+        width: 50vw;
+        height: 70vh;
+    }
+
+    .img_button_index_about_tsiw_section{
+        margin: -1rem 4rem;
+    }
+
+    .index_about_tsiw_section_text{
+        margin: 6.5rem 4rem 2rem;
+    }
+
+    .index_about_tsiw_section_text h2, .index_grade_activities_text h2{
+        font-size: 2.5rem;
+    }
+
+    .index_about_tsiw_section_text p{
+        font-size: 1rem;
+    }
+
+    .index_grade_activities_section{
+        padding: 3rem 0;    
+        gap: 0.8rem;
+        flex-direction: column;
+    }
+
+    .index_grade_activities_text p, .index_grade_activities_text li{
+        font-size: 1.2rem;
+    }
+
+    .wrapper{
+        width: 90vw;
+        padding-right: 0;
+    }
+
+    .wrapper i:last-child{
+        right: -0.8rem;
+    }
+
+    .wrapper img{
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .index_escaperoom_section h2{
+        font-size: 2.5rem;
+    }
+
+    .index_about_tsiw_section h3{
+        font-size: 1.8rem;
+    }
+
+    .index_escaperoom_section_body{
+        margin: auto;
+    }
+
+    .index_maze_icon_2{
+        left: 25rem;
+    }
+
+    .index_maze_icon_1{
+        left: 37%;
+        bottom: 20%;
+    }
+
+    .index_Testimonies{
+        padding-top: 2rem;
+    }
+
+    .index_Testimonies h2{
+        font-size: 3rem;
+    }
+
+    .index_Testimonies_content{
+        padding-top: 1rem;
+        height: 50rem;
+    }
+
+    .index_Testimonies_1 img, .index_Testimonies_2 img, .index_Testimonies_3 img{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .index_Testimonies_1 img{ 
+        top: -6rem;
+        right: 15rem;
+    }
+
+    #index_Testimonie_1_p, #index_Testimonie_2_p, #index_Testimonie_3_p{
+        width: 60%;
+        height: 40%;
+        padding: 3rem;
+    }
+
+    #index_Testimonie_1_p{
+        top: -1rem;
+        left: 0;
+    }
+
+    #index_Testimonies_1_profile, #index_Testimonies_2_profile, #index_Testimonies_3_profile{
+        width: 38%;
+        padding: 1rem;
+    }
+
+    #index_Testimonies_1_profile{
+        top: 7%;
+        left: 56%;
+        height: 27%;
+    }
+
+    #index_Testimonies_1_profile li, #index_Testimonies_2_profile li, #index_Testimonies_3_profile li{
+        font-size: 1.2rem;
+    }
+
+    .index_Testimonies_p{
+        font-size: 1.15rem;
+    }
+
+    #index_Testimonie_2_p{
+        top: 57%;
+        left: 40%;
+        width: 60%;
+    }
+
+    .index_Testimonies_2 img{
+        left: 35%;
+        top: 44%;
+    }
+
+    #index_Testimonies_2_profile{
+        left: 0;
+        height: 17%;
+        bottom: -5%;
+        height: 40%;
+    }
+
+    #index_Testimonie_3_p{
+        left: 0;
+        bottom: -70%;
+    }
+
+    .index_Testimonies_3 img{
+        bottom: -25%;
+        left: 50%;
+    }
+
+    #index_Testimonies_3_profile{
+        left: 58%;
+        bottom: -50%;
+    }
+
+    .index_application_incentive{
+        bottom: -80%;
+        right: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    body{
+        width: 100%;
+        overflow-x: none;
+    }
+
+    .index_main_img{
+        right: 1rem;
+    }
+
+    .index_main_text h1{
+        font-size: 2rem;
+    }
+
+    .index_follow_us_incentive{
+        width: 40%;
+        padding: 0.5rem;
+        right: 0;
+        bottom: -160.5vh;
+    }
+
+    .index_follow_us_incentive_icons_wrapper img{
+        width: 2rem;
+    }
+
+    .index_intel h4{
+        margin: 0 0 0 2rem;
+    }
+
+    .index_video_teaser h2{
+        margin: 1rem 2rem 0 2rem;
+    }
+
+    .video{
+        top: 8%;
+        width: 50vw;
+    }
+
+    .index_about_tsiw_section_text, .index_about_tsiw_section_text h2, .index_grade_activities_text h2, .index_escaperoom_section h2, .index_escaperoom_section h3, .index_escaperoom_section_body, .index_Testimonies h2{
+        text-align: center;
+    }
+
+    .index_grade_activities_text{
+        padding-left: 0;
+    }
+
+    .index_escaperoom_section h2, .index_escaperoom_section h3{
+        padding-left: 0;
+    }
+
+    .index_maze_icon_1{
+       left: 33%;
+    }
+
+    .index_maze_icon_2{
+        left: 42%;
+    }
+
+    .index_Testimonies h2{
+        font-size: 2.5rem;
+        margin: 0 4rem 8rem 4rem;
+    }
+
+    #index_Testimonies_1_profile, #index_Testimonies_2_profile, #index_Testimonies_3_profile{
+        width: 33%;
+        padding: 1rem;
+    }
+
+    #index_Testimonies_1_profile h4, #index_Testimonies_2_profile h4, #index_Testimonies_3_profile h4{
+        font-size: 1.7rem;
+    }
+
+
+    #index_Testimonies_1_profile li, #index_Testimonies_2_profile li, #index_Testimonies_3_profile li{
+        font-size: 1rem;
+    }
+
+
+    .index_Testimonies_1 img, .index_Testimonies_2 img, .index_Testimonies_3 img{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .index_Testimonies_1 img{
+        top: -5rem;
+        right: 10rem;
+    }
+    
+    .index_Testimonies_2 img{
+        top: 49%;
+    }
+
+    #index_Testimonies_1_profile{
+        height: 29%;
+    }
+
+    #index_Testimonies_2_profile{
+        height: 42%;
+    }
+
+    .index_application_incentive{
+        width: 50%;
+        font-size: 1.2rem;
+        text-align: end;
+    }
+}
+/* 
 @media screen and (max-width:600px) {
     body {
         overflow-x: none;
@@ -567,10 +905,10 @@
         margin: 0;
     }
 
-    /* .index_main_img{
+    .index_main_img{
         width: 50%;
         position: static;
-    } */
+    }
 }
 @media screen and (max-width:900px) {
     .carousel img {
@@ -581,4 +919,4 @@
     .carousel img {
         width: calc(100%);
     }
-}
+} */
