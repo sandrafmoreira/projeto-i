@@ -23,33 +23,33 @@
 
                     <div class=" form_credential">
                         <label for="Fname" class="form_label"> Nome</label>
-                        <input type="text" placeholder="nome..." name="Fname" class="form_input" id="Fname" required>
+                        <input type="text" placeholder="nome..." name="Fname" class="form_input" id="signUpName" required>
                     </div>
 
                     <div class=" form_credential">
                         <label for="Lname" class="form_label"> Apelido</label>
-                        <input type="text" placeholder="apelido..." name="Lname" class="form_input" id="Lname" required>
+                        <input type="text" placeholder="apelido..." name="Lname" class="form_input" id="signUpSurname" required>
                     </div>
                 </div>
 
                 <div class=" form_credential">
                     <label for="email" class="form_label"> E-mail</label>
-                    <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="email" required>
+                    <input type="email" placeholder="eeeee@gmail.com" name="email" class="form_input" id="signUpEmail" required>
                     
                 </div>
                 <div class=" form_credential">
                     <label for="password" class="form_label">Palavra-passe</label>
-                    <input type="password" placeholder="****** " name="password" class="form_input" required>
+                    <input type="password" placeholder="****** " name="password" class="form_input" id="signUpPassword" required>
                     <p class="pass_min_caracters">*No mínimo 8 caracteres</p>
                 </div>
 
                 <div class=" form_credential">
                     <label for="password" class="form_label">Confirmação da palavra-passe</label>
-                    <input type="password" placeholder="****** " name="password" class="form_input" required>
+                    <input type="password" placeholder="****** " name="password" class="form_input" id="signUpConfirmPassword" required>
             
                 </div>
            
-                <button type="submit" value="SIGN UP" class="form_btn" onclick="sign_form_upValidate()">
+                <button type="submit" value="SIGN UP" class="form_btn" >
                     Criar conta 
                 </button>
                  
@@ -75,6 +75,6 @@
 
     <footer></footer>
 
-    <script src="/js/sign-up.js"></script>
+    <script type="module" src="/js/sign-up.js"></script>
 </body>
 </html>
