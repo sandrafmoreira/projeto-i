@@ -7,14 +7,14 @@
 </head>
 <body>
     <style>
-        #addTestimony{
+        #addTestimony, #addEvents{
             display: none;
         }
         label, button{
             display: block;
         }
     </style>
-    <button id="openDiv">Adicionar Testemunhos</button>
+    <button id="openTestimonyDiv">Adicionar Testemunhos</button>
 
     <div id="addTestimony">
         <form action="" id="testimonyForm">
@@ -30,11 +30,32 @@
             <label for="testimony_image">Imagem do testemunho:</label>
             <input type="file" name="testimony_image" id="testimony_image" required>
 
-            <button type="submit" id="submitBtn">Submeter</button>
-            <button id="closeDiv">X</button>
+            <label for="testimony_placement">Onde inserir:</label>
+            <select name="testimony_placement" id="testimony_placement">
+                <option value="homepage">Homepage</option>
+                <option value="course">Curso</option>
+            </select>
+
+            <button type="submit" id="testimonySubmitBtn">Submeter</button>
+            <button id="closeTestimonyDiv">X</button>
+        </form>
+    </div>
+
+    <button id="openEventDiv">Adicionar Eventos</button>
+
+    <div id="addEvents">
+        <form action="" id="eventsForm">
+            <label for="event_name">Nome do evento:</label>
+            <input type="text" name="event_name" id="event_name">
+
+            <label for="event_image">Imagem/Poster do evento:</label>
+            <input type="file" name="event_image" id="event_image">
+            <button id="eventSubmitBtn">Submeter</button>
+            <button id="closeEventDiv">X</button>
         </form>
     </div>
 
     <script type="module" src="../js/models/testemoniesModel.js"></script>
+    <script type="module" src="../js/models/eventsModel.js"></script>
 </body>
 </html>

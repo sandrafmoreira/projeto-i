@@ -1,8 +1,30 @@
+//ESCAPE ROOM
+const book = document.getElementById('book').addEventListener('click', () => {
+    openModal()
+})
+
+const drawer = document.getElementById('drawer').addEventListener('click', () => {
+    openModal()
+})
+
+const notebook = document.getElementById('notebook').addEventListener('click', () => {
+    openModal()
+})
+
+const keyboard = document.getElementById('keyboard').addEventListener('click', () => {
+    openModal()
+})
+
+const screen = document.getElementById('screen').addEventListener('click', () => {
+    openModal()
+})
+
 
 // TEMPORIZADOR
 
 let countdownTimer = document.querySelector('#countdownBtn');
 let timer = document.querySelector('#timer');
+
 let intervalID;
 
 countdownTimer.addEventListener('click', (event) => {
@@ -42,11 +64,10 @@ function countdown(minutes, seconds){
 // ---------------------------------------------------------------------------------------
 // MODAL
 
-let modal = document.getElementById('quiz_modal');
+let modal = document.getElementById('esc_modal');
 let closeButton = document.getElementsByClassName('close')[0];
 function openModal() {
     modal.style.display = 'block';
-    displayNextQuestion();
 }
 function closeModal() {
     modal.style.display = 'none';

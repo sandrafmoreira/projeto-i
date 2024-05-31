@@ -1,9 +1,7 @@
-import updateTestimonies from "../views/testemoniesView.js";
-
-let submitBtn = document.querySelector('#submitBtn');
+let submitBtn = document.querySelector('#testimonySubmitBtn');
 let form = document.querySelector('#testimonyForm');
-let openDivBtn = document.querySelector('#openDiv');
-let closeDivBtn = document.querySelector('#closeDiv');
+let openDivBtn = document.querySelector('#openTestimonyDiv');
+let closeDivBtn = document.querySelector('#closeTestimonyDiv');
 
 let testemunhos = []
 
@@ -29,10 +27,11 @@ submitBtn.addEventListener('click', (event) => {
     let text = document.querySelector('#testimony_text').value;
     let job_position = document.querySelector('#testimony_job_position').value;
     let image = document.querySelector('#testimony_image').value;
+    let placement = document.querySelector('#testimony_placement').value;
+
 
     job_position = job_position.split(';')
 
-    
     let testimony_number = +prompt('Indica o número do testemunho que desejas mudar! (1 a 3)')
 
     if (testimony_number != 1 && testimony_number != 2 && testimony_number != 3){
@@ -40,23 +39,21 @@ submitBtn.addEventListener('click', (event) => {
         return;
     }  
 
-    addTestimony(name, text, job_position, image, testimony_number)
+    addTestimony(name, text, job_position, image, testimony_number, placement)
 })
 
-function addTestimony(name, text, job_position, image, testimony_number){
+function addTestimony(name, text, job_position, image, testimony_number, placement){
     if(localStorage.testemunhos){
         testemunhos.push(JSON.parse(localStorage.testemunhos));
 
         if (testemunhos.some(testemunho => testemunho.name == name)){
-            console.log('O testemunho que queres inserir já existe!');
+            alert('O testemunho que queres inserir já existe!');
             return;
         }
     } 
-    
-    const newTestimony = new Testimony(name, text, job_position, image, testimony_number)
+    const newTestimony = new Testimony(name, text, job_position, image, testimony_number, placement)
     testemunhos.push(newTestimony)
     localStorage.testemunhos = JSON.stringify(testemunhos)
-
 }
 
 
@@ -66,13 +63,15 @@ class Testimony {
     job_position = '';
     image_src = '';
     testimony_number = null;
+    placement = ''
 
-    constructor(name, text, job_position, image_src, testimony_number){
+    constructor(name, text, job_position, image_src, testimony_number, placement){
         this.name = name;
         this.text = text;
         this.job_position = job_position;
         this.image_src = image_src;
         this.testimony_number = testimony_number;
+        this.placement = placement;
     }
 
 }

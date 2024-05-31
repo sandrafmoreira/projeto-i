@@ -48,8 +48,6 @@ a{
 
 body {
     margin: 0px;
-    
-    
     overflow-x:none;
     
 }
@@ -66,10 +64,10 @@ h2 {
 h3 {
     font-size: 2.4rem; /* 24px */
 }
-
+/* 
 h4 {
-    font-size: 2rem; /* 20px */
-}
+    font-size: 2rem; 20px
+} */
 
 h5 {
     font-size: 1.8rem; /* 18px */
@@ -78,10 +76,10 @@ h5 {
 h6 {
     font-size: 1.6rem; /* 16px */
 }
-
+/* 
 p {
-    font-size: 1.6rem; /* 16px */
-}
+    font-size: 1.6rem; 16px
+} */
 
 .small-text {
     font-size: 1.4rem; /* 14px */
