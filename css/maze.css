@@ -1,13 +1,15 @@
 .maze-page-main {
-    margin: 0 50px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: var(--color-blue);
+    width: 100vw;
 }
-
+ 
 .maze-page-title-and-desc {
     z-index: 1000;
+    color: #fff;
 }
 
 .maze-page-title-and-desc > img {
@@ -24,6 +26,11 @@
 .maze-page-title-and-desc > h2 {
     font-family: var( --font-source);
     font-weight: 500;
+    font-size: 2.6rem;
+    padding-bottom: 100px;
+}
+.maze-page-title-and-desc > p {
+    font-size: 1.8rem;
 }
 
 .maze-page-pixels > img {
@@ -66,7 +73,6 @@
 /* Section Níveis */
 
 .maze_page_níveis {
-    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,15 +89,19 @@
 }
 
 .maze_page_nível {
-    width: 600px;
+    width: 800px;
     display: flex;
 }
 .maze_page_nível p {
-    line-height: 30px;
+    line-height: 25px;
+    color: #fff;
 }
 
 .maze_page_níveis_left > h2 {
     font-family:'Montserrat', sans-serif;;
+    font-size: 1.8rem;
+    color: var(--color-lightblue);
+    font-weight: 500;
 }
 .maze_page_níveis_left > img {
     width: 80px;
@@ -107,6 +117,7 @@
 .maze_page_níveis_left h3 {
     font-family:'Montserrat', sans-serif;
     color: #fff;
+    font-size: 1.6rem;
 }
 
 
@@ -130,7 +141,8 @@
     background-color: #fff;
     color: var(--color-orange);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    border-radius: 8px;
+    border-radius: 4px;
+    border: none;
 }
 
 
@@ -145,7 +157,7 @@
     }
 
     .maze-page-main {
-        margin: 0 10px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -188,7 +200,7 @@
     /* Section Níveis */
  
     .maze_page_níveis {
-        margin-top:200px;
+        padding-top: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
