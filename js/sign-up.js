@@ -17,6 +17,7 @@ document.querySelector(".sign_form")?.addEventListener("submit", (event) => {
         alert("Confirme a palavra-passe.")
     } else if (signUpPassword == signUpConfirmPassword) {
         User.add(signUpName, signUpSurname, signUpEmail, signUpPassword);
-        alert("Conta registada com sucesso!")
+        localStorage.setItem("userPassword", signUpPassword);
+        alert("Conta registada com sucesso!");
     }
 })
