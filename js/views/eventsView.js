@@ -10,7 +10,7 @@ function updateEvents(){
 
         if(get_div_class){
             new_image = `
-            <img src="${event.image_src}" alt="Poster do evento ${event.name}" title = "${event.name}">
+            <img src="/img/index/${event.image_src}" alt="Poster do evento ${event.name}" title = "${event.name}">
             `
 
             get_div_class.innerHTML += new_image

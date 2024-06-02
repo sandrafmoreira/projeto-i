@@ -29,6 +29,7 @@ submitBtn.addEventListener('click', (event) => {
     let image = document.querySelector('#testimony_image').value;
     let placement = document.querySelector('#testimony_placement').value;
 
+    image = image.replace(/^.*\\/, "");
 
     job_position = job_position.split(';')
 

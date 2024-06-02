@@ -12,7 +12,7 @@ function updateTestimonies(){
 
             if(get_div_class){
                 newTestimony = `
-                    <img src="${testimony.image_src}" alt="Fotografia de ${testimony.name}">
+                    <img src="/images/course/${testimony.image_src}" alt="Fotografia de ${testimony.name}">
                     <p class="paragraph">${testimony.text}</p>
                 </div>
                 <div class="testimony${testimony.testimony_number}_graduate">
@@ -35,9 +35,8 @@ function updateTestimonies(){
             get_div_class = document.querySelector(`.index_Testimonies_${testimony.testimony_number}`)
 
             if(get_div_class){
-
                 newTestimony = `
-                    <img class="index_testimonies_img" src="${testimony.image_src}" alt = "Fotografia de ${testimony.name}">
+                    <img class="index_testimonies_img" src="/images/course/${testimony.image_src}" alt = "Fotografia de ${testimony.name}">
 
                     <div id="index_Testimonies_${testimony.testimony_number}_profile" class="index_Testimonies_perfil">
                         <h4>${testimony.name}</h4>

@@ -25,6 +25,7 @@ submitBtn.addEventListener('click', (event) => {
 
     let name = document.querySelector('#event_name').value;
     let image = document.querySelector('#event_image').value;
+    image = image.replace(/^.*\\/, "")
 
     addEvent(name, image)
 })
