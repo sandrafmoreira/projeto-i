@@ -14,21 +14,151 @@
             display: block;
         }
     </style>
-    <button id="openTestimonyDiv">Adicionar Testemunhos</button>
+<!-- navbar -->
+    <nav></nav>
 
+
+    <h1> Olá Snadra</h1>
+    <div class="admin_button_grid">
+        <button id="openUserDiv">Gerir utilizadores</button>
+        <button id="openTestimonyDiv">Gerir Testemunhos</button>
+        <button id="openEventDiv">Gerir Eventos</button>
+        
+    </div>
+
+    <div class="manege_users_content"> 
+        <div class="user_div">
+            <p>
+                utilizador 001
+            </p>
+            <i >
+                <!-- colocar icon -->
+            </i>
+        </div>
+        <div class="user_div">
+            <p>
+                utilizador 001
+            </p>
+            <i >
+                <!-- colocar icon -->
+            </i>
+        </div>
+        <div class="user_div">
+            <p>
+                utilizador 001
+            </p>
+            <i >
+                <!-- colocar icon -->
+            </i>
+        </div>
+    </div>   
+    
+    <div id="addEvents" class="manege_events_content">
+        <div class="user_div">
+            <p>
+                feira tecnologica 
+            </p>
+
+            <div class="icons_content">
+                <i >
+                    <!-- colocar icon edit -->
+                </i>
+                <i >
+                    <!-- colocar icon delete -->
+                </i>
+
+            </div>
+        </div>
+        <div class="user_div">
+            <p>
+                feira tecnologica 
+            </p>
+
+            <div class="icons_content">
+                <i >
+                    <!-- colocar icon edit -->
+                </i>
+                <i >
+                    <!-- colocar icon delete -->
+                </i>
+
+            </div>
+        </div>
+        <div class="user_div">
+            <p>
+                feira tecnologica 
+            </p>
+
+            <div class="icons_content">
+                <i >
+                    <!-- colocar icon edit -->
+                </i>
+                <i >
+                    <!-- colocar icon delete -->
+                </i>
+
+            </div>
+        </div>
+        
+        <form action="" id="eventsForm" class="manege_event_form">
+            <h1>Adicionar evento</h1>
+            <label for="event_name">Nome do evento:</label>
+            <input type="text" name="event_name" id="event_name">
+
+            <label for="event_image">Imagem/Poster do evento:</label>
+            <input type="file" name="event_image" id="event_image">
+            <button id="eventSubmitBtn">Adicionar</button>
+            <button id="eventSubmitBtn">Alterar</button>
+            <button id="closeEventDiv">X</button>
+        </form>
+    </div>
+    
     <div id="addTestimony">
-        <form action="" id="testimonyForm">
-            <label for="testimony_name">Nome do testemunho:</label>
+        <div class="testimony_div">
+            <p>
+                Nuno Silva 
+            </p>
+
+            <div class="icons_content">
+                <i >
+                    <!-- colocar icon edit -->
+                </i>
+                <i >
+                    <!-- colocar icon delete -->
+                </i>
+
+            </div>
+        </div>
+        <div class="testimony_div">
+            <p>
+                Nuno Silva 
+            </p>
+
+            <div class="icons_content">
+                <i >
+                    <!-- colocar icon edit -->
+                </i>
+                <i >
+                    <!-- colocar icon delete -->
+                </i>
+
+            </div>
+        </div>
+
+        <form action="" id="testimonyForm" class="manege_testemony_form">
+            <h1>Gerir  Testemunhos</h1>
+
+            <label for="testimony_image">Imagem da testemunha:</label>
+            <input type="file" name="testimony_image" id="testimony_image" required>
+
+            <label for="testimony_name">Nome da testemunha:</label>
             <input type="text" name="testimony_name" id="testimony_name" required>
 
-            <label for="testimony_text">Texto do testemunho:</label>
-            <textarea name="testimony_text" id="testimony_text" rows="8" cols="25" style="resize: none;" required></textarea>
-
-            <label for="testimony_job_position">Local onde trabalha / Prémios</label>
+            <label for="testimony_job_position">Outras informações</label>
             <input type="text" name="testimony_job_position" id="testimony_job_position" required placeholder="colocar ; entre tópicos!">
 
-            <label for="testimony_image">Imagem do testemunho:</label>
-            <input type="file" name="testimony_image" id="testimony_image" required>
+            <label for="testimony_text">Testemunho:</label>
+            <textarea name="testimony_text" id="testimony_text" rows="8" cols="25" style="resize: none;" required></textarea>
 
             <label for="testimony_placement">Onde inserir:</label>
             <select name="testimony_placement" id="testimony_placement">
@@ -36,24 +166,15 @@
                 <option value="course">Curso</option>
             </select>
 
-            <button type="submit" id="testimonySubmitBtn">Submeter</button>
+            <button type="submit" id="testimonySubmitBtn">Adicionar</button>
+            <button type="submit" id="testimonySubmitBtn">Alterar</button>
             <button id="closeTestimonyDiv">X</button>
         </form>
     </div>
 
-    <button id="openEventDiv">Adicionar Eventos</button>
+    
 
-    <div id="addEvents">
-        <form action="" id="eventsForm">
-            <label for="event_name">Nome do evento:</label>
-            <input type="text" name="event_name" id="event_name">
-
-            <label for="event_image">Imagem/Poster do evento:</label>
-            <input type="file" name="event_image" id="event_image">
-            <button id="eventSubmitBtn">Submeter</button>
-            <button id="closeEventDiv">X</button>
-        </form>
-    </div>
+    
 
     <script type="module" src="../js/models/testemoniesModel.js"></script>
     <script type="module" src="../js/models/eventsModel.js"></script>
