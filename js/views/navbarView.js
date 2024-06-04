@@ -1,19 +1,22 @@
 import * as User from "/js/models/userModel.js";
+import {editProfile} from '/js/editProfile.js';
+import {changePassword} from '/js/editPassword.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     function navbarView() {
+        
         User.init();
 
         let result = `
             <div class="nav-width white-nav">
-                <a href="./html/about.html">SOBRE NÓS</a>
+                <a href="/html/about.html">SOBRE NÓS</a>
                 <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
-                <a href="./html/course.html">CURSO</a>
+                <a href="/html/course.html">CURSO</a>
                 <a href="/index.html">
                     <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
                 </a>
                 <div class="nav-esc">
-                    <a href="./html/game.html">MAZE</a>
+                    <a href="/html/maze.html">MAZE</a>
                     <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
                 </div>
         `;
@@ -51,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             result += `
                 <a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a>
                 <div class="nav-orange-divider"></div>
-                <a href="./html/sign-up.html">CRIAR CONTA</a>
+                <a href="/html/sign-up.html">CRIAR CONTA</a>
             `;
         }
 
@@ -66,11 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("YOU ARE LOGGED YOU ARE LOGGED YOU ARE LOGGED");
         }
 
-        eventListeners();
+        modals();
     }
 
-    function eventListeners() {
-        //clicar em "Iniciar Sessão" na navbar
+
+    function modals() {
+        //clicar em "Iniciar Sessão" na navbar:
         let loginLink = document.getElementById("loginLink");
         if (loginLink) {
             loginLink.addEventListener("click", (event) => {
@@ -87,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        //clicar em "Terminar Sessão"
+        //clicar em "Terminar Sessão" no dropdown menu:
         let logoutBtn = document.getElementById("logout-btn");
         if (logoutBtn) {
             logoutBtn.addEventListener("click", (event) => {
@@ -98,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        //clicar no dropdown menu da navbar
+        //clicar no dropdown menu da navbar:
         let navDropdownIcon = document.getElementById("nav_dropdown_icon");
         if (navDropdownIcon) {
             navDropdownIcon.addEventListener("click", (event) => {
@@ -108,23 +112,35 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        //clicar em editar o perfil para aparecer uma modal
+        //clicar em editar o perfil no dropdown menu:
         let editProfileLink = document.getElementById("editProfileLink");
         if (editProfileLink) {
             editProfileLink.addEventListener("click", (event) => {
                 event.preventDefault();
                 let editProfileModal = document.getElementById('edit-profile-modal-div');
+                // obter a modal
                 fetch('/html/editProfile.html')
                     .then(response => response.text())
                     .then(content => {
                         document.getElementById('editProfileModalContent').innerHTML = content;
+                        editProfile() // clicar para editar o avatar
                     });
-
                 editProfileModal.style.display = editProfileModal.style.display === 'none' ? 'block' : 'none';
+
             });
         }
+         // Local Storage: obter a src nova do avatar
+         const newAvatarImageSrc = localStorage.getItem('avatarImageSrc');
+         // mudar a src do avatar da navbar para a nova src
+         const avatarProfile = document.getElementById("nav_profile_pic");
+         if (newAvatarImageSrc) {
+             avatarProfile.src = newAvatarImageSrc;
+             avatarProfile.style.width = "40px";
+         }
 
-        //clicar em editar password para aparecer uma modal
+
+
+        //clicar em editar password no dropdown menu:
         let editPasswordLink = document.getElementById("editPasswordLink");
         if (editPasswordLink) {
             editPasswordLink.addEventListener("click", (event) => {
@@ -134,18 +150,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then(response => response.text())
                     .then(content => {
                         document.getElementById('editPasswordModalContent').innerHTML = content;
+                        const closePasswordModal = document.getElementById("closePasswordModal");
+                        closePasswordModal.addEventListener("click", () => {
+                            editPasswordModal.style.display = editPasswordModal.style.display === 'none' ? 'block' : 'none';
+                        })
+                        changePassword();
                     });
-
+                // para aparecer a modal ao clicar no link do dropdown:
                 editPasswordModal.style.display = editPasswordModal.style.display === 'none' ? 'block' : 'none';
             });
         }
+
     }
     
-    //clicar no form do login para iniciar sessao
+    //clicar no form do login para iniciar sessão:
     function loginForm() {
-        let loginForm = document.querySelector(".login_form");
+        let loginForm = document.getElementById("login-form-btn");
         if (loginForm) {
-            loginForm.addEventListener("submit", (event) => {
+            loginForm.addEventListener("click", (event) => {
                 event.preventDefault();
                 let email = document.getElementById("login-email").value;
                 let password = document.getElementById("login-password").value;
@@ -153,11 +175,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 User.login(email, password); //Chamar a funcao do login
                 window.location.href = "/html/dashboard.html";
             });
-        } else {
-            console.log("error");
         }
     }
+
+
     navbarView();
+
 });
 
 

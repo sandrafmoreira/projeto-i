@@ -2,7 +2,7 @@ function updateEvents(){
     let events = []
     let new_image = ''
     if(localStorage.eventos){
-        eventos = JSON.parse(localStorage.eventos)
+        events = JSON.parse(localStorage.eventos)
     }
 
     events.forEach(event => {
@@ -10,10 +10,11 @@ function updateEvents(){
 
         if(get_div_class){
             new_image = `
-            <img src="${event.image_src}" alt="Poster do evento ${event.name}" title = "${event.name}">
+            <img src="/img/index/${event.image_src}" alt="Poster do evento ${event.name}" title = "${event.name}">
             `
 
             get_div_class.innerHTML += new_image
+            console.log(get_div_class);
         }
     });
 }

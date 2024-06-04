@@ -36,10 +36,7 @@
     font-size: 1rem;
     color: #fff;
 }
-.modal_Profile_form_avatars {
-    width: 85%;
-    height: 24%;  
-}
+
 
 .modal_Profile_form_avatars > h4{
     color: #fff;
@@ -57,6 +54,7 @@
  display: grid;
  grid-template-columns: repeat(4, 15%) ;
  justify-content: center;
+ gap: 10px;
 }
 .avatar_description{
     display: flex;
@@ -64,13 +62,15 @@
     align-items: center;
     text-align: center;
     color: #fff;
-    padding-top: 10px;
+    padding: 5px;
+    background-color: var(--color-blue);
+    border: none;
 }
 .avatar_description p {
     padding-top: 10px;
 }
 .avatar_description img{
-    width: 50%;
+    width: 80%;
 } 
 
 /* modal pixels */
@@ -94,3 +94,7 @@
     padding-top: 2.6rem;
 } */
 
+.avatar_description:focus {
+    border: 2px solid lightblue;
+    box-sizing: border-box;
+}

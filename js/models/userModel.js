@@ -11,12 +11,11 @@ export class User {
     }
 
 }
-
-let users = [];
-let admin1 = new User("Sandra", "Moreira", "sandra@123", "123");
+export let users = [];
+// let admin1 = new User("Sandra", "Moreira", "sandra@123", "123");
 let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123");
 let admin3 = new User("Ken", "Lukau", "ken@123", "123");
-users.push(admin1, admin2, admin3);
+users.push( admin2, admin3);
 console.log(users);
 
 // descarregar utilizadores da local storage:
@@ -36,9 +35,7 @@ export function login(email, password) {
     ); 
     if (user) {
         sessionStorage.setItem("loggedUser", JSON.stringify(user));
-    } else {
-        console.log("User not found.");
-    }
+    } 
 }
 
 // verificar se o user existe:
@@ -62,7 +59,7 @@ export function add(name, surname, email, password) {
         )
         // atualizar a local storage:
         localStorage.setItem("users", JSON.stringify(users));
-        alert("blablabla")
     }
     console.log(users);
 }
+
