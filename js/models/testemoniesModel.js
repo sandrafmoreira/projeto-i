@@ -45,7 +45,7 @@ submitBtn.addEventListener('click', (event) => {
 
 function addTestimony(name, text, job_position, image, testimony_number, placement){
     if(localStorage.testemunhos){
-        testemunhos.push(JSON.parse(localStorage.testemunhos));
+        testemunhos = JSON.parse(localStorage.testemunhos);
 
         if (testemunhos.some(testemunho => testemunho.name == name)){
             alert('O testemunho que queres inserir já existe!');
@@ -54,6 +54,7 @@ function addTestimony(name, text, job_position, image, testimony_number, placeme
     } 
     const newTestimony = new Testimony(name, text, job_position, image, testimony_number, placement)
     testemunhos.push(newTestimony)
+    console.log(testemunhos);
     localStorage.testemunhos = JSON.stringify(testemunhos)
 }
 
