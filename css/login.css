@@ -106,8 +106,8 @@
 
 @media only screen and (max-width: 768px) {
 
-    .login_form_text{
-        top: -100px;
-    }
+  .login_form_text{
+    top: -100px;
+  }
 
 }

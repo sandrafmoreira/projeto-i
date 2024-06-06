@@ -32,7 +32,7 @@ submitBtn.addEventListener('click', (event) => {
 
 function addEvent(name, image){
     if(localStorage.eventos){
-        events.push(JSON.parse(localStorage.eventos));
+        events = JSON.parse(localStorage.eventos);
 
         if(events.some(evento => evento.name == name)){
             alert('O evento que queres inserir já existe!');
@@ -40,8 +40,7 @@ function addEvent(name, image){
         }
     }
 
-    const newEvent= new Event(name, image)
-    events.push(newEvent)
+    events.push(new Event(name, image))
     localStorage.eventos = JSON.stringify(events)
 }
 

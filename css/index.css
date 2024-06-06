@@ -319,6 +319,7 @@
     white-space: nowrap;
     cursor: pointer;
     overflow: hidden;
+    scroll-behavior: smooth;
 
 }
 
