@@ -1,0 +1,88 @@
+/*   MAIN PAGE      */
+/* body{
+    background-color: red;
+} */
+#addTestimony, #addEvents{
+    display: none;
+}
+label, button{
+    display: block;
+}
+
+.welcome_admin{
+    margin: 7rem 3rem 2rem  ;
+    color: var(--color-blue);
+   
+}
+.welcome_admin h1{
+    font-family: var(--font-raleway);
+    font-weight: 780;
+}
+
+/* button grid */
+
+
+.admin_button_grid {
+    display:grid;
+    grid-template-columns: auto auto auto  ;
+   /* justify-content: space-between; */
+    gap: 4rem;
+    max-width: 90vw;
+    margin: auto auto 2rem auto;
+}
+
+.admin_button_grid button{
+
+    margin-top: 15px;
+    background-color: var(--color-orange);
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 0.1rem;
+    color: #fff;
+    font-weight: 650;
+    font-size: 1.4rem;
+    
+}
+
+.admin_button_grid button
+
+.admin_button_grid button:hover {
+    background-color: #fff;
+    color: var(--color-orange);
+    border: 0.15rem solid var(--color-orange);
+    padding: 0rem;
+}
+
+/* icon - we use predefined icon class directly */
+.material-symbols-outlined{
+    color: var(--color-orange);
+    font-size: 2.5rem;
+} 
+
+/* table style */
+
+.manege_users_table{
+   
+    width: 100%;
+    max-width: 90vw;
+    margin: 1rem auto;
+    
+    
+}
+
+.manege_users_table tr{
+    background-color: var(--color-lightblue);
+}
+
+.manege_users_table td{
+    padding: 0.5rem;
+    font-family: var( --font-source);
+    font-size: 1.5rem; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

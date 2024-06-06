@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <style>
-        #addTestimony, #addEvents{
-            display: none;
-        }
-        label, button{
-            display: block;
-        }
-    </style>
 <!-- navbar -->
     <nav></nav>
-
-
-    <h1> Olá Snadra</h1>
+    <div class="welcome_admin">
+        <h1> Olá Sandra !</h1>
+    </div>
     <div class="admin_button_grid">
         <button id="openUserDiv">Gerir utilizadores</button>
         <button id="openTestimonyDiv">Gerir Testemunhos</button>
@@ -26,32 +20,51 @@
         
     </div>
 
-    <div class="manege_users_content"> 
-        <div class="user_div">
-            <p>
+    
+
+    <table  class="manege_users_table">
+        <tr>
+            <td>
+                
                 utilizador 001
-            </p>
-            <i >
-                <!-- colocar icon -->
-            </i>
-        </div>
-        <div class="user_div">
-            <p>
+
+                <i id="delete_icon"  class="material-symbols-outlined">
+                    delete
+                </i>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
                 utilizador 001
-            </p>
-            <i >
-                <!-- colocar icon -->
-            </i>
-        </div>
-        <div class="user_div">
-            <p>
+
+                <i id="delete_icon"  class="material-symbols-outlined">
+                    delete
+                </i>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
                 utilizador 001
-            </p>
-            <i >
-                <!-- colocar icon -->
-            </i>
-        </div>
-    </div>   
+
+                <i id="delete_icon"  class="material-symbols-outlined">
+                    delete
+                </i>
+            </td>
+        </tr>
+
+    </table>
+    <!-- <div class="user_div">
+        <p>
+            utilizador 001
+        </p>
+        <i id="delete_icon"  class="material-symbols-outlined">
+            delete
+        </i>
+    </div> -->
+    
+
     
     <div id="addEvents" class="manege_events_content">
         <div class="user_div">
