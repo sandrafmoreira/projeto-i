@@ -2,63 +2,130 @@ import * as User from "/js/models/userModel.js";
 import {editProfile} from '/js/editProfile.js';
 import {changePassword} from '/js/editPassword.js';
 
+alert(User.admin());
+
 document.addEventListener("DOMContentLoaded", () => {
     function navbarView() {
         
         User.init();
 
-        let result = `
-            <div class="nav-width white-nav">
-                <a href="/html/about.html">SOBRE NÓS</a>
-                <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
-                <a href="/html/course.html">CURSO</a>
-                <a href="/index.html">
-                    <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
-                </a>
-                <div class="nav-esc">
-                    <a href="/html/maze.html">MAZE</a>
-                    <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
-                </div>
-        `;
-
-        if (User.isLogged()) {
-            result += `
-                <a href="./html/dashboard.html">DASHBOARD</a>
-                <div class="nav_orange_divider"></div>
-                <div class="nav_after_login">
-                    <img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar">
-                    <a href="" id="nav_dropdown_icon">
-                        <img id="nav_dropdown_icon" src="/assets/navbar/nav_dropdown_icon.png" alt="dropdown icon on navbar">
-                        <div id="dropmenu-div" style="display: none;">
-                            <div>
-                                <img src="/assets/navbar/dropdownMenu/editar.png" alt="icon editar perfil">
-                                <a id="editProfileLink" href="">Editar Perfil</a>
-                            </div>
-                            <div>
-                                <img src="/assets/navbar/dropdownMenu/pw.png" alt="icon editar password">
-                                <a id="editPasswordLink" href="">Editar Palavra-Passe</a>
-                            </div>
-                            <div>
-                                <img src="/assets/navbar/dropdownMenu/ajuda.png" alt="icon ajuda">
-                                <a href="">Ajuda</a>
-                            </div>
-                            <div>
-                                <img src="/assets/navbar/dropdownMenu/logout.png" alt="icon logout">
-                                <a id="logout-btn" href="">Terminar Sessão</a>
-                            </div>
-                        </div>
+            let result = `
+                <div class="nav-width white-nav">
+                    <a href="/html/about.html">SOBRE NÓS</a>
+                    <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
+                    <a href="/html/course.html">CURSO</a>
+                    <a href="/index.html">
+                        <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
                     </a>
-                </div>
-            `;
-        } else {
-            result += `
-                <a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a>
-                <div class="nav-orange-divider"></div>
-                <a href="/html/sign-up.html">CRIAR CONTA</a>
-            `;
-        }
+                    <div class="nav-esc">
+                        <a href="/html/maze.html">MAZE</a>
+                        <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
+                    </div>
+                `;
+    
+            if (User.isLogged()) {
+                
+                if (User.admin()) {
+                    result += `<a href="/html/adminDashboard.html">DASHBOARD</a>`
+                    alert(User.admin())
+                } else if (!User.admin(), "navbar") {
+                    result += `<a href="/html/dashboard.html">DASHBOARD</a>`
+                    alert(User.admin(), "navbar")
 
-        result += `</div>`;
+                }
+                
+                result += `
+                    <div class="nav_orange_divider"></div>
+                    <div class="nav_after_login">
+                        <img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar">
+                        <a href="" id="nav_dropdown_icon">
+                            <img id="nav_dropdown_icon" src="/assets/navbar/nav_dropdown_icon.png" alt="dropdown icon on navbar">
+                            <div id="dropmenu-div" style="display: none;">
+                                <div>
+                                    <img src="/assets/navbar/dropdownMenu/editar.png" alt="icon editar perfil">
+                                    <a id="editProfileLink" href="">Editar Perfil</a>
+                                </div>
+                                <div>
+                                    <img src="/assets/navbar/dropdownMenu/pw.png" alt="icon editar password">
+                                    <a id="editPasswordLink" href="">Editar Palavra-Passe</a>
+                                </div>
+                                <div>
+                                    <img src="/assets/navbar/dropdownMenu/ajuda.png" alt="icon ajuda">
+                                    <a href="">Ajuda</a>
+                                </div>
+                                <div>
+                                    <img src="/assets/navbar/dropdownMenu/logout.png" alt="icon logout">
+                                    <a id="logout-btn" href="">Terminar Sessão</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `;
+            } else {
+                result += `
+                    <a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a>
+                    <div class="nav-orange-divider"></div>
+                    <a href="/html/sign-up.html">CRIAR CONTA</a>
+                `;
+            }
+    
+            result += `</div>`;
+
+        // if (User.admin()) {
+
+        // }
+        // let result = `
+        //     <div class="nav-width white-nav">
+        //         <a href="/html/about.html">SOBRE NÓS</a>
+        //         <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
+        //         <a href="/html/course.html">CURSO</a>
+        //         <a href="/index.html">
+        //             <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
+        //         </a>
+        //         <div class="nav-esc">
+        //             <a href="/html/maze.html">MAZE</a>
+        //             <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
+        //         </div>
+        // `;
+
+        // if (User.isLogged()) {
+        //     result += `
+        //         <a href="./html/dashboard.html">DASHBOARD</a>
+        //         <div class="nav_orange_divider"></div>
+        //         <div class="nav_after_login">
+        //             <img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar">
+        //             <a href="" id="nav_dropdown_icon">
+        //                 <img id="nav_dropdown_icon" src="/assets/navbar/nav_dropdown_icon.png" alt="dropdown icon on navbar">
+        //                 <div id="dropmenu-div" style="display: none;">
+        //                     <div>
+        //                         <img src="/assets/navbar/dropdownMenu/editar.png" alt="icon editar perfil">
+        //                         <a id="editProfileLink" href="">Editar Perfil</a>
+        //                     </div>
+        //                     <div>
+        //                         <img src="/assets/navbar/dropdownMenu/pw.png" alt="icon editar password">
+        //                         <a id="editPasswordLink" href="">Editar Palavra-Passe</a>
+        //                     </div>
+        //                     <div>
+        //                         <img src="/assets/navbar/dropdownMenu/ajuda.png" alt="icon ajuda">
+        //                         <a href="">Ajuda</a>
+        //                     </div>
+        //                     <div>
+        //                         <img src="/assets/navbar/dropdownMenu/logout.png" alt="icon logout">
+        //                         <a id="logout-btn" href="">Terminar Sessão</a>
+        //                     </div>
+        //                 </div>
+        //             </a>
+        //         </div>
+        //     `;
+        // } else {
+        //     result += `
+        //         <a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a>
+        //         <div class="nav-orange-divider"></div>
+        //         <a href="/html/sign-up.html">CRIAR CONTA</a>
+        //     `;
+        // }
+
+        // result += `</div>`;
 
         let navbar = document.getElementById("navbar");
         navbar.innerHTML = result;
@@ -70,6 +137,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         modals();
+
+        // function toggleNavbar() {
+        //     let phoneNavbar = document.querySelector(".white-nav");
+        //     phoneNavbar.style.display = (phoneNavbar.style.display === "block") ? "none" : "block";
+        // }
+        // toggleNavbar()
     }
 
 
@@ -173,12 +246,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 let password = document.getElementById("login-password").value;
                 console.log(email, password); //teste
                 User.login(email, password); //Chamar a funcao do login
-                window.location.href = "/html/dashboard.html";
+                if (User.admin() == true) {
+                    window.location.href = "/html/adminDashboard.html";
+                } else if (User.admin() == false) {
+                    window.location.href = "/html/dashboard.html";
+                }
+                
             });
         }
     }
 
-
+    if (User.isLogged()) {
+        User.admin();
+    }
     navbarView();
 
 });

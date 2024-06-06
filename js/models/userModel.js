@@ -3,20 +3,27 @@
  */
 export class User {
 
-    constructor(name, surname, email, password) {
+    constructor(name, surname, email, password, admin = false) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.admin = admin;
     }
+
+
 
 }
 export let users = [];
-// let admin1 = new User("Sandra", "Moreira", "sandra@123", "123");
-let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123");
-let admin3 = new User("Ken", "Lukau", "ken@123", "123");
-users.push( admin2, admin3);
-console.log(users);
+let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true);
+let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true);
+let admin3 = new User("Ken", "Lukau", "ken@123", "123", true);
+let user1 = new User("Mario", "Prof", "mario@123", "123", false);
+users.push(admin1, admin2, admin3, user1);
+
+// for (const user of users) {
+//     console.log(user);
+// }
 
 // descarregar utilizadores da local storage:
 export function init() {
@@ -27,6 +34,31 @@ export function init() {
         }
     }
 }
+
+// verificar se o o admin esta logged para poder mudar a navbar:
+export function admin() {
+    const admins = users.filter(user => user.admin == true);
+    const loggedUser = JSON.parse(sessionStorage.getItem("loggedUser"));
+    
+    if (!loggedUser) {
+        return false; // para aparecer a navbar mesmo que um user não esteja logged on
+    }
+
+    const isAdmin = admins.some(admin => {
+        console.log(admin.email, "admin");
+        console.log(loggedUser.email, "loggeUser");
+        if(loggedUser.email == admin.email) {
+            // console.log("aaaadmin")
+            return true;
+        } else {
+            // console.log("ffalllllse")
+            return false;
+        }
+    })
+    // console.log(isAdmin, "result");
+    return isAdmin;
+}
+
 
 // descarregar user que esta a fazer login da local storage:
 export function login(email, password) {
@@ -48,7 +80,7 @@ export function logout() {
     sessionStorage.removeItem("loggedUser");
 }
 
-// adicionar conta:
+// adicionar conta à classe e à local storage:
 export function add(name, surname, email, password) {
     if(users.some(user => user.email === email)) {
         alert("Já existe uma conta com esse email.")
