@@ -35,8 +35,11 @@
     font-weight: 400;
     font-size: 1rem;
     color: #fff;
-}
+} 
 
+.form_credential > * {
+    height: 26px;
+}
 
 .modal_Profile_form_avatars > h4{
     color: #fff;
@@ -49,6 +52,10 @@
     font-size: 0.8rem;
     font-weight: 200;
     color: #fff;
+}
+
+.pass_min_caracters {
+    margin-bottom: 0;
 }
 .avatars_grid{
  display: grid;

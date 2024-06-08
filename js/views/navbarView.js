@@ -4,6 +4,9 @@ import {changePassword} from '/js/editPassword.js';
 
 alert(User.admin());
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     function navbarView() {
         
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="/html/about.html">SOBRE NÓS</a>
                     <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
                     <a href="/html/course.html">CURSO</a>
-                    <a href="/index.html">
+                    <a href="/index.html" id="navLogo">
                         <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
                     </a>
                     <div class="nav-esc">
@@ -138,13 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         modals();
 
-        // function toggleNavbar() {
-        //     let phoneNavbar = document.querySelector(".white-nav");
-        //     phoneNavbar.style.display = (phoneNavbar.style.display === "block") ? "none" : "block";
-        // }
-        // toggleNavbar()
     }
 
+    
 
     function modals() {
         //clicar em "Iniciar Sessão" na navbar:
@@ -262,6 +261,5 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarView();
 
 });
-
 
 

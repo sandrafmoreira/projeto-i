@@ -106,8 +106,21 @@
 
 @media only screen and (max-width: 768px) {
 
+  .modal {
+    z-index: 5000;
+  }
+
   .login_form_text{
     top: -100px;
+  }
+
+  .modal-content {
+    background-color: var(--color-blue);
+    width: 90vw;
+    height: 80vh;
+  }
+  .login_content > * {
+    margin: 5px;
   }
 
 }

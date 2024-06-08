@@ -7,8 +7,8 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    width: 50%;
-    padding: 20px ;
+    width: 900px;
+    padding: 20px;
     background-color: var(--color-blue);
     
 }
@@ -18,15 +18,14 @@
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    margin-top:auto;
-    margin-bottom: 5rem;
-    
+    margin-bottom: 1.2rem;    
 }
 
+
 .sign_form_text p {
-    margin-top:auto; 
-    width: 80%;
-    color: #fff;
+    /* margin-top:auto;  */
+    width: 70%;
+    color: white;
     font-weight: 400;
     font-size: 1.2rem;
 }
@@ -49,8 +48,8 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     width: 60%;
-    /* gap: 0.25rem; */
     border: none;    
+    align-items: left;
 }
 
 .form_credential label{
@@ -81,9 +80,10 @@
     
  }
 .pass_min_caracters{
-    font-size: 0.6rem;
-    margin: 0;
-    font-weight: 200;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--color-lightblue);
 }
 
 .form_btn {
@@ -151,16 +151,27 @@
     padding-top: 5rem;
 }
 
-
+.login_form_text {
+    text-align: center;
+    font-family: var(--font-raleway);
+    color: white;
+}
+.login_form_text h3 {
+    font-size: 1.8rem;
+}
 
 /* medias queries  */
 
 @media only screen and (max-width: 768px) {
+
+
+    .sign_form_credential_wrapper {
+        flex-direction: column;
+    }
     .sign_content{
-        margin: auto;
-        width: 100%;
-        padding: 20px ;
-        height: 100%;
+        /* width: 600px; */
+        padding: 0;
+        /* left: 0; */
     }
 
     .sign_up_page_pixel_1{
@@ -180,11 +191,13 @@
 }
 
 @media only screen and (max-width: 480px) {
+
+    
     .sign_content{
-        /* display: flex;
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        border-radius: 15px; */
+        align-items: left;
+        border-radius: 15px;
         margin: 0;
         width: 100%;
         padding: 20px ;
