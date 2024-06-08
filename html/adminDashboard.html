@@ -83,7 +83,7 @@
 
     <!-- manege events -->
 
-    <div id="addEvents" class="manege_events_content">
+    <!-- <div id="addEvents" class="manege_events_content">
        <div class="manage_events_scroll_div">
             <table  class="manege_events_table">
                 <tr>
@@ -257,71 +257,161 @@
                 <button id="eventSubmitBtn"  >Adicionar</button>
                 <button id="eventSubmitBtn" >Alterar</button>
             </div>
-            
+             -->
             <!-- <button id="closeEventDiv">X</button> -->
         </form>
     
        
     </div>
     
-    <!-- <div id="addTestimony">
-        <div class="testimony_div">
-            <p>
-                Nuno Silva 
-            </p>
+    <div id="addTestimony" class="manege_testimony_content">
+        <!-- <div class="manage_testimony_scroll_div"> -->
+            <table  class="manege_testimony_table">
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        Nuno silva 
+        
+                        <div class="manege_icons_content">
+                            <i  class="material-symbols-outlined"> 
+                                edit_square                    
+                            </i>
+                            <i id="delete_icon"  class="material-symbols-outlined">
+                                delete
+                            </i>
+            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        <!-- </div> -->
 
-            <div class="icons_content">
-                <i >
-                    colocar icon edit
-                </i>
-                <i >
-                    colocar icon delete
-                </i>
-
-            </div>
-        </div>
-        <div class="testimony_div">
-            <p>
-                Nuno Silva 
-            </p>
-
-            <div class="icons_content">
-                <i >
-                    colocar icon edit
-                </i>
-                <i >
-                    colocar icon delete
-                </i>
-
-            </div>
-        </div>
+        
+    
 
         <form action="" id="testimonyForm" class="manege_testemony_form">
-            <h1>Gerir  Testemunhos</h1>
+            <h3>Gerir Testemunho</h3>
+            <div class="manege_testemony_form_grid">
+                
+                <div class="testimony_form_data">
+                    <label for="testimony_image" class="testimony_form_label">Imagem da testemunha:</label>
+                    <input type="file" name="testimony_image" id="testimony_image" class="form_input" required>
+                </div>
 
-            <label for="testimony_image">Imagem da testemunha:</label>
-            <input type="file" name="testimony_image" id="testimony_image" required>
+                <div class="testimony_form_data">
+                    <label for="testimony_name" class="testimony_form_label" >Nome da testemunha:</label>
+                    <input type="text" name="testimony_name" id="testimony_name" class="form_input" required>
 
-            <label for="testimony_name">Nome da testemunha:</label>
-            <input type="text" name="testimony_name" id="testimony_name" required>
+                </div>
 
-            <label for="testimony_job_position">Outras informações</label>
-            <input type="text" name="testimony_job_position" id="testimony_job_position" required placeholder="colocar ; entre tópicos!">
+                <div class="testimony_form_data"> 
+                    <label for="testimony_placement" class="testimony_form_label">Onde inserir:</label>
+                    <select name="testimony_placement" id="testimony_placement" class="testimony_form_select">
+                        <option value="homepage">Homepage</option>
+                        <option value="course">Curso</option>
+                    </select>
+                </div>
+                               
+                <div class="testimony_form_data">
+                    <label for="testimony_text" class="testimony_form_label">Testemunho:</label>
+                    <textarea name="testimony_text" id="testimony_text" class="testimony_form_textarea" required></textarea>
 
-            <label for="testimony_text">Testemunho:</label>
-            <textarea name="testimony_text" id="testimony_text" rows="8" cols="25" style="resize: none;" required></textarea>
+                </div>
+                <div class="testimony_form_data">
+                    <label for="testimony_job_position" class="testimony_form_label">Outras informações</label>
+                    <input type="text" name="testimony_job_position" id="testimony_job_position" class="form_input" required placeholder="Por tópicos">
 
-            <label for="testimony_placement">Onde inserir:</label>
-            <select name="testimony_placement" id="testimony_placement">
-                <option value="homepage">Homepage</option>
-                <option value="course">Curso</option>
-            </select>
-
-            <button type="submit" id="testimonySubmitBtn">Adicionar</button>
-            <button type="submit" id="testimonySubmitBtn">Alterar</button>
-            <button id="closeTestimonyDiv">X</button>
+                </div>
+                
+               
+                <div class="events_btn_content">
+                    <button type="submit" id="testimonySubmitBtn">Adicionar</button>
+                    <button type="submit" id="testimonySubmitBtn">Alterar</button>
+                    <!-- <button id="closeTestimonyDiv">X</button> -->
+                </div>
+            </div>
         </form>
-    </div> -->
+    </div>
 
     
 
