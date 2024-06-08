@@ -102,8 +102,9 @@ nav a {
         z-index: 5000;
         color: var(--color-orange);
         background-color: #fff;
-        width: 100vw;
+        width: 20vw;
         text-align: center;
+        right: 0;
     }
     .hamburger > h2 {
         margin-right: 5%;
@@ -116,15 +117,20 @@ nav a {
         flex-direction: column;
         position: fixed;
         top: 0;
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         display: flex;
-        justify-content: space-around;
+        margin-top: 20px;
         background-color: white;
         color: black;
     } 
+
+    .white-nav.active {
+        display: flex;
+    }
     .white-nav > * {
-        height: 50px;
+        height: 30px;
+        align-items: center;
     } 
 
     .nav-orange-divider {
@@ -132,6 +138,20 @@ nav a {
     }
     
     #navLogo {
-        display: none;
+        margin: -25px 0 10px 0;
+    }
+
+    .white-nav * {
+        order: 1;
+    }
+    .white-nav *:nth-child(1) {order: 6;}
+    .white-nav *:nth-child(2) {order: 7;}
+    .white-nav *:nth-child(3) {order: 5;}
+    .white-nav *:nth-child(4) {order: 1;}
+    .white-nav *:nth-child(5) {order: 4;}
+    .white-nav *:nth-child(6) {order: 3;}
+    .white-nav *:nth-child(7) {
+        order: 2;
+        margin-bottom: -50px;
     }
 }
