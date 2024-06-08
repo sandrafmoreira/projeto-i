@@ -1,0 +1,222 @@
+/*   MAIN PAGE      */
+/* body{
+    background-color: red;
+} */
+/* #addTestimony, #addEvents{
+    display: none;
+}
+label, button{
+    display: block;
+} */
+
+.welcome_admin{
+    margin: 7rem 3rem 2rem  ;
+    color: var(--color-blue);
+   
+}
+.welcome_admin h1{
+    font-family: var(--font-raleway);
+    font-weight: 780;
+}
+
+/* button grid */
+
+
+.admin_button_grid {
+    display:grid;
+    grid-template-columns: auto auto auto  ;
+   /* justify-content: space-between; */
+    gap: 4rem;
+    max-width: 93vw;
+    margin: auto;
+    
+}
+
+.admin_button_grid button{
+
+    margin-top: 15px;
+    background-color: var(--color-orange);
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 0.1rem;
+    color: #fff;
+    font-weight: 650;
+    font-size: 1.4rem;
+    
+}
+
+.admin_button_grid button
+
+.admin_button_grid button:hover {
+    background-color: #fff;
+    color: var(--color-orange);
+    border: 0.15rem solid var(--color-orange);
+    padding: 0rem;
+}
+
+/* icon - we use predefined icon class directly */
+.material-symbols-outlined{
+    color: var(--color-orange);
+    font-size: 2.5rem;
+} 
+
+/* table style */
+
+.manege_users_table{
+   
+    width: 100%;
+    max-width: 90vw;
+    margin: 1rem auto;
+    
+    
+}
+
+.manege_users_table tr{
+    background-color: var(--color-lightblue);
+}
+
+.manege_users_table td{
+    padding: 0.5rem;
+    font-family: var( --font-source);
+    font-size: 1.5rem; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* manege events */
+
+.manege_events_content{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap-reverse;  */
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 100vw;
+    margin: auto;
+   
+    height: 58vh;
+ 
+}
+.manage_events_scroll_div{
+   
+    border-radius: 0.5rem;
+    overflow-y:scroll; 
+    height: 100%;
+    width: 60%;
+    /* max-width: 0vw; */
+    margin: 1rem auto; 
+
+}
+
+.manege_events_table{
+   
+    width: 100%;
+    
+    
+}
+
+.manege_events_table tr{
+    border: 5rem;
+    background-color: var(--color-blue);
+}
+
+.manege_events_table td{
+   
+    padding: 0.5rem;
+    color: #fff;
+    font-family: var( --font-source);
+    font-size: 1.5rem; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manege_icons_content i{
+    color: #fff;
+}
+
+.manege_event_form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    margin: 1rem auto;  
+    background-color: var(--color-blue);
+    padding: 2rem;
+    /* gap: 2rem; */
+
+}
+
+.manege_event_form h3{
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    font-family: var( --font-raleway);
+    font-weight:800;
+}
+.events_form_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+    /* gap: 0.25rem; */
+    border: none;  
+}
+.events_form_label{
+    font-family: var(--font-source);
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.form_input{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color:var( --color-blue) ;
+    padding: 8px 0px;
+    margin: auto 0;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 100;
+    
+ }
+
+ .events_btn_content{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+ }
+
+
+.events_btn_content button {
+    margin-top: 15px;
+    background-color: #fff;
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 0.1rem;
+    color: var(--color-orange);
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    
+ }
+
+ .events_btn_content button:hover {
+    background-color: var(--color-orange);
+    color:  #fff;
+    /* border:1rem ,solid ,#fff;
+    color: var(--color-orange) ;
+    background-color: var(--color-blue); */
+  }
+
+  

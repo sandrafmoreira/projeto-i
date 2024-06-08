@@ -7,6 +7,7 @@
 @import url(./maze.css);
 @import url(./sign-up.css);
 @import url(./dashboard.css);
+@import url(./adminDashboard.css);
 @import url(./about.css);
 
 
@@ -48,7 +49,7 @@ a{
 
 body {
     margin: 0px;
-    overflow-x:none;
+    overflow-x:hidden;
     
 }
 

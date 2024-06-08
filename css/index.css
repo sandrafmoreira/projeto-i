@@ -277,19 +277,15 @@
 .index_grade_activities_text ul li{
     font-family: var(--font-source);
     font-size: 1.4rem;
-    font-weight: 350;
-   
-    
+    font-weight: 350; 
 }
 
 .wrapper{
-
-   
     position: relative;
     width: 100%;
-    padding-right: 6rem;
-    
+    padding-right: 6rem;  
 }
+
 .wrapper i{
     top: 45%;
     background: var(--color-orange);
