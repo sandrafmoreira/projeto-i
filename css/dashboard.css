@@ -555,6 +555,16 @@
     width: 62px;
 }
 
+
+#content_acessed {
+    background-color: rgb(16, 76, 100); /* Cor de fundo branca semi-transparente */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas, se desejado */
+    width: 500px;
+}
+
+
+/* 
 #content_acessed{
     background-color: var(--color-blue);
     border-radius: 5px;
@@ -646,7 +656,7 @@
 
 .content_acessed_graphs_info div p{
     margin: 0;
-}
+} 
 
 #bar_color1{
     background-color: var(--color-lightblue);
@@ -667,7 +677,7 @@
 #bar_color5{
     background-color: #3A9B95;
 }
-
+*/
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px){

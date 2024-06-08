@@ -8,8 +8,26 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<!-- navbar -->
-    <nav></nav>
+    <!-- navbar -->
+    <nav id="navbar"></nav>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <h2>&#9776;</h2>
+    </div>
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editProfileModalContent"></div>
+        </div>
+    </div>
+    <!-- Edit Password Modal -->
+    <div id="edit-password-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editPasswordModalContent"></div>
+        </div>
+    </div>    
+
+
+    
     <div class="welcome_admin">
         <h1> Olá Sandra !</h1>
     </div>
@@ -19,8 +37,6 @@
         <button id="openEventDiv">Gerir Eventos</button>
         
     </div>
-
-    
 
     <!-- <table  class="manege_users_table">
         <tr>
@@ -313,5 +329,7 @@
 
     <script type="module" src="../js/models/testemoniesModel.js"></script>
     <script type="module" src="../js/models/eventsModel.js"></script>
+    <script type="module" src="/js/views/navbarView.js"></script>
+
 </body>
 </html>

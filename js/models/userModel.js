@@ -14,6 +14,8 @@ export class User {
 
 
 }
+
+// localStorage.clear();
 export let users = [];
 let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true);
 let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true);
@@ -21,9 +23,10 @@ let admin3 = new User("Ken", "Lukau", "ken@123", "123", true);
 let user1 = new User("Mario", "Prof", "mario@123", "123", false);
 users.push(admin1, admin2, admin3, user1);
 
-// for (const user of users) {
-//     console.log(user);
-// }
+for (const user of users) {
+    console.log(user);
+}
+
 
 // descarregar utilizadores da local storage:
 export function init() {

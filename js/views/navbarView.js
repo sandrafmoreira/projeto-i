@@ -2,7 +2,7 @@ import * as User from "/js/models/userModel.js";
 import {editProfile} from '/js/editProfile.js';
 import {changePassword} from '/js/editPassword.js';
 
-alert(User.admin());
+// alert(User.admin());
 
 
 

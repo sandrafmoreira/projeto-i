@@ -5,11 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
-<body>
-    <nav>
-        
-    </nav>
+<body data-page-name="about">
+    
+    <nav id="navbar"></nav>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <h2>&#9776;</h2>
+    </div>
+    <!-- Login Modal -->
+    <div id="login-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="loginModalContent"></div>
+        </div>
+    </div>
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editProfileModalContent"></div>
+        </div>
+    </div>
+    <!-- Edit Password Modal -->
+    <div id="edit-password-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="editPasswordModalContent"></div>
+        </div>
+    </div> 
+
+
     <section  class="about_hero_section">
         <div class="about_hero_section_text">
            <h1>Ajudamos-te a descobrir o mundo da web</h1> 
@@ -149,5 +173,9 @@
         </div>
     </section>
     <footer></footer>
+
+    <script src="/js/dashboardConteúdosAcedidos.js"></script>
+    <script type="module" src="/js/views/navbarView.js"></script>
+
 </body>
 </html>

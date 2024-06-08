@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav></nav>
-
+    
+    <nav id="navbar"></nav>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <h2>&#9776;</h2>
+    </div>
+    <!-- Login Modal -->
+    <div id="login-modal-div" class="modal">
+        <div class="modal-content">
+            <div id="loginModalContent"></div>
+        </div>
+    </div>
 
 
     <!--sign up_form -->
@@ -75,6 +84,7 @@
 
     <footer></footer>
 
+    <script type="module" src="/js/views/navbarView.js"></script>
     <script type="module" src="/js/sign-up.js"></script>
 </body>
 </html>

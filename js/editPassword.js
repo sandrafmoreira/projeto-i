@@ -1,5 +1,7 @@
 import * as User from "/js/models/userModel.js";
 
+console.log(User.users);
+
 export function changePassword() {
 
     document.querySelector(".modal_password_form").addEventListener("submit", (event) => {
@@ -15,11 +17,6 @@ export function changePassword() {
 
         if(currentPassword == newPassword) {
             alert("Insere uma nova palavra-passe.")
-            return
-        }
-
-        if(currentPassword !== savedPassword) {
-            alert("Insere a tua palavra-passe antiga.")
             return
         }
     
