@@ -19,39 +19,118 @@ const book = document.getElementById('book').addEventListener('click', () => {
 })
 
 const drawer = document.getElementById('drawer').addEventListener('click', () => {
+    
     //Codigo para abrir a gaveta
-
-    //
-    let box = `
-    <section class="locked-box">
-        <div class="square" id="box1"></div>
-        <div class="square" id="box2"></div>
-        <div class="square" id="box3"></div>
-    </section>
+    if (openDrawer) {
+        let box = `
+        <section class="locked-box">
+            <div class="square" id="box1"></div>
+            <div class="square" id="box2"></div>
+            <div class="square" id="box3"></div>
+        </section>
     `
+        addHTML.innerHTML = box
+        let box1 = document.querySelector('#box1')
+        let box2 = document.querySelector('#box2')
+        let box3 = document.querySelector('#box3')
     
-    openModal()
-    addHTML.innerHTML += box
-    let box1 = document.querySelector('#box1')
-    let box2 = document.querySelector('#box2')
-    let box3 = document.querySelector('#box3')
-    
-    document.querySelectorAll('.square').forEach(box => {
-        let iteration = 0;
-        box.addEventListener('click', () => {
-            box.style.backgroundColor = colorsPicked[iteration]
-            iteration += 1;
-            if (iteration == 9) {
-                iteration = 0;
+        
+        document.querySelectorAll('.square').forEach(box => {
+            let iteration = 0;
+            box.addEventListener('click', () => {
                 box.style.backgroundColor = colorsPicked[iteration]
+                iteration += 1;
+                if (iteration == 9) {
+                    iteration = 0;
+                    box.style.backgroundColor = colorsPicked[iteration]
+                }
+            })
+            if (box1.style.backgroundColor == colorsPicked[correctOrder[0]] && 
+                box2.style.backgroundColor == colorsPicked[correctOrder[1]] &&
+                box3.style.backgroundColor == colorsPicked[correctOrder[2]]) {
+                    alert('You won!!! :DD')
             }
         })
-        if (box1.style.backgroundColor == colorsPicked[correctOrder[0]] && 
-            box2.style.backgroundColor == colorsPicked[correctOrder[1]] &&
-            box3.style.backgroundColor == colorsPicked[correctOrder[2]]) {
-                alert('You won!!! :DD')
+    } else {
+        openModal()
+        console.log('teste');
+        let drawer = `
+        <section class="locked-drawer">
+            <div><h2  class="digit" id="number1">0</h2></div>
+            <div><h2 class="digit" id="number2">0</h2></div>
+            <div><h2 class="digit" id="number3">0</h2></div>
+            <div><h2 class="digit" id="number4">0</h2></div>
+        </section>
+        `
+
+        addHTML.innerHTML = drawer
+        
+        document.querySelector('#modal_main_img').src = "../img/game/drawer.png"
+
+        document.querySelectorAll('.digit').forEach(digit => {
+            digit.addEventListener('click', () => {
+                let digitNumber = parseInt(digit.textContent)
+                digitNumber += 1
+
+                if (digitNumber == 10) {
+                    digitNumber = 0
+                }
+                digit.textContent = digitNumber
+
+                setInterval
+                //Verificar se codigo esta correto
+                let digit1 = document.querySelector('#number1').textContent
+                let digit2 = document.querySelector('#number2').textContent
+                let digit3 = document.querySelector('#number3').textContent
+                let digit4 = document.querySelector('#number4').textContent
+
+                if (digit1 == secretNumber.charAt(0) && 
+                digit2 == secretNumber.charAt(1) && 
+                digit3 == secretNumber.charAt(2) &&
+                digit4 == secretNumber.charAt(3)) {
+                alert('WOOO')
+                openDrawer = true
+                document.querySelector('#modal_main_img').src = ""
+                let box = `
+                <section class="locked-box">
+                    <div class="square" id="box1"></div>
+                    <div class="square" id="box2"></div>
+                    <div class="square" id="box3"></div>
+                </section>
+            `
+                addHTML.innerHTML = box
+                let box1 = document.querySelector('#box1')
+                let box2 = document.querySelector('#box2')
+                let box3 = document.querySelector('#box3')
+            
+                
+                document.querySelectorAll('.square').forEach(box => {
+                    let iteration = 0;
+                    box.addEventListener('click', () => {
+                        box.style.backgroundColor = colorsPicked[iteration]
+                        iteration += 1;
+                        if (iteration == 9) {
+                            iteration = 0;
+                            box.style.backgroundColor = colorsPicked[iteration]
+                        }
+                    })
+                    if (box1.style.backgroundColor == colorsPicked[correctOrder[0]] && 
+                        box2.style.backgroundColor == colorsPicked[correctOrder[1]] &&
+                        box3.style.backgroundColor == colorsPicked[correctOrder[2]]) {
+                            alert('You won!!! :DD')
+                    }
+                })
+                
         }
-    })
+            })
+        })
+        
+
+        
+    }
+    //
+    
+    
 })
 
 const notebook = document.getElementById('notebook').addEventListener('click', () => {
@@ -129,6 +208,7 @@ let modal = document.getElementById('esc_modal');
 let addHTML = document.querySelector('#modal_secondary_img')
 let closeButton = document.getElementsByClassName('close')[0];
 let foundColorOrder = false
+let openDrawer = false
 
 function openModal() {
     addHTML.innerHTML = ''

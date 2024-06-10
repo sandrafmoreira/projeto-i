@@ -27,6 +27,22 @@
     justify-content: center;
 }
 
+.locked-drawer{
+    width: 500px;
+    height: 200px;
+    background-color: #F1F59E;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.locked-drawer div{
+    width: 100px;
+    height: 100px;
+    background-color: #F1F59E;
+    border: 2px solid black;
+}
+
 #modal_main_img{
     width: 300px;
     height: 300px;
