@@ -90,6 +90,7 @@ label, button{
 
 /* manege events-------------------------------- */
 
+
 .manege_events_content{
     display: flex;
     flex-direction: row;
@@ -219,7 +220,9 @@ label, button{
 
 
 /* manege testimony-------------------------------- */
-
+#addTestimony{
+    display: none;
+}
 .manege_testimony_content{
     
     display: flex;
@@ -333,8 +336,9 @@ label, button{
     overflow: auto;
  }
 
- .testimony_form_select{
+ select{
     border: none;
+    border-radius: 0px;
     border-bottom: 2px solid #fff;
     background-color:var( --color-blue) ;
     padding: 8px  0px 0px 0px;
@@ -343,5 +347,6 @@ label, button{
     font-size: 1.2rem;
     color:#fff;
     font-weight: 100;
+    appearance:none;
     
  }
