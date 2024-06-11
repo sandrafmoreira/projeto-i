@@ -11,7 +11,7 @@
 <body data-page-name="tsiw">
 
     <nav id="navbar"></nav>
-    <div class="hamburger" onclick="toggleNavbar()">
+    <div class="hamburger">
         <h2>&#9776;</h2>
     </div>
     <!-- Login Modal -->
@@ -290,17 +290,6 @@
     <script src="./js/index_slider.js"></script>
 
     <script>
-        function toggleNavbar() {
-            let phoneNavbar = document.querySelector(".white-nav");
-            phoneNavbar.style.display = (phoneNavbar.style.display === "none") ? "block" : "none";
-        }
-        
-        const burger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.white-nav');
-
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
     </script>
 </body>
 </html>

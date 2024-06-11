@@ -129,6 +129,7 @@ nav a {
         display: flex;
     }
     .white-nav > * {
+        text-align: center;
         height: 30px;
         align-items: center;
     } 
@@ -154,4 +155,4 @@ nav a {
         order: 2;
         margin-bottom: -50px;
     }
-}
+} 

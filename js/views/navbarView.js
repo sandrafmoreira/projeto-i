@@ -5,8 +5,6 @@ import {changePassword} from '/js/editPassword.js';
 // alert(User.admin());
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     function navbarView() {
         
@@ -79,15 +77,27 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.innerHTML = result;
 
         if (!User.isLogged()) {
-            alert("WARNING YOU ARE NOT LOGGED WARNING WARNING WARNING");
+            // alert("WARNING YOU ARE NOT LOGGED WARNING WARNING WARNING");
         } else {
             alert("YOU ARE LOGGED YOU ARE LOGGED YOU ARE LOGGED");
         }
 
         modals();
 
+        
+
     }
 
+    let phoneNavbar = document.querySelector(".white-nav");
+
+    const burger = document.querySelector(".hamburger");
+
+    burger.addEventListener("click", () => toggleNavbar)
+
+    function toggleNavbar() {
+        alert("hehehe")
+        phoneNavbar.style.display = "none";
+    };
     
     // funcções para carregar conteúdo das modais que se encontram em ficheiros html para as modais
     function modals() {
