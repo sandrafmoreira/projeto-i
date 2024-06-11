@@ -1,18 +1,31 @@
 let submitBtn = document.querySelector('#testimonySubmitBtn');
 let form = document.querySelector('#testimonyForm');
 let openDivBtn = document.querySelector('#openTestimonyDiv');
-let closeDivBtn = document.querySelector('#closeTestimonyDiv');
 
 let testemunhos = []
 
+let isThereAdiv = document.getElementById("adminDasboard")
+
+
+let divs = document.querySelectorAll("#adminDasboard > div")
+
 openDivBtn.addEventListener('click', () => {
-    document.querySelector('#addTestimony').style.display = 'block';
+    for (let i = 0; i < divs.length; i++){
+        console.log("Hiding div", i); 
+        // divs[i].style.display = "none"
+
+        if (divs[i] == document.querySelector('#addTestimony'))
+        {
+           
+           divs[i].style.display="flex"  
+        }else{
+
+            divs[i].style.display="none" 
+        }
+       
+    }
 })
 
-
-closeDivBtn.addEventListener('click', () => {
-    document.querySelector('#addTestimony').style.display = 'none';
-})
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();

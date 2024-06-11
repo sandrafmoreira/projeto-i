@@ -3,17 +3,28 @@
 let submitBtn = document.querySelector('#eventSubmitBtn');
 let form = document.querySelector('#eventsForm');
 let openDivBtn = document.querySelector('#openEventDiv');
-let closeDivBtn = document.querySelector('#closeEventDiv');
+
 
 let events = []
 
-openDivBtn.addEventListener('click',  () => {
-    document.querySelector('#addEvents').style.display = 'block';
+let divs = document.querySelectorAll("#adminDasboard > div")
+
+openDivBtn.addEventListener('click', () => {
+    for (let i = 0; i < divs.length; i++){
+        console.log("Hiding div", i); 
+        // divs[i].style.display = "none"
+
+        if (divs[i] == document.querySelector('#addEvents'))
+        {
+           
+           divs[i].style.display="flex"  
+        }else{
+            divs[i].style.display="none" 
+        }
+       
+    }
 })
 
-closeDivBtn.addEventListener('click', () => {
-    document.querySelector('#addEvents').style.display = 'none';
-})
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -42,6 +53,10 @@ function addEvent(name, image){
 
     events.push(new Event(name, image))
     localStorage.eventos = JSON.stringify(events)
+}
+
+function modifyEvent (name, image){
+
 }
 
 
