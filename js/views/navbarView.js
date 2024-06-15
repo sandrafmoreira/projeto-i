@@ -1,45 +1,46 @@
 import * as User from "/js/models/userModel.js";
-import {editProfile} from '/js/editProfile.js';
-import {changePassword} from '/js/editPassword.js';
+import { editProfile } from '/js/editProfile.js';
+import { changePassword } from '/js/editPassword.js';
 
 // alert(User.admin());
 
 
 document.addEventListener("DOMContentLoaded", () => {
     function navbarView() {
-        
+
         User.init();
 
-            let result = `
+        let result = `
                 <div class="nav-width white-nav">
-                    <a href="/html/about.html">SOBRE NÓS</a>
-                    <a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a>
-                    <a href="/html/course.html">CURSO</a>
-                    <a href="/index.html" id="navLogo">
+                    <ul>
+                    <li><a href="/html/about.html">SOBRE NÓS</a></li>
+                    <li><a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a></li>
+                    <li><a href="/html/course.html">CURSO</a></li>
+                    <li><a href="/index.html" id="navLogo"></li>
                         <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
-                    </a>
-                    <div class="nav-esc">
+                    </a></li>
+                    <li><div class="nav-esc">
                         <a href="/html/maze.html">MAZE</a>
                         <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
-                    </div>
+                    </div></li>
                 `;
-    
-            if (User.isLogged()) {
-                
-                if (User.admin()) {
-                    result += `<a href="/html/adminDashboard.html">DASHBOARD</a>`
-                    alert(User.admin())
-                } else if (!User.admin(), "navbar") {
-                    result += `<a href="/html/dashboard.html">DASHBOARD</a>`
-                    alert(User.admin(), "navbar")
 
-                }
-                
-                result += `
+        if (User.isLogged()) {
+
+            if (User.admin()) {
+                result += `<li><a href="/html/adminDashboard.html">DASHBOARD</a></li>`
+                alert(User.admin())
+            } else if (!User.admin(), "navbar") {
+                result += `<li><a href="/html/dashboard.html">DASHBOARD</a></li>`
+                alert(User.admin(), "navbar")
+
+            }
+
+            result += `
                     <div class="nav_orange_divider"></div>
-                    <div class="nav_after_login">
-                        <img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar">
-                        <a href="" id="nav_dropdown_icon">
+                    <!-- <div class="nav_after_login"> -->
+                        <li><img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar"></li>
+                        <li><a href="" id="nav_dropdown_icon">
                             <img id="nav_dropdown_icon" src="/assets/navbar/nav_dropdown_icon.png" alt="dropdown icon on navbar">
                             <div id="dropmenu-div" style="display: none;">
                                 <div>
@@ -59,18 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <a id="logout-btn" href="">Terminar Sessão</a>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </a></li>
+                    <!-- </div> -->
                 `;
-            } else {
-                result += `
-                    <a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a>
+        } else {
+            result += `
+                    <li><a id="loginLink" href="" class="nav-login-btn">INICIAR SESSÃO</a></li>
                     <div class="nav-orange-divider"></div>
-                    <a href="/html/sign-up.html">CRIAR CONTA</a>
+                    <li><a href="/html/sign-up.html">CRIAR CONTA</a></li>
                 `;
-            }
-    
-            result += `</div>`;
+        }
+
+        result += `</div>`;
 
 
         let navbar = document.getElementById("navbar");
@@ -84,21 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         modals();
 
-        
+
 
     }
 
-    let phoneNavbar = document.querySelector(".white-nav");
 
-    const burger = document.querySelector(".hamburger");
 
-    burger.addEventListener("click", () => toggleNavbar)
+    // function toggleNavbar() {
+    //     alert("hehehe")
+    //     phoneNavbar.style.display = "none";
+    // };
 
-    function toggleNavbar() {
-        alert("hehehe")
-        phoneNavbar.style.display = "none";
-    };
-    
     // funcções para carregar conteúdo das modais que se encontram em ficheiros html para as modais
     function modals() {
         //clicar em "Iniciar Sessão" na navbar:
@@ -125,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
                 User.logout();
                 navbarView();
-                window.location.href = "/index.html"; 
+                window.location.href = "/index.html";
             });
         }
 
@@ -156,14 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
         }
-         // Local Storage: obter a src nova do avatar
-         const newAvatarImageSrc = localStorage.getItem('avatarImageSrc');
-         // mudar a src do avatar da navbar para a nova src
-         const avatarProfile = document.getElementById("nav_profile_pic");
-         if (newAvatarImageSrc) {
-             avatarProfile.src = newAvatarImageSrc;
-             avatarProfile.style.width = "40px";
-         }
+        // Local Storage: obter a src nova do avatar
+        const newAvatarImageSrc = localStorage.getItem('avatarImageSrc');
+        // mudar a src do avatar da navbar para a nova src
+        const avatarProfile = document.getElementById("nav_profile_pic");
+        if (newAvatarImageSrc) {
+            avatarProfile.src = newAvatarImageSrc;
+            avatarProfile.style.width = "40px";
+        }
 
 
 
@@ -189,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-    
+
     //clicar no form do login para iniciar sessão:
     function loginForm() {
         let loginForm = document.getElementById("login-form-btn");
@@ -200,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let password = document.getElementById("login-password").value;
                 console.log(email, password); //teste
                 User.login(email, password); //Chamar a funcao do login
-                if(User.isLogged()) {
+                if (User.isLogged()) {
                     if (User.admin() == true) {
                         window.location.href = "/html/adminDashboard.html";
                     } else if (User.admin() == false) {
@@ -219,3 +216,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    let phoneNavbar = document.querySelector(".white-nav");
+
+    const burger = document.querySelector(".hamburger");
+
+    burger.addEventListener("click", () => {
+
+        if (phoneNavbar.classList.contains('hidden')) {
+            phoneNavbar.classList.remove('hidden')
+        }
+        else {
+            phoneNavbar.classList.add('hidden')
+        }
+    })
+
+})

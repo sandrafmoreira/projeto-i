@@ -69,6 +69,10 @@ function updateProgressBar(progress) {
     });
 }
 
+// chart.style.width ="110px";
+
+
+
 // inicializar progresso:
 let progress = getProgress();
 updateProgressBar(progress);
