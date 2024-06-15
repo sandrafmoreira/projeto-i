@@ -12,7 +12,7 @@
     width: 64px;
 }
 
-.modal-content{
+.interactive_section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,12 @@
     font-size: 2rem;
 }
 
-#locked_drawer{
+#drawer_img img{
+    width: 500px;
+    height: 300px;
+}
+
+#locked_drawer_digits{
     position: absolute;
     width: 500px;
     height: 200px;
@@ -37,18 +42,21 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 24%;
+    margin-top: 20%;
 }
 
 
 #modal_main_img{
-    width: 500px;
-    height: 300px;
     display: flex;
     justify-content: center;
 }
 
-#locked_box{
+#box_img img{
+    width: 500px;
+    height: 300px;
+}
+
+#locked_box_squares{
     position: absolute;
     width: 300px;
     height: 200px;
@@ -60,12 +68,19 @@
 }
 
 
-.bookmarker{
-    background-color: #DFCFB7;
-    width: 300px;
-    height: 100px;
+#book_image img{
+    width: 400px;
+    height: 450px;
+    margin-top: -5%;
 }
 
+#book_image h3{
+    position: absolute;
+    font-size: 1.7rem;
+    transform: rotate(-45deg);
+    margin-top: 10%;    
+    margin-left: 2%;
+}
 
 .square{
     margin-top: 0%;
@@ -75,9 +90,50 @@
     border: 2px solid black;
 }
 
+.colorOrder{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    margin-right: 40%;
+    margin-top: 12%;
+}
+
+.secretWord{
+    margin: 0;
+}
+
+#word1, #word3{
+    transform: rotate(10deg);
+}
+
+#word2{
+    transform: rotate(-10deg);
+}
+
+#notebook_img img{
+    width: 500px;
+    height: 400px;
+}
+
+#postIt_img img{
+    width: 400px;
+    height: 300px;
+}
+
+#postIt_img h4{
+    position: absolute;
+    font-size: 2.5rem;
+    transform: rotate(-8deg);
+}
+
 .close{
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: unset;
+    color: white;
+    font-size: 2rem;
+    border: none;
 }
 
 #nav{
