@@ -12,59 +12,128 @@
     width: 64px;
 }
 
-.modal-content{
+.interactive_section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.locked-box{
-    width: 500px;
-    height: 200px;
-    background-color: brown;
-    gap: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.locked-drawer{
-    width: 500px;
-    height: 200px;
+.digit{
+    width: 50px;
+    height: 50px;
     background-color: #F1F59E;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    border: 1px solid black;
+    font-size: 2rem;
 }
 
-.locked-drawer div{
-    width: 100px;
-    height: 100px;
-    background-color: #F1F59E;
-    border: 2px solid black;
-}
-
-#modal_main_img{
-    width: 300px;
+#drawer_img img{
+    width: 500px;
     height: 300px;
 }
 
-#modal_secondary_img{
+#locked_drawer_digits{
+    position: absolute;
     width: 500px;
     height: 200px;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20%;
 }
 
-.bookmarker{
-    background-color: #DFCFB7;
+
+#modal_main_img{
+    display: flex;
+    justify-content: center;
+}
+
+#box_img img{
+    width: 500px;
+    height: 300px;
+}
+
+#locked_box_squares{
+    position: absolute;
     width: 300px;
-    height: 100px;
+    height: 200px;
+    background-color: unset;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+
+#book_image img{
+    width: 400px;
+    height: 450px;
+    margin-top: -5%;
+}
+
+#book_image h3{
+    position: absolute;
+    font-size: 1.7rem;
+    transform: rotate(-45deg);
+    margin-top: 10%;    
+    margin-left: 2%;
 }
 
 .square{
-    margin-top: 10%;
-    width: 100px;
-    height: 100px;
+    margin-top: 0%;
+    width: 60px;
+    height: 60px;
     background-color: wheat;
     border: 2px solid black;
+}
+
+.colorOrder{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    margin-right: 40%;
+    margin-top: 12%;
+}
+
+.secretWord{
+    margin: 0;
+}
+
+#word1, #word3{
+    transform: rotate(10deg);
+}
+
+#word2{
+    transform: rotate(-10deg);
+}
+
+#notebook_img img{
+    width: 500px;
+    height: 400px;
+}
+
+#postIt_img img{
+    width: 400px;
+    height: 300px;
+}
+
+#postIt_img h4{
+    position: absolute;
+    font-size: 2.5rem;
+    transform: rotate(-8deg);
+}
+
+.close{
+    width: 50px;
+    height: 50px;
+    background-color: unset;
+    color: white;
+    font-size: 2rem;
+    border: none;
 }
 
 #nav{
