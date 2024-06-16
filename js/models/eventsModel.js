@@ -106,16 +106,6 @@ editBtn.addEventListener('click', (event) => {
     editEvent(name, image, rowIndex)
 })
 
-function init() {
-    if(localStorage.eventos) {
-        let savedEvents = JSON.parse(localStorage.eventos);
-        for (let eventos of savedEvents) {
-            eventos.push(new Book(evento.propriedade, evento.propriedade, evento.propriedade, evento.propriedade))
-        } 
-    } else {
-        eventos = []
-    }
-}
 
 function renderTable(eventos) {
     let adicionarFila = ''
