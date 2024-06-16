@@ -29,7 +29,6 @@
 
     
     <div class="welcome_admin">
-        <h1> Olá Sandra !</h1>
     </div>
     <div class="admin_button_grid">
         <button id="openUserDiv">Gerir utilizadores</button>
@@ -40,55 +39,18 @@
 
     <section id="adminDasboard"> 
 
-        <!-- <table  class="manege_users_table">
-            <tr>
-                <td>
-                    
-                    utilizador 001
-
-                    <i id="delete_icon"  class="material-symbols-outlined">
-                        delete
-                    </i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    
-                    utilizador 001
-
-                    <i id="delete_icon"  class="material-symbols-outlined">
-                        delete
-                    </i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    
-                    utilizador 001
-
-                    <i id="delete_icon"  class="material-symbols-outlined">
-                        delete
-                    </i>
-                </td>
-            </tr>
-
-        </table> -->
-        <!-- <div class="user_div">
-            <p>
-                utilizador 001
-            </p>
-            <i id="delete_icon"  class="material-symbols-outlined">
-                delete
-            </i>
-        </div> -->
-        
+        <div class="deleteUsers">
+        <table  class="manage_users_table">
+        </table>
+       
+        </div>
 
         <!-- manege events -->
 
         <div id="addEvents" class="manege_events_content">
         <div class="manage_events_scroll_div">
                 <table  class="manege_events_table">
-                    <tr>
+                    <!-- <tr>
                     <td>
                     
                         feira tecnologica 
@@ -237,7 +199,7 @@
                 
                             </div>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
             
@@ -256,8 +218,8 @@
                 </div>
                 
                 <div class="events_btn_content">
-                    <button id="eventSubmitBtn"  >Adicionar</button>
-                    <button id="eventSubmitBtn" >Alterar</button>
+                    <button id="eventSubmitBtn">Adicionar</button>
+                    <button id="eventEditBtn">Alterar</button>
                 </div>
                 
                 
@@ -408,7 +370,7 @@
                 
                     <div class="events_btn_content">
                         <button type="submit" id="testimonySubmitBtn">Adicionar</button>
-                        <button type="submit" id="testimonySubmitBtn">Alterar</button>
+                        <button type="submit" id="testimonyEditBtn">Alterar</button>
                         <!-- <button id="closeTestimonyDiv">X</button> -->
                     </div>
                 </div>
@@ -418,7 +380,7 @@
     
 
     
-
+    <script type="module" src="../js/models/userModel.js"></script>
     <script type="module" src="../js/models/testemoniesModel.js"></script>
     <script type="module" src="../js/models/eventsModel.js"></script>
     <script type="module" src="/js/views/navbarView.js"></script>

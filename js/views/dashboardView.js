@@ -14,7 +14,6 @@ function loadDashboard() {
     }
     let loggedUser = JSON.parse(sessionStorage.loggedUser)
     users.forEach(user => {
-        console.log(user);
         if (user.name == loggedUser.name) {
             document.querySelector('#dashboardUserTitle').textContent = user.name
             if (user.dashboard.time_record.includes('00:')) {
