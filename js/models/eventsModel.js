@@ -106,6 +106,51 @@ editBtn.addEventListener('click', (event) => {
     editEvent(name, image, rowIndex)
 })
 
+function init() {
+    if(localStorage.eventos) {
+        let savedEvents = JSON.parse(localStorage.eventos);
+        for (let eventos of savedEvents) {
+            eventos.push(new Book(evento.propriedade, evento.propriedade, evento.propriedade, evento.propriedade))
+        } 
+    } else {
+        eventos = []
+    }
+}
+
+function renderTable(eventos) {
+    let adicionarFila = ''
+
+    //Reinicar tabela para cada vez que for renderizada 
+    document.querySelector('table').innerHTML = ''
+
+    eventos.forEach(evento => {
+        adicionarFila += `
+            <tr>
+                <td>
+                
+                    
+
+                    <div class="manege_icons_content">
+                        <i  class="material-symbols-outlined"> 
+                            edit_square                    
+                        </i>
+                        <i id="delete_icon"  class="material-symbols-outlined">
+                            delete
+                        </i>
+        
+                    </div>
+                </td>
+            </tr>
+        `
+
+        document.querySelector('table').innerHTML += adicionarFila
+        adicionarFila = ''
+    })
+
+
+}
+
+
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
