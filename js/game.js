@@ -106,7 +106,7 @@ function welcomeModal() {
 }
 
 function playerTime(escapeRoomStats) {
-//Esta função faz a conta o tempo que o jogador demora completar o Escape Room, depois vai ser utilizado para renderizar a dashboard do utilizador!
+//Esta função faz a contagem o tempo que o jogador demora completar o Escape Room, depois vai ser utilizado para renderizar a dashboard do utilizador!
 
     let minutes = 0; 
     let seconds = 0;
@@ -151,4 +151,7 @@ let escapeRoomStats = new EscapeRoom('', '', false, 3, '', '0000', ['#112a46','#
 escapeRoomStats.generatePassword()
 escapeRoomStats.generateDrawerCode()
 escapeRoomStats.generateColorOrder()
-welcomeModal()
+
+document.addEventListener('DOMContentLoaded', function() {
+    welcomeModal()
+})

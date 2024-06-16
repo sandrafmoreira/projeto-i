@@ -1,31 +1,35 @@
 /**
  * CLASSE QUE MODELA UM UTILIZADOR NA APLICAÇÃO
  */
-export class User {
+export default class User {
 
-    constructor(name, surname, email, password, admin = false) {
+    constructor(name, surname, email, password, admin = false, dashboard) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.admin = admin;
+        this.dashboard = dashboard;
     }
 
 
 
 }
 
+let dashboard = {
+    time_record: '',
+    medals: [],
+    status: []
+}
+
 // localStorage.clear();
 export let users = [];
-let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true);
-let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true);
-let admin3 = new User("Ken", "Lukau", "ken@123", "123", true);
-let user1 = new User("Mario", "Prof", "mario@123", "123", false);
+let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true, dashboard);
+let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true, dashboard);
+let admin3 = new User("Ken", "Lukau", "ken@123", "123", true, dashboard);
+let user1 = new User("Mario", "Prof", "mario@123", "123", false, dashboard);
 users.push(admin1, admin2, admin3, user1);
 
-for (const user of users) {
-    console.log(user);
-}
 
 
 // descarregar utilizadores da local storage:
@@ -33,7 +37,7 @@ export function init() {
     if(localStorage.users) {
         const tempUsers = JSON.parse(localStorage.users);
         for(let user of tempUsers) {
-            users.push(new User(user.name, user.surname, user.email, user.password))
+            users.push(new User(user.name, user.surname, user.email, user.password, user.admin, user.dashboard))
         }
     }
 }
