@@ -33,7 +33,7 @@
     
     <section class="row" id="main_messages">
         <div class="col-lg-3" id="welcome_user">
-            <h1>Olá ... <span id="dashboardUserTitle"></span></h1>
+            <h1>Olá <span id="dashboardUserTitle"></span></h1>
             <h4>Bem vindo à tua Dashboard, aqui podes acompanhar a tua atividade com facilidade!</h4>
         </div>
         <div class="col-lg-9" id="escape_message">
@@ -64,7 +64,7 @@
             <div class="esc_time_record">
                 <div class="time_info">
                     <p><span> Novo Recorde: </span> Escape Room</p>
-                    <h3><span></span> </h3>
+                    <h3 id="user_time_record"><span></span> </h3>
                 </div>
                 <div class="rankings">
                     <p id="ranking_title">Ranking</p>
@@ -212,11 +212,10 @@
 
     <footer></footer>
 
+    <script type="module" src="/js/views/dashboardView.js"></script>
     <script src="/js/dashboardConteúdosAcedidos.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="/js/views/dashboardView.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
