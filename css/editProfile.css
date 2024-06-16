@@ -35,18 +35,19 @@
     font-weight: 400;
     font-size: 1rem;
     color: #fff;
+
 } 
 
 .form_credential > * {
     height: 26px;
 }
 
-.modal_Profile_form_avatars > h4{
+/* .modal_Profile_form_avatars > h4{
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
-}
+} */
 .modal_Profile_form_avatars p{
     padding: 5px;
     font-size: 0.8rem;

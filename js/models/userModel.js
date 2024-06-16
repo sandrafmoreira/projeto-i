@@ -11,9 +11,6 @@ export default class User {
         this.admin = admin;
         this.dashboard = dashboard;
     }
-
-
-
 }
 
 let dashboard = {
@@ -130,7 +127,9 @@ export function login(email, password) {
     ); 
     if (user) {
         sessionStorage.setItem("loggedUser", JSON.stringify(user));
-    } 
+    } else {
+        alert("Tenta outra vez.")
+    }
 }
 
 // verificar se o user existe:
@@ -141,6 +140,7 @@ export function isLogged() {
 // logout:
 export function logout() {
     sessionStorage.removeItem("loggedUser");
+    window.location.href = "/index.html";
 }
 
 // adicionar conta à classe e à local storage:

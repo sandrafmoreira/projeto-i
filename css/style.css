@@ -95,8 +95,22 @@ button {
     cursor: pointer;
 }
 
+input {
+    padding: 20px;
+}
 input:focus {
     outline: none;
     background-color: transparent;
 }
-  
+
+/* fix os estilos dos inputs quando os browsers preencherem automaticamente com as credenciais guardadas */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #104C64 inset;
+    -webkit-text-fill-color: #fff;
+    border: none; 
+}
+
+h1, h2, h3, p {
+    cursor: default;
+}
+

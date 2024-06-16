@@ -1,16 +1,41 @@
-.nav-logo {
+  .nav-logo {
     width: 75px;
 }
 
 .nav-maze {
     width: 30px;
 }
+/*
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 nav {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-blue);
+    font-weight: 600;
+
+}
+
+ */
+ li {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* transform: translateX(-50%); */
     position: fixed;
     box-sizing: border-box;
     top: 0;
@@ -20,6 +45,7 @@ nav {
     border-bottom: 1px solid #cecece;
     z-index: 2000;
     padding: 0 20px;
+    font-size: .8rem;
 }
 
 .nav-width {
@@ -27,7 +53,6 @@ nav {
 }
 
 .nav-esc {
-    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +93,6 @@ nav {
 }
 
 
-/* navbar after login */
 .nav_after_login {
     display: flex;
     align-items: center;
@@ -103,6 +127,8 @@ nav a {
     flex-direction: column;
 }
 
+
+
 .white-nav.hidden {
     display: none;
 }
@@ -133,6 +159,7 @@ nav a {
         width: 20vw;
         text-align: center;
         right: 0;
+        top: 0;
     }
 
     .hamburger>h2 {
@@ -146,7 +173,7 @@ nav a {
         flex-direction: column;
         position: fixed;
         top: 0;
-        height: 80vh;
+        height: 70vh;
         width: 100vw;
         display: flex;
         margin-top: 20px;
@@ -154,7 +181,19 @@ nav a {
         color: black;
     }
 
+    #nav_dropdown_icon {
+        margin-top: -10px;
+    }
 
+    #dropmenu-div {
+        height: 800px;
+        top: 200px;
+    }
+    #dropmenu-div a {
+        font-weight: 500;
+        height: 1px;
+        margin-bottom: -20px;
+    }
 
     .white-nav.active {
         display: flex;
@@ -168,21 +207,21 @@ nav a {
         font-weight: 600;
         font-size: .8rem;
     }
-
-
-
     .nav-orange-divider {
         display: none;
     }
 
-    #navLogo {
-        margin: -25px 0 10px 0;
+    .nav-logo {
+        margin-top: -30px;
+    }
+
+    .nav-esc {
+        margin-bottom: -40px;
     }
 
     .white-nav * {
         order: 1;
-        padding-bottom: 30px;
-
+        padding-bottom: 20px;
     }
 
     .white-nav *:nth-child(1) {
@@ -196,6 +235,7 @@ nav a {
 
     .white-nav *:nth-child(3) {
         order: 5;
+        
     }
 
     .white-nav *:nth-child(4) {
@@ -203,6 +243,7 @@ nav a {
     }
 
     .white-nav *:nth-child(5) {
+        margin-bottom: 10px;
         order: 3;
     }
 
@@ -212,6 +253,6 @@ nav a {
 
     .white-nav *:nth-child(7) {
         order: 4;
-        margin-bottom: -50px;
+        margin-bottom: -40px;
     }
-}
+} 
