@@ -274,16 +274,99 @@ export function getSecondaryScreen(escapeRoomStats) {
      * Função que renderiza o ecrã da esquerda!
      * JOGO DA MEMÓRIA!
      */
+    // let secondaryScreen = `
+    // <div class="modal-content">
+    //     <button class="close">X</button>
+    //     <div class="interactive_section">
+    //         <h2>${escapeRoomStats.pc_password.slice(3,6)}</h2>
+    //     </div>
+    // </div>
+    // `
     let secondaryScreen = `
     <div class="modal-content">
         <button class="close">X</button>
         <div class="interactive_section">
             <h2>${escapeRoomStats.pc_password.slice(3,6)}</h2>
         </div>
+
+        <section class="memoryGameContainer">
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+        </section>
     </div>
     `
 
     document.querySelector('#esc_modal').innerHTML = secondaryScreen
+    alert("Localiza os 2 pedaços de código! Memoriza a posição do primeiro pedaço que encontraste. Ao descobrires o segundo tens que identificar, no tabuleiro, a posição  do primeiro!")
+
+    let divs = document.querySelectorAll('.computerMemoryGame');
+
+    let pos1 = Math.floor(Math.random() * divs.length);
+    let pos2 = Math.floor(Math.random() * divs.length);
+    console.log(pos1, pos2);
+
+    while (pos1 == pos2) {
+        pos2 = Math.floor(Math.random() * divs.length);
+    }
+
+    divs.forEach(div => {
+        div.innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
+    })
+
+    let clickedFirstEgg = false;
+    let clickedSecondEgg = false;
+
+    divs.forEach(div => {
+        div.addEventListener('click', () => {
+            // div.style.backgroundColor = "pink";
+            if (!clickedFirstEgg) {
+                if (div == divs[pos1]) {
+                    showFirstEgg();
+                    clickedFirstEgg = true;
+                }
+            }
+            
+            if (clickedFirstEgg) {
+                // div.style.backgroundColor = "lightblue";
+                if (div == divs[pos2]) {
+                    divs[pos2].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
+                    clickedSecondEgg = true;
+                } 
+            }
+
+            if (clickedSecondEgg) {
+                // div.style.backgroundColor = "orange";
+                if (div == divs[pos1]) {
+                    divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
+                    setTimeout(() => {
+                        alert("Parabéns! Encontraste as duas partes do código!")
+                        }, 700
+                    );
+                } else if (div !== divs[pos1] && div !== divs[pos2]) {
+                        alert("Que Memória Fraca! Não acertaste na posição da primeira parte do código!");
+                    }        
+            }
+        });
+    });
+
+    function showFirstEgg() {
+        divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`
+        setTimeout(() => {
+            divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
+            }, 1000
+        )
+    }
+ 
     document.querySelector('.close').addEventListener('click', () => {
         closeModal()
     })

@@ -178,6 +178,12 @@
     width: 100%;
 }
 
+.memoryGameContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 50px;
+}
+
 @media only screen and (max-width: 768px){
     .bye_chatgpt{
         font-size: 1.2rem;
