@@ -130,7 +130,7 @@ export function getBox(escapeRoomStats) {
         box.addEventListener('click', () => {            
             iteration += 1;
             
-            iteration == 7 ? iteration = 0 : iteration
+            iteration == 8 ? iteration = 0 : iteration
             box.style.backgroundColor = escapeRoomStats.boxColors[iteration]
 
             //Ir buscar as cores que estão em cada quadrado
@@ -407,6 +407,7 @@ export function getMainScreen(escapeRoomStats) {
             escapeRoomStats.player_password = password
             if (password == escapeRoomStats.pc_password) {
                 alert(`PC desbloqueado! Tempo parou em ${escapeRoomStats.timer}`)
+                saveStats(escapeRoomStats)
             } else {
                 escapeRoomStats.player_tries -= 1;
                 
@@ -443,3 +444,26 @@ export function closeModal() {
     modal.style.display = 'none';
 }
 
+
+function saveStats(escapeRoomStats) {
+    let user = JSON.parse(sessionStorage.loggedUser)
+    user.dashboard.time_record = escapeRoomStats.timer
+    let time_record = user.dashboard.time_record
+    let findUser = user.email
+
+    let users = JSON.parse(localStorage.users)
+    users.forEach(user => {
+        if (user.email == findUser) {
+            console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
+            console.log();
+            if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
+                user.dashboard.time_record = time_record
+            } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
+                if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+                    user.dashboard.time_record = time_record
+                }
+            }
+        }
+    });
+    localStorage.users = JSON.stringify(users)
+}
