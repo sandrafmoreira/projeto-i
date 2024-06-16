@@ -9,6 +9,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     padding: 0 30px;
+    z-index: 6000;
 }
 
 footer > div {
