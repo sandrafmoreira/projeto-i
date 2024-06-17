@@ -1,23 +1,4 @@
-// const carousel = document.querySelector(".carousel");
 
-// let isDragStart = false;
-// const dragstart= () => {
-//     isDragStart = true
-// }
-
-// const dragging= (e) => {
-//    if (!isDragStart)return;
-//     // e.preventDefault();
-//     carousel.scrollLeft = e.pageX;
-//     console.log(e.pageX)
-// }
-
-// // const dragstop =()=>{
-
-// // }
-// carousel.addEventListener("mousemove", dragging);
-// carousel.addEventListener("mousedown", dragstart);
-// // carousel.addEventListener("mouseup", dragstop);
 
 
 const carousel = document.querySelector(".carousel");
