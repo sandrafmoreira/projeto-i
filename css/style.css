@@ -45,8 +45,7 @@ a{
     color: var(--color-orange);
     cursor: pointer;
     font-family: var(--font-source);
-    font-weight: 700;
-    font-size: 1.2rem;
+  
 }
 
 body {

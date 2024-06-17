@@ -8,7 +8,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
     <link rel="stylesheet" href="/css/style.css">
+ 
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -42,42 +44,98 @@
 
 
     <section class="welcome_section">
-        <h1 class="header1"><span class="header_font_weight"> Tudo sobre</span> Tecnologias e  Sistemas de  Informação  para a Web</h1>
-
-        <img src="/images/course/image placeholder.png" alt="" id="video">
+        <!-- <h1 class="header1"><span class="header_font_weight"> Tudo sobre</span> Tecnologias e  Sistemas de  Informação  para a Web</h1> -->
+        <div id="course_carousel" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#course_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active caroussel_item">
+              <div class="embed-responsive embed-responsive-16by9  " id="video_caroussel">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qfMwfaaCFNI?si=drEEpB41pYMc6-CN&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="carousel-item caroussel_item">
+              <img src="/assets/course/image placeholder.png" class="d-block w-100  caroussel_img" alt="...">
+            </div>
+            <div class="carousel-item  caroussel_item">
+              <img src="/assets/course/image placeholder.png" class="d-block w-100  caroussel_img" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#course_carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      
+        <!-- <img src="/images/course/image placeholder.png" alt="" id="video"> -->
     </section>
 
-    <h6 class="header6" id="motivating_sentence">Descobre como esta licenciatura pode ser uma mais valia para o teu futuro!</h6>
+    <!-- <h6 class="header6" id="motivating_sentence">Descobre como esta licenciatura pode ser uma mais valia para o teu futuro!</h6> -->
 
-    <div class="lightblue_pixel" id="pixel1"></div>
+    <!-- <div class="lightblue_pixel" id="pixel1"></div> -->
 
     <section class="course_info">
-        <div class="course_info_section1">
-            <div class="graduate_posters">
+       <!-- <div class="course_info_section1"> -->
+            <!-- <div class="graduate_posters">
                 <img src="/images/course/cartaz de projeto I.png" alt="Cartaz de um projeto de um licenciado" id ="project-posters">
                 <img src="/images/course/cartaz de projeto II.png" alt="Outro cartaz de um projeto de um licenciado" id="project-posters">
-            </div>
-            <div class="course_about1">
+            </div> -->
+            <!-- <div class="course_about1">
                 <h6 class="header6">A licenciatura foca-se no design e desenvolvimento de produtos e software. Destaca-se pelo desenvolvimento de competências fundamentais como design de interação, usabilidade e experiência de utilizador, além da prototipagem de plataformas. </h6>
-            </div>
+            </div> -->
+          </div>
+          <!-- <div class="lightblue_pixel" id="pixel2"></div> -->
+          <div class="course_info_section2">
+              <div class="course_about2">
+                  <p class="header6">A licenciatura foca-se no design e criação de produtos e software. Destaca-se pelo desenvolvimento de competências fundamentais como design de interação, usabilidade e experiência de utilizador, além da prototipagem de plataformas. 
+                    A combinação de todas as aptidões é essencial para o mundo de trabalho e nesta área em específico, e é uma característica marcante da licenciatura que contribui para o seu sucesso.</p>
+                  <div class="how_to_enter">
+                      <h5>Para te candidatares só precisas de:</h5>
+                      <h5>(16) Matemática A<br> ou <br> (19) Matemática</h5>
+                  </div>
+                  <h6 class="header6" id="more_info">Para saberes mais sobre as notas de candidatura acede a <a href="https://inspiring.future.pt/" target="_blank">inspire.future.pt</a>!</h6>
+              </div>
+              <!-- <img src="/images/course/cartaz de projeto III.png" alt="Outro cartaz de um projeto de um licenciado" id ="project-posters"> -->
+          </div>
+      <section class="index_grade_projects_section">
+        <div class="index_grade_projects_text" >
+            <h2>Projetos</h2>
         </div>
-        <div class="lightblue_pixel" id="pixel2"></div>
-        <div class="course_info_section2">
-            <div class="course_about2">
-                <h6 class="header6">A combinação de todas as aptidões é essencial para o mundo de trabalho e nesta área em específico, e é uma característica marcante da licenciatura que contribui para o seu sucesso.</h6>
-                <div class="how_to_enter">
-                    <h5>Para te candidatares só precisas de:</h5>
-                    <h5>(16) Matemática A<br> ou <br> (19) Matemática</h5>
-                </div>
-                <h6 class="header6" id="more_info">Para saberes mais sobre as notas de candidatura acede a <a href="https://inspiring.future.pt/" target="_blank">inspire.future.pt</a>!</h6>
-            </div>
-            <img src="/images/course/cartaz de projeto III.png" alt="Outro cartaz de um projeto de um licenciado" id ="project-posters">
-        </div>
-    </section>
 
-    <div class="lightblue_pixel" id="pixel3"></div>
+       <div class="projects_wrapper">
+            <i id="left" class="material-symbols-outlined">
+                chevron_left
+            </i>
+                <div class="projects_carousel">
+                    <img src="/images/course/projetos/Beatriz Rodrigues.jpeg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/BrunoRodrigues.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/Joana Portugal.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/Joao PInho.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/JoaoCarmo.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/Marco Malta.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/Luís_Gomes.jpg" alt="poster da projetos" title="">
+                    <img src="/images/course/projetos/SofiaRibeiro.jpg" alt="poster da projetos" title="">
+                </div>
+            
+            <i id="right" class="material-symbols-outlined"> chevron_right
+                
+            </i>
+       </div>
+      </section>
+       
+    </section>
+<!-- 
+    <div class="lightblue_pixel" id="pixel3"></div> -->
     
     <section class="classes_info">
+      <h1>Unidades Curriculares</h1>
       <button data-bs-toggle ='collapse' data-bs-target="#button1">Ano Zero</button>
       <div id="button1" class="collapse">
         
@@ -196,7 +254,7 @@
 
     <section class="employability">
       <h2 class="subtitle" id="section5_subtitle">Empregabilidade</h2>
-      <h4 class="header4">Questionário de Empregabilidade (diplomados em TSIW)</h4>
+      <p class="header4">Questionário de Empregabilidade (diplomados em TSIW)</p>
       <div class="percentages">
         <div>
           <h3 class="header3">78%</h3>
@@ -290,9 +348,9 @@
     </section>
     
     <h2 class="subtitle" id="section7_subtitle">... e parceiros da ESMAD!</h2>
-    <section class="slideshow">
-      <div class="slider">
-        <div class="slide">
+    <section class="partners_slideshow">
+      <div class="partners_slider">
+        <div class="partners_slide">
           <img src="/images/course/blip.png" alt="Logo da empresa Blip">
           <img src="/images//course/bindtuning.png" alt="Logo da empresa Bindtuning">
           <img src="/images/course/helppier.png" alt="Logo da empresa Helppier">
@@ -360,10 +418,10 @@
     <script src="/js/dashboardConteúdosAcedidos.js"></script>
 
     <script src="../js/views/testemoniesView.js"></script>
-
+    <script src="/js/course_slider.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module" src="/js/views/navbarView.js"></script>
