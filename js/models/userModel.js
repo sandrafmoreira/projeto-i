@@ -24,7 +24,7 @@ export let users = [];
 let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true, dashboard);
 let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true, dashboard);
 let admin3 = new User("Ken", "Lukau", "ken@123", "123", true, dashboard);
-let user1 = new User("Mario", "Prof", "mario@123", "123", false, dashboard);
+let user1 = new User("Mário", "Prof", "mario@123", "123", false, dashboard);
 
 if (!localStorage.users) {
     users.push(admin1, admin2, admin3, user1)

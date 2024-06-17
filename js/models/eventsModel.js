@@ -69,10 +69,11 @@ function adminDashboardLoadEvents(events) {
         eventRow = ''
     });
 
-    let iconRow = button.closest('tr')
-    rowIndex = iconRow.rowIndex
+    
 
     document.querySelectorAll('#delete_icon').forEach(button => {
+        let iconRow = button.closest('tr')
+        rowIndex = iconRow.rowIndex
         button.addEventListener('click', () => {
             events.splice(iconRow.rowIndex,1)
             localStorage.events = JSON.stringify(events)
@@ -82,6 +83,8 @@ function adminDashboardLoadEvents(events) {
     })
 
     document.querySelectorAll('#edit_icon').forEach(button => {
+        let iconRow = button.closest('tr')
+        rowIndex = iconRow.rowIndex
         button.addEventListener('click', () => {
             eventSelected = events[rowIndex]
             

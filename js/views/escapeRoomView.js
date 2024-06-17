@@ -213,9 +213,9 @@ export function getNotebook(escapeRoomStats) {
                         <img usemap="notebook" class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/notebook2.png" id="modal_main_img">
 
                         <div class="colorOrder">
-                            <h4 class="secretWord" id="word1"><b>Teste</b></h4>
-                            <h4 class="secretWord" id="word2"><b>Teste</b></h4>
-                            <h4 class="secretWord" id="word3"><b>Teste</b></h4>
+                            <div class="secretWord" id="color1"></div>
+                            <div class="secretWord" id="color2"></div>
+                            <div class="secretWord" id="color3"></div>
                         </div>      
                     </div>
                 </div>
@@ -244,13 +244,13 @@ export function getNotebook(escapeRoomStats) {
                 closeModal()
             })
                 
-            let word1 = document.querySelector('#word1')
-            let word2 = document.querySelector('#word2')
-            let word3 = document.querySelector('#word3')
+            let color1 = document.querySelector('#color1')
+            let color2 = document.querySelector('#color2')
+            let color3 = document.querySelector('#color3')
 
-            word1.style.color = escapeRoomStats.boxColorOrder[0]
-            word2.style.color = escapeRoomStats.boxColorOrder[1]
-            word3.style.color = escapeRoomStats.boxColorOrder[2]
+            color1.style.backgroundColor = escapeRoomStats.boxColorOrder[0]
+            color2.style.backgroundColor = escapeRoomStats.boxColorOrder[1]
+            color3.style.backgroundColor = escapeRoomStats.boxColorOrder[2]
         }) 
     } else {
 
@@ -259,13 +259,13 @@ export function getNotebook(escapeRoomStats) {
             closeModal()
         })
 
-        let word1 = document.querySelector('#word1')
-        let word2 = document.querySelector('#word2')
-        let word3 = document.querySelector('#word3')
+        let color1 = document.querySelector('#color1')
+        let color2 = document.querySelector('#color2')
+        let color3 = document.querySelector('#color3')
 
-        word1.style.color = escapeRoomStats.boxColorOrder[0]
-        word2.style.color = escapeRoomStats.boxColorOrder[1]
-        word3.style.color = escapeRoomStats.boxColorOrder[2]
+        color1.style.backgroundColor = escapeRoomStats.boxColorOrder[0]
+        color2.style.backgroundColor = escapeRoomStats.boxColorOrder[1]
+        color3.style.backgroundColor = escapeRoomStats.boxColorOrder[2]
     }
 }
 
@@ -274,6 +274,122 @@ export function getSecondaryScreen(escapeRoomStats) {
      * Função que renderiza o ecrã da esquerda!
      * JOGO DA MEMÓRIA!
      */
+    let secondaryScreen = ''
+    // <div class="modal-content">
+    //     <button class="close">X</button>
+    //     <div class="interactive_section" id="postIt_img" style="display: none">
+    //         <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
+    //         <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
+    //     </div>
+    // </div>    
+
+    if(!escapeRoomStats.memoryGameSolved) {
+        secondaryScreen = `
+        <div class="modal-content">
+            <button class="close">X</button>
+            <section class="memoryGameContainer">
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+                <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
+            </section>
+        </div>
+        `
+
+        document.querySelector('#esc_modal').innerHTML = secondaryScreen
+        alert("Localiza os 2 pedaços de código! Memoriza a posição do primeiro pedaço que encontraste. Ao descobrires o segundo tens que identificar, no tabuleiro, a posição  do primeiro!")
+        document.querySelector('.close').addEventListener('click', () => {
+            closeModal()
+        })
+
+        let divs = document.querySelectorAll('.computerMemoryGame');
+
+        let pos1 = Math.floor(Math.random() * divs.length);
+        let pos2 = Math.floor(Math.random() * divs.length);
+
+        while (pos1 == pos2) {
+            pos2 = Math.floor(Math.random() * divs.length);
+        }
+
+        divs.forEach(div => {
+            div.innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
+        })
+
+        let clickedFirstEgg = false;
+        let clickedSecondEgg = false;
+
+        divs.forEach(div => {
+            div.addEventListener('click', () => {
+                // div.style.backgroundColor = "pink";
+                if (!clickedFirstEgg) {
+                    if (div == divs[pos1]) {
+                        showFirstEgg(divs, pos1);
+                        clickedFirstEgg = true;
+                    }
+                }
+                
+                if (clickedFirstEgg) {
+                    // div.style.backgroundColor = "lightblue";
+                    if (div == divs[pos2]) {
+                        divs[pos2].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
+                        clickedSecondEgg = true;
+                    } 
+                }
+
+                if (clickedSecondEgg) {
+                    // div.style.backgroundColor = "orange";
+                    if (div == divs[pos1]) {
+                        divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
+                        setTimeout(() => {
+                            alert("Parabéns! Encontraste as duas partes do código!")
+                            escapeRoomStats.memoryGameSolved = true
+                            }, 1000
+                        );
+                        secondaryScreen = `
+                            <div class="modal-content">
+                                <button class="close">X</button>
+                                <div class="interactive_section" id="postIt_img2">
+                                    <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
+                                    <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
+                                </div>
+                            </div>` 
+                        document.querySelector('#esc_modal').innerHTML = secondaryScreen
+                        document.querySelector('.close').addEventListener('click', () => {
+                            closeModal()
+                    })
+
+                    } else if (div !== divs[pos1] && div !== divs[pos2]) {
+                            alert("Que Memória Fraca! Não acertaste na posição da primeira parte do código!");
+                        }        
+                }
+            });
+        });
+    } else {
+        secondaryScreen = `
+        <div class="modal-content">
+            <button class="close">X</button>
+            <div class="interactive_section" id="postIt_img2">
+                <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
+                <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
+            </div>
+        </div>` 
+    
+        document.querySelector('#esc_modal').innerHTML = secondaryScreen
+        document.querySelector('.close').addEventListener('click', () => {
+            closeModal()
+    })
+
+    }
+
+    
     // let secondaryScreen = `
     // <div class="modal-content">
     //     <button class="close">X</button>
@@ -282,94 +398,9 @@ export function getSecondaryScreen(escapeRoomStats) {
     //     </div>
     // </div>
     // `
-    let secondaryScreen = `
-    <div class="modal-content">
-        <button class="close">X</button>
-        <div class="interactive_section">
-            <h2>${escapeRoomStats.pc_password.slice(3,6)}</h2>
-        </div>
-
-        <section class="memoryGameContainer">
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-            <div style="width:30px;height:30px;" class="computerMemoryGame"></div>
-        </section>
-    </div>
-    `
-
-    document.querySelector('#esc_modal').innerHTML = secondaryScreen
-    alert("Localiza os 2 pedaços de código! Memoriza a posição do primeiro pedaço que encontraste. Ao descobrires o segundo tens que identificar, no tabuleiro, a posição  do primeiro!")
-
-    let divs = document.querySelectorAll('.computerMemoryGame');
-
-    let pos1 = Math.floor(Math.random() * divs.length);
-    let pos2 = Math.floor(Math.random() * divs.length);
-    console.log(pos1, pos2);
-
-    while (pos1 == pos2) {
-        pos2 = Math.floor(Math.random() * divs.length);
-    }
-
-    divs.forEach(div => {
-        div.innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
-    })
-
-    let clickedFirstEgg = false;
-    let clickedSecondEgg = false;
-
-    divs.forEach(div => {
-        div.addEventListener('click', () => {
-            // div.style.backgroundColor = "pink";
-            if (!clickedFirstEgg) {
-                if (div == divs[pos1]) {
-                    showFirstEgg();
-                    clickedFirstEgg = true;
-                }
-            }
-            
-            if (clickedFirstEgg) {
-                // div.style.backgroundColor = "lightblue";
-                if (div == divs[pos2]) {
-                    divs[pos2].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
-                    clickedSecondEgg = true;
-                } 
-            }
-
-            if (clickedSecondEgg) {
-                // div.style.backgroundColor = "orange";
-                if (div == divs[pos1]) {
-                    divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
-                    setTimeout(() => {
-                        alert("Parabéns! Encontraste as duas partes do código!")
-                        }, 700
-                    );
-                } else if (div !== divs[pos1] && div !== divs[pos2]) {
-                        alert("Que Memória Fraca! Não acertaste na posição da primeira parte do código!");
-                    }        
-            }
-        });
-    });
-
-    function showFirstEgg() {
-        divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`
-        setTimeout(() => {
-            divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
-            }, 1000
-        )
-    }
+    
  
-    document.querySelector('.close').addEventListener('click', () => {
-        closeModal()
-    })
+    
 }
 
 export function getMainScreen(escapeRoomStats) {
@@ -444,26 +475,39 @@ export function closeModal() {
     modal.style.display = 'none';
 }
 
+function showFirstEgg(divs, pos1) {
+    divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`
+    setTimeout(() => {
+        divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
+        }, 1000
+    )
+}
 
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
-    user.dashboard.time_record = escapeRoomStats.timer
+    console.log(escapeRoomStats.timer);
+    user.dashboard.time_record = escapeRoomStats.time
     let time_record = user.dashboard.time_record
     let findUser = user.email
 
     let users = JSON.parse(localStorage.users)
     users.forEach(user => {
         if (user.email == findUser) {
-            console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
-            console.log();
-            if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
-                user.dashboard.time_record = time_record
-            } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
-                if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+            if(user.dashboard.time_record != '') {
+                console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
+                if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
                     user.dashboard.time_record = time_record
+                } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
+                    if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+                        user.dashboard.time_record = time_record
+                    }
                 }
+            } else {
+                user.dashboard.time_record = time_record
             }
+            
         }
     });
     localStorage.users = JSON.stringify(users)
 }
+

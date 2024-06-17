@@ -40,11 +40,16 @@ const mainScreen = document.getElementById('mainScreen').addEventListener('click
     View.getMainScreen(escapeRoomStats)
 })
 
+let countdownTimer = ''
+let timer = ''
+let timerRanOut = false
 
 // TEMPORIZADOR
+if(document.querySelector('#countdownBtn') && document.querySelector('#timer')) {
+    countdownTimer = document.querySelector('#countdownBtn');
+    timer = document.querySelector('#timer');
+}
 
-let countdownTimer = document.querySelector('#countdownBtn');
-let timer = document.querySelector('#timer');
 
 
 function countdown(){
@@ -55,30 +60,36 @@ function countdown(){
     let seconds = 0;
 
     //Atualizar o tempo a cada segundo!
-    setInterval(function() {
+    let countdownTimer = setInterval(function() {
         timer.textContent = minutes + ':' + seconds;
 
     //Se o temporizador terminar!
-    if (minutes <= 0 && seconds <= 0){
-        clearInterval(intervalID)
-        alert(`Time's up!`)
-        return //????
-    }
-
-    if (seconds == 0){
-        seconds = 59
-        minutes -= 1
-    }
-
-    seconds -= 1;
-    if (seconds < 10){
-        timer.textContent = minutes + ":" + '0' + seconds;
-    } else if(minutes < 10){
-        timer.textContent = '0' + minutes + ':' + seconds;
-    } else if(minutes < 10 && seconds < 10){
-        text.textContent = '0' + minutes + ':' + '0' + seconds;
-    }
+    if (!timerRanOut) {
+        if (minutes <= 0 && seconds <= 0){
+            clearInterval(countdownTimer)
+            timer.textContent = '----'
+            alert(`Time's up!`)
+            welcomeModal()
+            return;
+        }
+        if (seconds == 0){
+            seconds = 59
+            minutes -= 1
+        }
+    
+        seconds -= 1;
+        console.log(seconds);
+        if (seconds < 10){
+            console.log('123');
+            timer.textContent = minutes + ":" + '0' + seconds;
+        } else if(minutes < 10 && seconds < 10){
+            text.textContent = '0' + minutes + ':' + '0' + seconds;
+        }
+        } 
     }, 1000)
+    
+
+    
     
 }
 
@@ -88,17 +99,19 @@ function welcomeModal() {
 
     let modal = `
     <div class="modal-content">
-        <div class="interactive_section">
+        <div class="interactive_section" id="welcomeModal">
+            <img src="../assets/maze/prof_Cyberino.png" class="avatar">
             <h4>Bem vindo ao TSIW Maze! O professor Cyberino pretende 
             acabar com todas as ferramentas de inteligência artificial... e o teu objetivo é pará-lo o mais rápido possível!
             Não te demores, tens 5 minutos para sair da sala e salvar as IAs! Boa sorte! </h4>
-            <button class="close">Começar!</button>
+            <button class="startGame">Começar!</button>
         </div>
     </div>
     `
 
     document.querySelector('#esc_modal').innerHTML = modal
-    document.querySelector('.close').addEventListener('click', () => {
+    document.querySelector('.startGame').addEventListener('click', () => {
+        timerRanOut = false
         View.closeModal()
         countdown()
         playerTime(escapeRoomStats)
@@ -136,21 +149,23 @@ function playerTime(escapeRoomStats) {
 
 // ---------------------------------------------------------------------------------------
 // MODAL
+let modal = ''
 
-let modal = document.getElementById('esc_modal');
-let closeButton = document.getElementsByClassName('close')[0];
-
-
-function openModal() {
-    modal.style.display = 'block';
-
-
+if(document.getElementById('esc_modal')) {    
+    modal = document.getElementById('esc_modal');
 }
 
-let escapeRoomStats = new EscapeRoom('', '', false, 3, '', '0000', ['#112a46','#0f3315','#e15a20','#e01f1f','#8c0f0f','#000000','#c62490','#6f0ba1'], [], ['#C5C6CB','#C5C6CB','#C5C6CB'], false, false, false, '')
+function openModal() {
+    if (document.getElementById('esc_modal')) {
+        modal.style.display = 'block';
+    }
+}
+
+let escapeRoomStats = new EscapeRoom('', '', false, 3, '', '0000', ['#112a46','#0f3315','#e15a20','#e01f1f','#8c0f0f','#000000','#c62490','#6f0ba1'], [], ['#C5C6CB','#C5C6CB','#C5C6CB'], false, false, false, false, '')
 escapeRoomStats.generatePassword()
 escapeRoomStats.generateDrawerCode()
 escapeRoomStats.generateColorOrder()
+
 
 document.addEventListener('DOMContentLoaded', function() {
     welcomeModal()

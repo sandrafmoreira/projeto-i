@@ -11,10 +11,11 @@ export default class EscapeRoom {
     openDrawer = false; //Para saber se o jogador já abriu a gaveta!
     openBox = false;   //Para saber se o jogador já abriu a caixa!
     postItClicked = false; //Para saber se o jogador já clicou no post-it clicável no caderno!
+    memoryGameSolved = false; //Para saber se o jogador já resolveu o jogo da memoria!!
     time = ''; //Tempo que o jogador demora a completar o Escape Room!
 
 
-    constructor(pc_password, player_password, pc_locked, player_tries, drawerCode, playerCode, boxColors, boxColorOrder, playerColorOrder,openDrawer, openBox, postItClicked, time) {
+    constructor(pc_password, player_password, pc_locked, player_tries, drawerCode, playerCode, boxColors, boxColorOrder, playerColorOrder,openDrawer, openBox, postItClicked, memoryGameSolved, time) {
         this.pc_password = pc_password;
         this.player_password = player_password;
         this.pc_locked = pc_locked;
@@ -27,6 +28,7 @@ export default class EscapeRoom {
         this.openDrawer = openDrawer;
         this.openBox = openBox
         this.postItClicked = postItClicked;
+        this.memoryGameSolved = memoryGameSolved;
         this.time = time;
     }
 
