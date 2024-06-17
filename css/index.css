@@ -4,14 +4,13 @@
     position: relative;
     display: grid;
     width: 100%;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
     justify-content: space-between;
     gap: 2rem;
     align-content: center;
-    padding-top: 8rem;
-    padding-bottom: 15rem;
+    padding-bottom: 6rem;
     background-color: var(--color-blue);
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .index_main_text {
@@ -22,15 +21,16 @@
     flex-direction: column;
     align-items: left;
     margin: 0rem 1rem 2rem 2rem;
+    padding-top:10rem ;
 }
 
 .index_main_text h1 {
     text-align: left;
-    font-size: 6.5rem;
+    font-size: 5.5rem;
     font-family: var(--font-raleway);
     
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-weight: 900;
     z-index: 1;
 }
@@ -38,7 +38,7 @@
     font-size: 1.8rem;
     font-weight: 200;
     text-align: left;
-    width: 60%;
+    width: 100%;
 }
 
 .index_main_img{
@@ -52,20 +52,24 @@
     width: 100%;
 }
 
-/*  Section teaser website (site tour) */
+/*  Section teaser website  */
 
 .index_site_tour_section{
     background-color: var(--color-blue);
+    display: grid;
+    grid-template-columns: 60% 40%;
     width: 100%;
     height: 55rem;
-    padding: 6rem 0rem;
-    color: #fff;  
-    
+    padding: 0rem 0rem 10rem;
+    color: #fff;
+    align-items: center;
+    position: relative;
+        
 }
 .index_video_teaser{
     
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
     
 }
 
@@ -76,11 +80,12 @@
 }
 .video{
     
-    width: 60%;
-    height: 30rem;
+    width: 100%;
+    /* 
     z-index: 1;
-    position: relative;
-    border-radius: 0.2rem;
+    position: relative; */
+    height: 60vh;
+    border-radius: 0.3rem;
 
     
     
@@ -88,15 +93,16 @@
 .index_intel{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    margin-left:auto;
-    height: 28rem;
-    position: relative;
-    bottom: 29rem;
-    border-radius: 0.2rem;
-    background-color: var( --color-lightblue-opacity);
+    width: 100%;
+    /* margin-left: auto; */
+    /* height: 28rem; */
+    /* position: absolute; */
+    /* bottom: 29rem; */
+    /* border-radius: 0.2rem; */
+    /* background-color: var( --color-lightblue-opacity); */;
+    padding-right: auto;
 }
-.index_intel h4{
+.index_intel h3{
     font-family: var( --font-raleway);
     font-weight: 700;
     color: #fff;
@@ -106,21 +112,21 @@
 
 .index_site_tour_section ul li{
     font-family: var(--font-source);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 350;
     margin: 0.5rem 0 0 8rem;
     
    
 }
 
-.index_follow_us_incentive{
+/* .index_follow_us_incentive{
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* height: auto; */
+   
     background-color: var(--color-lightblue);
     width: 25%;
-    /* height: 10rem; */
+    
     padding: 1rem;
     margin-left: auto;
     position: absolute;
@@ -138,13 +144,13 @@
 }
 .index_follow_us_incentive_icons_wrapper{
     display: grid; 
-    width: 50%;
-    grid-template-columns: 25% 25% 25%;
+    width: 20%;
+    grid-template-rows: 25% 25% 25%;
    justify-content: space-around;
    
   
   
-}
+} */
 
 
 
@@ -205,6 +211,7 @@
 .index_about_tsiw_section_text p{
    width: 100%;
     font-weight: 350;
+    font-size: 1.4rem;
     
 }
 /* Section tools slideshow  */

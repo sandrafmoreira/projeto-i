@@ -44,12 +44,18 @@ a{
     text-decoration: none;
     color: var(--color-orange);
     cursor: pointer;
+    font-family: var(--font-source);
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 body {
     margin: 0px;
     overflow-x:hidden;
-    
+    font-family: var(--font-source);
+    padding-top: 4rem ;
+ 
+
 }
 
 h1 {
@@ -76,13 +82,13 @@ h5 {
 h6 {
     font-size: 1.6rem; /* 16px */
 }
-/* 
+
 p {
-    font-size: 1.6rem; 16px
-} */
+    font-size: 1.2rem; 
+}
 
 .small-text {
-    font-size: 1.4rem; /* 14px */
+    font-size: 1.1rem; /* 14px */
 }
 
 p, label{
