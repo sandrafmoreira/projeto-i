@@ -1,9 +1,12 @@
 import User from "../models/userModel.js"
+import * as user from "../models/userModel.js"
+// import {funct} from "../game.js"
 
 let users = []
 
 document.addEventListener('DOMContentLoaded', function() {
     loadDashboard()
+    specialStat()
 })
 
 function loadDashboard() {
@@ -31,3 +34,25 @@ function loadDashboard() {
     
   }
 }
+
+
+function specialStat() {
+    let currentUser = JSON.parse(sessionStorage.getItem("loggedUser"));
+
+    let recordTime = currentUser.dashboard.time_record;
+    // alert(recordTime);
+
+    let specialStatus = document.getElementById("specialStatus");
+
+    let time = recordTime.split(":");
+
+    if (time[0] <= 1 && time[1] <= 35)  {
+        specialStatus.innerHTML = "Finalista de curso";
+    } else if (time[0] <= 2 && time[1] <= 30) {
+        specialStatus.innerHTML = ("Sherlock dos Dados");
+    } else {
+        specialStatus.innerHTML = ("Programador novato");
+    }
+}
+
+
