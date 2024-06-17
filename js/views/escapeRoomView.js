@@ -486,7 +486,7 @@ function showFirstEgg(divs, pos1) {
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
     console.log(escapeRoomStats.timer);
-    user.dashboard.time_record = escapeRoomStats.time
+    // user.dashboard.time_record = escapeRoomStats.timer
     let time_record = user.dashboard.time_record
     let findUser = user.email
 
@@ -494,6 +494,7 @@ function saveStats(escapeRoomStats) {
     users.forEach(user => {
         if (user.email == findUser) {
             if(user.dashboard.time_record != '') {
+                console.log("321");
                 console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
                 if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
                     user.dashboard.time_record = time_record
@@ -503,7 +504,8 @@ function saveStats(escapeRoomStats) {
                     }
                 }
             } else {
-                user.dashboard.time_record = time_record
+                console.log("123");
+                user.dashboard.time_record = escapeRoomStats.timer
             }
             
         }
