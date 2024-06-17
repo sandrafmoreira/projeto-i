@@ -9,6 +9,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     padding: 0 30px;
+    z-index: 6000;
 }
 
 footer > div {
@@ -23,11 +24,11 @@ footer > div {
     width: 250px;
 }
 .footer_logo > h3 {
-    font-size:2rem ;
+    font-size:1.4rem ;
     font-weight: 500;
 }
 footer h2{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 .footer_sitemap > a {
@@ -49,5 +50,10 @@ footer h2{
 .footer_contactos_icons {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+.footer_contactos_icons p {
+    font-size: 13px;
 }
 

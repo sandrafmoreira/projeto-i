@@ -16,23 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li><a href="/html/about.html">SOBRE NÓS</a></li>
                     <li><a href="https://www.esmad.ipp.pt/" target="_blank">ESMAD</a></li>
                     <li><a href="/html/course.html">CURSO</a></li>
-                    <li><a href="/index.html" id="navLogo"></li>
+                    <li><a href="/index.html" id="navLogo">
                         <img src="/assets/logo.png" alt="tsiw logo" class="nav-logo">
                     </a></li>
-                    <li><div class="nav-esc">
+                    <li class="nav-esc">
                         <a href="/html/maze.html">MAZE</a>
                         <img src="/assets/index/Labyrinth.png" alt="tsiw logo" class="nav-maze">
-                    </div></li>
+                    </li>
                 `;
 
         if (User.isLogged()) {
 
             if (User.admin()) {
                 result += `<li><a href="/html/adminDashboard.html">DASHBOARD</a></li>`
-                alert(User.admin())
+                // alert(User.admin())
             } else if (!User.admin(), "navbar") {
                 result += `<li><a href="/html/dashboard.html">DASHBOARD</a></li>`
-                alert(User.admin(), "navbar")
+                // alert(User.admin(), "navbar")
 
             }
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="nav_orange_divider"></div>
                     <!-- <div class="nav_after_login"> -->
                         <li><img id="nav_profile_pic" src="/assets/navbar/default user pic.png" alt="profile pic on navbar"></li>
-                        <li><a href="" id="nav_dropdown_icon">
+                            <a href="" id="nav_dropdown_icon">
                             <img id="nav_dropdown_icon" src="/assets/navbar/nav_dropdown_icon.png" alt="dropdown icon on navbar">
                             <div id="dropmenu-div" style="display: none;">
                                 <div>
@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="nav-orange-divider"></div>
                     <li><a href="/html/sign-up.html">CRIAR CONTA</a></li>
                 `;
-        }
+        } 
 
-        result += `</div>`;
+        result += `</ul></div>`;
 
 
         let navbar = document.getElementById("navbar");
@@ -89,12 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-
-    // function toggleNavbar() {
-    //     alert("hehehe")
-    //     phoneNavbar.style.display = "none";
-    // };
 
     // funcções para carregar conteúdo das modais que se encontram em ficheiros html para as modais
     function modals() {
@@ -197,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let password = document.getElementById("login-password").value;
                 console.log(email, password); //teste
                 User.login(email, password); //Chamar a funcao do login
+                
                 if (User.isLogged()) {
                     if (User.admin() == true) {
                         window.location.href = "/html/adminDashboard.html";
