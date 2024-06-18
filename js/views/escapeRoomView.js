@@ -388,19 +388,6 @@ export function getSecondaryScreen(escapeRoomStats) {
     })
 
     }
-
-    
-    // let secondaryScreen = `
-    // <div class="modal-content">
-    //     <button class="close">X</button>
-    //     <div class="interactive_section">
-    //         <h2>${escapeRoomStats.pc_password.slice(3,6)}</h2>
-    //     </div>
-    // </div>
-    // `
-    
- 
-    
 }
 
 export function getMainScreen(escapeRoomStats) {
@@ -410,14 +397,16 @@ export function getMainScreen(escapeRoomStats) {
      * O jogador tem por default 3 tentativas para o fazer, ao utilizar as 3 tentativas, o jogador perde automaticamente o Escape Room!
      * Ao inserir a password correta, irá desbloquear o PC e passar para os desafios finais do Escape Room para sair da sala!
      * DESAFIOS PROGRAMAÇÃO
-     */
+     */        
     let mainScreen = `
     <div class="modal-content">
         <button class="close">X</button>
-        <div class="interactive_section">
+        <div class="interactive_section" id="mainScreen">
+            <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/windows.jpg" alt="Ecrã de computador" id="mainScreen">
             <form get="#">
-                <input type="text" placeholder="Insira a password!" id="password_input" value="${escapeRoomStats.player_password}">
-                <button id="submitBtn">Inserir!</button>
+                <label for="password_input" class="password_input_label">Insere a password!</label>
+                <input type="text" placeholder="Insira a password!" name="password_input" id="password_input" value="${escapeRoomStats.player_password}">
+                <button id="passwordSubmitBtn">Inserir!</button>
             </form>
         </div>
     </div>
@@ -432,27 +421,30 @@ export function getMainScreen(escapeRoomStats) {
         document.querySelector('.interactive_section').style.display = 'none'
         
     } else {
-        document.querySelector('#submitBtn').addEventListener('click', () => {
+        document.querySelector('#passwordSubmitBtn').addEventListener('click', (event) => {
+            event.preventDefault()
+
             let password = document.querySelector('#password_input').value;
 
             escapeRoomStats.player_password = password
             if (password == escapeRoomStats.pc_password) {
-                alert(`PC desbloqueado! Tempo parou em ${escapeRoomStats.timer}`)
-                saveStats(escapeRoomStats)
+                alert('Parabéns! Desbloqueaste o PC!')
+                renderQuizQuestions(escapeRoomStats)
             } else {
                 escapeRoomStats.player_tries -= 1;
                 
                 if(escapeRoomStats.player_tries == 0) {
                     alert('O PC foi bloqueado e não já não dá para desbloquea-lo.. o Cyberino ganhou! D:')
-                    document.querySelector('.interactive_section').style.display = 'none'
-                    escapeRoomStats.pc_locked = true;
+                    location.reload() //Dá refresh na página para começar o Escape Room de novo!
                 } else {
                     alert(`Password errada! Tens mais ${escapeRoomStats.player_tries} tentativas!`)
                 }
 
             }
         })
-    }
+    
+}
+    
 }
 
 function rgbToHex(r, g, b, escapeRoomStats, colorIndex) {
@@ -486,28 +478,191 @@ function showFirstEgg(divs, pos1) {
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
     console.log(escapeRoomStats.timer);
-    user.dashboard.time_record = escapeRoomStats.time
+    // user.dashboard.time_record = escapeRoomStats.time
     let time_record = user.dashboard.time_record
     let findUser = user.email
-
+ 
     let users = JSON.parse(localStorage.users)
     users.forEach(user => {
-        if (user.email == findUser) {
-            if(user.dashboard.time_record != '') {
-                console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
-                if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
-                    user.dashboard.time_record = time_record
-                } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
-                    if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
-                        user.dashboard.time_record = time_record
-                    }
-                }
-            } else {
+        if(user.dashboard.time_record != '') {
+            console.log("321");
+            console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
+            if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
                 user.dashboard.time_record = time_record
+            } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
+                if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+                    user.dashboard.time_record = time_record
+                }
             }
-            
+        } else {
+            console.log("123");
+            user.dashboard.time_record = escapeRoomStats.timer
         }
     });
     localStorage.users = JSON.stringify(users)
 }
 
+function renderQuizQuestions(escapeRoomStats) {
+    alert('Oh não! O Cyberino está a tentar travar-te! Tens agora que responder a 5 perguntas relacionadas com programação para sair da sala! Mas tem cuidado, se errares uma.. é GAME OVER!!')
+    let questionsList = []
+    const question1 = {
+        question: 'Qual é o valor x após o valor de "x" após a execução do código?',
+        image_src: '/img/game/quiz-questions/question1.png',
+        answer1: '10',
+        answer2: '5',
+        answer3: '7.5',
+        answer4: '15',
+        correctAnswer: '7.5'
+    }
+    questionsList.push(question1)
+
+    const question2 = {
+        question: 'O que vai ser exibido na consola ao executar o seguinte código?',
+        image_src: '/img/game/quiz-questions/question2.png',
+        answer1: 'apple',
+        answer2: 'undefined',
+        answer3: 'cherry',
+        answer4: 'banana',
+        correctAnswer: 'apple'
+    }
+    questionsList.push(question2)
+
+    const question3 = {
+        question: 'O que vai ser exibido na consola ao executar o seguinte código?',
+        image_src: '/img/game/quiz-questions/question3.png',
+        answer1: '2',
+        answer2: '3',
+        answer3: '4',
+        answer4: 'undefined',
+        correctAnswer: '3'
+    }
+    questionsList.push(question3)
+
+    const question4 = {
+        question: 'Sabendo que o método "push" adiciona um novo elemento à última posição de uma lista, o que é exibido na consola?',
+        image_src: '/img/game/quiz-questions/question4.png',
+        answer1: '["1", "2", "3", "4"]',
+        answer2: '["4", "1", "2", "3"]',
+        answer3: '["4", "3", "2", "1"]',
+        answer4: '["1", "2", "3"]',
+        correctAnswer: '["1", "2", "3", "4"]',
+    }
+    questionsList.push(question4)
+
+    const question5 = {
+        question: 'O que é exibido na consola quando o seguinte código é executado?',
+        image_src: '/img/game/quiz-questions/question5.png',
+        answer1: 'hello',
+        answer2: 'undefined',
+        answer3: 'h',
+        answer4: 'Error',
+        correctAnswer: 'h',
+    }
+    questionsList.push(question5)
+
+    const question6 = {
+        question: 'Sabendo que o método "find" retorna o primeiro valor que é verdadeiro numa condição, qual é o valor de "result"?',
+        image_src: '/img/game/quiz-questions/question6.png',
+        answer1: '2',
+        answer2: '3',
+        answer3: '["2","3"]',
+        answer4: 'Error',
+        correctAnswer: '2'
+    }
+    questionsList.push(question6)
+
+    const question7 = {
+        question: 'O que é exibido na consola?',
+        image_src: '/img/game/quiz-questions/question7.png',
+        answer1: '5',
+        answer2: '23',
+        answer3: 'Error',
+        answer4: '2',
+        correctAnswer: '23'
+    }
+    questionsList.push(question7)
+
+    const question8 = {
+        question: 'Sabendo que o método "filter" retorna todos os valores que são verdadeiros numa condição, qual é o valor de "result"?',
+        image_src: '/img/game/quiz-questions/question8.png',
+        answer1: '["1","2","3","4","5"]',
+        answer2: '["1","2"]',
+        answer3: '["4","5"]',
+        answer4: 'undefined',
+        correctAnswer: '["4","5"]'
+    }
+    questionsList.push(question8)
+
+    const question9 = {
+        question: 'Usando este ciclo for, o que vai ser exibido na consola?',
+        image_src: '/img/game/quiz-questions/question9.png',
+        answer1: '0 1 2 3 4',
+        answer2: '1 2 3 4 5 ',
+        answer3: '0 1 3 6 10',
+        answer4: '10',
+        correctAnswer: '0 1 3 6 10'
+    }
+    questionsList.push(question9)
+
+    const question10 = {
+        question: 'A variável "person" é um objeto com as propriedades "name", e "age". O que vai ser exibido na consola depois da definição da variável "person"',
+        image_src: '/img/game/quiz-questions/question10.png',
+        answer1: '{name: "John", age: 30}',
+        answer2: 'undefined',
+        answer3: '30',
+        answer4: 'John',
+        correctAnswer: 'John'
+    }
+    questionsList.push(question10)
+
+    let iteration = 0;
+    quizGame(escapeRoomStats, questionsList, iteration)
+}
+
+function quizGame(escapeRoomStats, questionsList, iteration) {
+    let questionHTML = '';
+    let answer = '';
+
+    let chooseQuestion = Math.floor(Math.random() * (questionsList.length))
+
+    questionHTML = `
+        <div class="modal-content">
+            <div class="interactive-section" id="mainScreen">
+                <h3 id="quiz_question"> ${iteration + 1}) ${questionsList[chooseQuestion].question}</h3>
+                <img src="${questionsList[chooseQuestion].image_src}"
+                <br>
+                <div id="quiz_options">
+                    <button>${questionsList[chooseQuestion].answer1}</button>
+                    <button>${questionsList[chooseQuestion].answer2}</button>
+                    <button>${questionsList[chooseQuestion].answer3}</button>
+                    <button>${questionsList[chooseQuestion].answer4}</button>
+                </div>
+            </div>
+        </div>
+    `
+
+    document.querySelector('#esc_modal').innerHTML = questionHTML
+
+    document.querySelectorAll('#quiz_options button').forEach(button => {
+        button.addEventListener('click', () => {
+            answer = button.textContent
+            if (answer == questionsList[chooseQuestion].correctAnswer) {
+                alert('Certa! :D')
+                iteration += 1
+                questionsList.splice(chooseQuestion, 1)
+                if (iteration == 5) {
+                    alert(`SAISTE DA SALA! PARABENS! Acabaste o Escape Room em: ${escapeRoomStats.timer}`)
+                    saveStats(escapeRoomStats)
+                    location.reload()
+                } else {
+                    quizGame(escapeRoomStats, questionsList, iteration)
+                }
+            } else {
+                alert('ERRADO! O Cyberino conseguiu o que precisava para acabar com as IAs! :( GAME OVER!')
+                location.reload()
+            }
+
+        })
+    })
+
+}

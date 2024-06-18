@@ -45,7 +45,7 @@ let timer = ''
 let timerRanOut = false
 
 // TEMPORIZADOR
-if(document.querySelector('#countdownBtn') && document.querySelector('#timer')) {
+if(document.querySelector('#timer')) {
     countdownTimer = document.querySelector('#countdownBtn');
     timer = document.querySelector('#timer');
 }
@@ -56,7 +56,7 @@ function countdown(){
     //Esta função faz a contagem decrescente, que é o tempo que o jogador tem para completar o Escape Room (apenas para o modo competitivo)
 
     //Por default, o jogador tem 5 minutos!
-    let minutes = 5; 
+    let minutes = 10; 
     let seconds = 0;
 
     //Atualizar o tempo a cada segundo!
@@ -78,7 +78,6 @@ function countdown(){
         }
     
         seconds -= 1;
-        console.log(seconds);
         if (seconds < 10){
             console.log('123');
             timer.textContent = minutes + ":" + '0' + seconds;
@@ -161,12 +160,9 @@ function openModal() {
     }
 }
 
-let escapeRoomStats = new EscapeRoom('', '', false, 3, '', '0000', ['#112a46','#0f3315','#e15a20','#e01f1f','#8c0f0f','#000000','#c62490','#6f0ba1'], [], ['#C5C6CB','#C5C6CB','#C5C6CB'], false, false, false, false, '')
+let escapeRoomStats = new EscapeRoom('', '', 3, '', '0000', ['#112a46','#0f3315','#e15a20','#e01f1f','#8c0f0f','#000000','#c62490','#6f0ba1'], [], ['#C5C6CB','#C5C6CB','#C5C6CB'], false, false, false, false, false, '')
 escapeRoomStats.generatePassword()
 escapeRoomStats.generateDrawerCode()
 escapeRoomStats.generateColorOrder()
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    welcomeModal()
-})
+welcomeModal()
