@@ -88,8 +88,3 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-document.getElementById('clearStorage').addEventListener('click', () => {
-    localStorage.removeItem('pageProgress');
-    location.reload();
-});

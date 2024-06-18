@@ -478,25 +478,28 @@ function showFirstEgg(divs, pos1) {
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
     console.log(escapeRoomStats.timer);
-    // user.dashboard.time_record = escapeRoomStats.time
+    // // user.dashboard.time_record = escapeRoomStats.timer
     let time_record = user.dashboard.time_record
     let findUser = user.email
  
     let users = JSON.parse(localStorage.users)
     users.forEach(user => {
-        if(user.dashboard.time_record != '') {
-            console.log("321");
-            console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
-            if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
-                user.dashboard.time_record = time_record
-            } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
-                if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+        if (user.email == findUser) {
+            if(user.dashboard.time_record != '') {
+                console.log("321");
+                console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
+                if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
                     user.dashboard.time_record = time_record
+                } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
+                    if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
+                        user.dashboard.time_record = time_record
+                    }
                 }
+            } else {
+                console.log("123");
+                user.dashboard.time_record = escapeRoomStats.timer
             }
-        } else {
-            console.log("123");
-            user.dashboard.time_record = escapeRoomStats.timer
+            
         }
     });
     localStorage.users = JSON.stringify(users)

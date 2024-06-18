@@ -164,5 +164,5 @@ let escapeRoomStats = new EscapeRoom('', '', 3, '', '0000', ['#112a46','#0f3315'
 escapeRoomStats.generatePassword()
 escapeRoomStats.generateDrawerCode()
 escapeRoomStats.generateColorOrder()
-
+console.log(escapeRoomStats.pc_password);
 welcomeModal()
