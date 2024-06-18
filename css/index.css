@@ -35,7 +35,7 @@
     z-index: 1;
 }
 .index_main_text h4{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 200;
     text-align: left;
     width: 100%;
@@ -57,7 +57,7 @@
 .index_site_tour_section{
     background-color: var(--color-blue);
     display: grid;
-    grid-template-columns: 60% 35%;
+    grid-template-columns: 65% 30%;
     width: 100%;
     height: 55rem;
     padding: 0rem 0rem 10rem;
@@ -79,7 +79,7 @@
     font-family: var(--font-raleway);
     margin: 0rem 2rem 2rem 2rem;
 }
-.video{
+.video_teaser{
     
     width: 100%;
     /* 
@@ -91,6 +91,7 @@
     
     
 }
+
 .index_intel{
     display: flex;
     flex-direction: column;
@@ -114,17 +115,18 @@
  
 }
 
-.index_site_tour_section ul li{
+.index_site_tour_section  ul li{
     font-family: var(--font-source);
     font-size: 1.4rem;
     font-weight: 350;
-    margin: 0.5rem 0 0 0rem;
-    /* text-align: left; */
+    margin-top: 0.5rem;
     width: 100%;
-    align-items: left;
+    list-style-type: square;
+    /* align-items: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     margin-left: auto;
+  
  
    
 }
@@ -186,6 +188,8 @@
 }
 .img_button_index_about_tsiw_section img{
     width: 100%;
+    height: 50vh;
+    object-fit: cover;
 }
 .btn_index{
     margin-top: 15px;
@@ -287,6 +291,7 @@
 .index_grade_activities_text p{
     width: 100%;
     font-weight: 350;
+
    
     
 }
@@ -461,13 +466,13 @@
 .index_Testimonies_2 img{
     object-fit: cover;
     position: absolute;
-    top: 53rem;
+    top: 49rem;
     left: 35rem;
 }
 
 #index_Testimonies_2_profile{
     position: absolute;
-    bottom: 58rem;
+    bottom: 63rem;
     left: 59rem;
     
 }
@@ -486,12 +491,12 @@
 }
 #index_Testimonies_3_profile{
     position: absolute;
-    bottom: 17rem;
+    bottom: 22rem;
     left: 28rem;
 }
 .index_Testimonies_3 img{
     position: absolute;
-    bottom: 17rem;
+    bottom: 22rem;
 }
 #index_Testimonie_3_p{
     position: absolute;

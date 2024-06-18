@@ -23,11 +23,13 @@ nav {
 }
 
  */
- li {
+
+ /* aqui ta o problema sandra  */
+/* li {
     width: 120px;
     display: flex;
     justify-content: center;
-}
+} */
 
 
 nav {
