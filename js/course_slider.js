@@ -1,10 +1,10 @@
 const carousel = document.querySelector(".projects_carousel");
 const icons = document.querySelectorAll(".projects_wrapper i")
-const firstImag = document.querySelectorAll("img")[0]
+const firstImag = document.querySelectorAll(".projects_carousel img")[0]
 
 
 let isSliderStart = false, prevpageX, prevscrollleft;
-let firstImgWidth =firstImag.clientWidth + 5;
+let firstImgWidth =firstImag.clientWidth + 8;
 console.log(firstImgWidth)
 
 icons.forEach(function(icon) {
