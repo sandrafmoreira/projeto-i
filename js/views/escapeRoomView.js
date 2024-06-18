@@ -275,7 +275,6 @@ export function getSecondaryScreen(escapeRoomStats) {
      * Função que renderiza o ecrã da esquerda!
      * JOGO DA MEMÓRIA!
      */
-    let secondaryScreen = ''
     // <div class="modal-content">
     //     <button class="close">X</button>
     //     <div class="interactive_section" id="postIt_img" style="display: none">
@@ -283,6 +282,7 @@ export function getSecondaryScreen(escapeRoomStats) {
     //         <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
     //     </div>
     // </div>    
+    let secondaryScreen = ''
 
     if(!escapeRoomStats.memoryGameSolved) {
         secondaryScreen = `
@@ -307,6 +307,7 @@ export function getSecondaryScreen(escapeRoomStats) {
 
         document.querySelector('#esc_modal').innerHTML = secondaryScreen
         alert("Localiza os 2 pedaços de código! Memoriza a posição do primeiro pedaço que encontraste. Ao descobrires o segundo tens que identificar, no tabuleiro, a posição  do primeiro!")
+        alert('Atênção, se perderes o jogo, o Cyberino ganha!')
         document.querySelector('.close').addEventListener('click', () => {
             closeModal()
         })
@@ -324,28 +325,28 @@ export function getSecondaryScreen(escapeRoomStats) {
             div.innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
         })
 
-        let clickedFirstEgg = false;
-        let clickedSecondEgg = false;
+        let clickedFirstCode = false;
+        let clickedSecondCode = false;
 
         divs.forEach(div => {
             div.addEventListener('click', () => {
                 // div.style.backgroundColor = "pink";
-                if (!clickedFirstEgg) {
+                if (!clickedFirstCode) {
                     if (div == divs[pos1]) {
-                        showFirstEgg(divs, pos1);
-                        clickedFirstEgg = true;
+                        showFirstCode(divs, pos1);
+                        clickedFirstCode = true;
                     }
                 }
                 
-                if (clickedFirstEgg) {
+                if (clickedFirstCode) {
                     // div.style.backgroundColor = "lightblue";
                     if (div == divs[pos2]) {
                         divs[pos2].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
-                        clickedSecondEgg = true;
+                        clickedSecondCode = true;
                     } 
                 }
 
-                if (clickedSecondEgg) {
+                if (clickedSecondCode) {
                     // div.style.backgroundColor = "orange";
                     if (div == divs[pos1]) {
                         divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
@@ -368,7 +369,7 @@ export function getSecondaryScreen(escapeRoomStats) {
                     })
 
                     } else if (div !== divs[pos1] && div !== divs[pos2]) {
-                            alert("Que Memória Fraca! Não acertaste na posição da primeira parte do código!");
+                        loseModal(escapeRoomStats);
                         }        
                 }
             });
@@ -469,7 +470,7 @@ export function closeModal() {
     modal.style.display = 'none';
 }
 
-function showFirstEgg(divs, pos1) {
+function showFirstCode(divs, pos1) {
     divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`
     setTimeout(() => {
         divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer.png">`;
@@ -551,6 +552,36 @@ function finalModal(escapeRoomStats, time_record) {
     document.querySelector('#startAgain').addEventListener('click', () => {
         location.reload();
     })
+}
+
+function loseModal() {
+    let loseModal = `
+    <div class="modal-content">
+        <div class="interactive_section" id="loseModal">
+            <h2>Oh não!</h2>
+            <h4>O Cyberino conseguiu trancar-te no escritório e destruir todas as IAs!</h4>
+            <div id="lose_buttons">
+                <button id="goToDashboard">Ir para a dashboard</button>
+                <button id="startAgain">Tentar de novo</button>
+            </div>
+        </div>
+    </div>
+    `
+
+    document.querySelector('#esc_modal').innerHTML = loseModal
+    document.querySelector('#goToDashboard').addEventListener('click', () => {
+        let user = JSON.parse(sessionStorage.loggedUser)
+        if (user.admin) {
+            window.location.href = 'adminDashboard.html'
+        } else {
+            window.location.href = 'dashboard.html'
+        }    
+    })
+
+    document.querySelector('#startAgain').addEventListener('click', () => {
+        location.reload();
+    })
+
 }
 
 function renderQuizQuestions(escapeRoomStats) {

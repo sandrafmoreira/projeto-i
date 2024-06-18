@@ -273,16 +273,16 @@
     width: 120px;
 }
 
-#congratulations_text{
+#congratulations_text, #loseModal{
     color: white;
     text-align: center;
 }
 
-#congratulations_text h2{
+#congratulations_text h2, #loseModal h2{
     font-size: 3rem;
 }
 
-#congratulations_text h4{
+#congratulations_text h4, #loseModal h4{
     font-size: 1.2rem;
 }
 
@@ -290,16 +290,12 @@
     font-size: 1.1rem;
 }
 
-#congratulations_buttons{
+#congratulations_buttons, #lose_buttons{
     text-align: center;
     margin-top: 50px;
 }
 
-#congratulations_buttons a{
-    color: white;
-}
-
-#congratulations_buttons button {
+#congratulations_buttons button, #lose_buttons button {
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
@@ -309,9 +305,13 @@
     padding: 12px 20px;
 }
 
-#congratulations_buttons button:hover{
+#congratulations_buttons button:hover, #lose_buttons button:hover{
     background-color: white;
     color: var(--color-orange);
+}
+
+#loseModal{
+    text-align: center;
 }
 
 .close{
@@ -377,6 +377,11 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 50px;
+    margin-top: 50px;
+}
+
+.computerMemoryGame{
+    margin-left: 15px;
 }
 
 @media only screen and (max-width: 768px){

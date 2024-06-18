@@ -11,7 +11,6 @@ export default class EscapeRoom {
     openBox = false;   //Para saber se o jogador já abriu a caixa!
     postItClicked = false; //Para saber se o jogador já clicou no post-it clicável no caderno!
     memoryGameSolved = false; //Para saber se o jogador já resolveu o jogo da memoria!!
-    gameLost = false;
     time = ''; //Tempo que o jogador demora a completar o Escape Room!
 
 
