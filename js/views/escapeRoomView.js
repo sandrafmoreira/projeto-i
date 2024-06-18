@@ -351,7 +351,6 @@ export function getSecondaryScreen(escapeRoomStats) {
                     if (div == divs[pos1]) {
                         divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
                         setTimeout(() => {
-                            alert("Parabéns! Encontraste as duas partes do código!")
                             escapeRoomStats.memoryGameSolved = true
                             }, 1000
                         );
@@ -380,7 +379,7 @@ export function getSecondaryScreen(escapeRoomStats) {
             <button class="close">X</button>
             <div class="interactive_section" id="postIt_img2">
                 <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
-                <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
+                <h4>_ _ _ ${escapeRoomStats.pc_password.slice(3, 6)}</h4>
             </div>
         </div>` 
     
@@ -436,8 +435,7 @@ export function getMainScreen(escapeRoomStats) {
                 escapeRoomStats.player_tries -= 1;
                 
                 if(escapeRoomStats.player_tries == 0) {
-                    alert('O PC foi bloqueado e não já não dá para desbloquea-lo.. o Cyberino ganhou! D:')
-                    location.reload() //Dá refresh na página para começar o Escape Room de novo!
+                    loseModal()
                 } else {
                     alert(`Password errada! Tens mais ${escapeRoomStats.player_tries} tentativas!`)
                 }
@@ -480,12 +478,9 @@ function showFirstCode(divs, pos1) {
 
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
-    console.log(escapeRoomStats.time);
-    // // user.dashboard.time_record = escapeRoomStats.timer
-    let time_record = user.dashboard.time_record
     let findUser = user.email
     let new_record = ''
- 
+    
     let users = JSON.parse(localStorage.users)
     users.forEach(user => {
         if (user.email == findUser) {
@@ -513,30 +508,63 @@ function saveStats(escapeRoomStats) {
 
 
 function finalModal(escapeRoomStats, time_record) {
-    let finalModal = `
-    <div class="modal-content">
-        <div class="interactive_section" id="finalModal">
-            <div id="confetti_div">
-                <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti1">
-            </div>
-            <div id="congratulations_div">
-                <div id="congratulations_text">
-                    <h2>PARABÉNS! :D</h2>
-                    <h4>Travaste o plano do Cyberino de destruir as IAs... por agora...</h4>
-                    <p>O tempo que demoraste: <b>${escapeRoomStats.time}</b></p>
-                    <p>O teu tempo-recorde: <b>${time_record}</b></p>
+    document.querySelector('#timer').style.display = 'none'
+    let competitiveMode = JSON.parse(sessionStorage.competitiveMode)
+    let finalModal = ''
+
+    if(competitiveMode) {
+        finalModal = `
+        <div class="modal-content">
+            <div class="interactive_section" id="finalModal">
+                <div id="confetti_div">
+                    <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti1">
                 </div>
-                <div id="congratulations_buttons">
-                    <button id="goToDashboard">Ir para a dashboard</button>
-                    <button id="startAgain">Jogar de novo</button>
+                <div id="congratulations_div">
+                    <div id="congratulations_text">
+                        <h2>PARABÉNS! :D</h2>
+                        <h4>Travaste o plano do Cyberino de destruir as IAs... por agora...</h4>
+                        <p>O tempo que demoraste: <b>${escapeRoomStats.time}</b></p>
+                        <p>O teu tempo-recorde: <b>${time_record}</b></p>
+                    </div>
+                    <div id="congratulations_buttons">
+                        <button id="goToDashboard">Ir para a dashboard</button>
+                        <button id="startAgain">Jogar de novo</button>
+                    </div>
                 </div>
-            </div>
-            <div id="confetti_div">
-                <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti2">
+                <div id="confetti_div">
+                    <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti2">
+                </div>
             </div>
         </div>
-    </div>
-    `
+        `
+    } else {
+        finalModal = `
+        <div class="modal-content">
+            <div class="interactive_section" id="finalModal">
+                <div id="confetti_div">
+                    <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti1">
+                </div>
+                <div id="congratulations_div">
+                    <div id="congratulations_text">
+                        <h2>PARABÉNS! :D</h2>
+                        <h4>Travaste o plano do Cyberino de destruir as IAs... por agora...</h4>
+                        <p>O tempo que demoraste: <b>${escapeRoomStats.time}</b></p>
+                        <p>O teu tempo-recorde: <b>${time_record}</b></p>
+                        <p>Como jogaste em Modo Passivo, o tempo-recorde não vai atualizar! </p>
+                    </div>
+                    <div id="congratulations_buttons">
+                        <button id="goToDashboard">Ir para a dashboard</button>
+                        <button id="startAgain">Jogar de novo</button>
+                    </div>
+                </div>
+                <div id="confetti_div">
+                    <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti2">
+                </div>
+            </div>
+        </div>
+        `
+    }
+    
 
     document.querySelector('#esc_modal').innerHTML = finalModal
     document.querySelector('#goToDashboard').addEventListener('click', () => {
@@ -554,7 +582,8 @@ function finalModal(escapeRoomStats, time_record) {
     })
 }
 
-function loseModal() {
+export function loseModal() {
+    document.querySelector('#timer').style.display = 'none'
     let loseModal = `
     <div class="modal-content">
         <div class="interactive_section" id="loseModal">
@@ -704,6 +733,7 @@ function renderQuizQuestions(escapeRoomStats) {
 function quizGame(escapeRoomStats, questionsList, iteration) {
     let questionHTML = '';
     let answer = '';
+    let competitiveMode = JSON.parse(sessionStorage.competitiveMode)
 
     let chooseQuestion = Math.floor(Math.random() * (questionsList.length))
 
@@ -734,7 +764,20 @@ function quizGame(escapeRoomStats, questionsList, iteration) {
                 questionsList.splice(chooseQuestion, 1)
                 if (iteration == 5) {
                     alert(`SAISTE DA SALA! PARABENS! Acabaste o Escape Room em: ${escapeRoomStats.time}`)
-                    saveStats(escapeRoomStats)
+                    if (competitiveMode) {
+                        saveStats(escapeRoomStats)
+                    } else {
+                        let user = JSON.parse(sessionStorage.loggedUser)
+                        let findUser = user.email
+                        let user_time_record = ''
+                        let users = JSON.parse(localStorage.users)
+                        users.forEach(user => {
+                            if(user.email == findUser) {
+                                user_time_record = user.dashboard.time_record
+                            }
+                        });
+                        finalModal(escapeRoomStats, user_time_record)
+                    }
                 } else {
                     quizGame(escapeRoomStats, questionsList, iteration)
                 }
