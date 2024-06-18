@@ -174,8 +174,9 @@ export function getPostIt(escapeRoomStats) {
     <div class="modal-content">
         <button class="close">X</button>
         <div class="interactive_section" id="postIt_img">
+
             <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
-            <h4>${escapeRoomStats.pc_password.slice(0, 3)}</h4>
+            <h4>${escapeRoomStats.pc_password.slice(0, 3)}_ _ _</h4>
         </div>
     </div>
     `
@@ -358,7 +359,7 @@ export function getSecondaryScreen(escapeRoomStats) {
                                 <button class="close">X</button>
                                 <div class="interactive_section" id="postIt_img2">
                                     <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
-                                    <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
+                                    <h4>_ _ _ ${escapeRoomStats.pc_password.slice(3, 6)}</h4>
                                 </div>
                             </div>` 
                         document.querySelector('#esc_modal').innerHTML = secondaryScreen
