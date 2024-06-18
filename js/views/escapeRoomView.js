@@ -448,6 +448,7 @@ export function getMainScreen(escapeRoomStats) {
     
 }
 
+
 function rgbToHex(r, g, b, escapeRoomStats, colorIndex) {
     /**
      * Função que transforma o codigo rgb em codigo Hex
@@ -478,29 +479,78 @@ function showFirstEgg(divs, pos1) {
 
 function saveStats(escapeRoomStats) {
     let user = JSON.parse(sessionStorage.loggedUser)
-    console.log(escapeRoomStats.timer);
+    console.log(escapeRoomStats.time);
     // // user.dashboard.time_record = escapeRoomStats.timer
     let time_record = user.dashboard.time_record
     let findUser = user.email
+    let new_record = ''
  
     let users = JSON.parse(localStorage.users)
     users.forEach(user => {
         if (user.email == findUser) {
             if(user.dashboard.time_record != '') {
-                if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
-                    user.dashboard.time_record = time_record
-                } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
-                    if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(time_record.slice(time_record.indexOf(':') + 1)))  {
-                        user.dashboard.time_record = time_record
+                new_record = user.dashboard.time_record
+                if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(escapeRoomStats.time.slice(1, 2))) {
+                    user.dashboard.time_record = escapeRoomStats.time
+                    new_record = user.dashboard.time_record
+                } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(escapeRoomStats.time.slice(1, 2))){
+                    if(parseInt(user.dashboard.time_record.slice(user.dashboard.time_record.indexOf(':') + 1)) > parseInt(escapeRoomStats.time.slice(escapeRoomStats.time.indexOf(':') + 1)))  {
+                        user.dashboard.time_record = escapeRoomStats.time
+                        new_record = user.dashboard.time_record
                     }
                 }
             } else {
-                user.dashboard.time_record = escapeRoomStats.timer
+                user.dashboard.time_record = escapeRoomStats.time
+                new_record = user.dashboard.time_record
             }
             
         }
     });
     localStorage.users = JSON.stringify(users)
+    finalModal(escapeRoomStats, new_record)
+}
+
+
+function finalModal(escapeRoomStats, time_record) {
+    let finalModal = `
+    <div class="modal-content">
+        <div class="interactive_section" id="finalModal">
+            <div id="confetti_div">
+                <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti1">
+            </div>
+            <div id="congratulations_div">
+                <div id="congratulations_text">
+                    <h2>PARABÉNS! :D</h2>
+                    <h4>Travaste o plano do Cyberino de destruir as IAs... por agora...</h4>
+                    <p>O tempo que demoraste: <b>${escapeRoomStats.time}</b></p>
+                    <p>O teu tempo-recorde: <b>${time_record}</b></p>
+                </div>
+                <div id="congratulations_buttons">
+                    <button id="goToDashboard">Ir para a dashboard</button>
+                    <button id="startAgain">Jogar de novo</button>
+                </div>
+            </div>
+            <div id="confetti_div">
+                <img src="/assets/dashboard/confetti.png" class="confetti" id="confetti2">
+            </div>
+        </div>
+    </div>
+    `
+
+    document.querySelector('#esc_modal').innerHTML = finalModal
+    document.querySelector('#goToDashboard').addEventListener('click', () => {
+        let user = JSON.parse(sessionStorage.loggedUser)
+        if (user.admin) {
+            window.location.href = 'adminDashboard.html'
+        } else {
+            window.location.href = 'dashboard.html'
+        }
+        
+    })
+
+    document.querySelector('#startAgain').addEventListener('click', () => {
+        location.reload();
+    })
 }
 
 function renderQuizQuestions(escapeRoomStats) {
@@ -652,9 +702,8 @@ function quizGame(escapeRoomStats, questionsList, iteration) {
                 iteration += 1
                 questionsList.splice(chooseQuestion, 1)
                 if (iteration == 5) {
-                    alert(`SAISTE DA SALA! PARABENS! Acabaste o Escape Room em: ${escapeRoomStats.timer}`)
+                    alert(`SAISTE DA SALA! PARABENS! Acabaste o Escape Room em: ${escapeRoomStats.time}`)
                     saveStats(escapeRoomStats)
-                    location.reload()
                 } else {
                     quizGame(escapeRoomStats, questionsList, iteration)
                 }
