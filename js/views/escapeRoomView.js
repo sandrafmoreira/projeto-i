@@ -486,8 +486,6 @@ function saveStats(escapeRoomStats) {
     users.forEach(user => {
         if (user.email == findUser) {
             if(user.dashboard.time_record != '') {
-                console.log("321");
-                console.log(parseInt(user.dashboard.time_record.slice(1,2)), parseInt(time_record.slice(1, 2)));
                 if ( parseInt(user.dashboard.time_record.slice(1,2)) > parseInt(time_record.slice(1, 2))) {
                     user.dashboard.time_record = time_record
                 } else if (parseInt(user.dashboard.time_record.slice(1,2)) == parseInt(time_record.slice(1, 2))){
@@ -496,7 +494,6 @@ function saveStats(escapeRoomStats) {
                     }
                 }
             } else {
-                console.log("123");
                 user.dashboard.time_record = escapeRoomStats.timer
             }
             
