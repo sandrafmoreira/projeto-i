@@ -19,12 +19,39 @@ let events = []
 let eventSelected = ''
 let rowIndex = null
 init()
+
 function init() {
     if(localStorage.eventos) {
         const tempEvents = JSON.parse(localStorage.eventos);
         for(let event of tempEvents) {
             events.push(new Event(event.name, event.image_src))
         }
+    } else {
+        let event1 = {
+            name: 'Porto Tech Hub 1',
+            image_src: 'image 51.png'
+        }
+        events.push(event1)
+
+        let event2 = {
+            name: 'Porto Tech Hub 2',
+            image_src : 'image 52.png'
+        }
+        events.push(event2)
+
+        let event3 = {
+            name: 'TSIW Endpoints 1',
+            image_src: 'image53.png'
+        }
+        events.push(event3)
+
+        let event4 = {
+            name: 'TSIW Endpoints 2',
+            image_src: 'image54.png'
+        }
+        events.push(event4)
+
+        localStorage.eventos = JSON.stringify(events) 
     }
 }
 

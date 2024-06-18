@@ -75,11 +75,11 @@ function countdown(){
         if (seconds == 0){
             seconds = 59
             minutes -= 1
+            timer.textContent = minutes + ':' + seconds;
         }
     
         seconds -= 1;
         if (seconds < 10){
-            console.log('123');
             timer.textContent = minutes + ":" + '0' + seconds;
         } else if(minutes < 10 && seconds < 10){
             text.textContent = '0' + minutes + ':' + '0' + seconds;
@@ -138,9 +138,9 @@ function playerTime(escapeRoomStats) {
 
     seconds += 1;
     if (seconds < 10){
-        escapeRoomStats.timer = minutes + ":" + '0' + seconds;
+        escapeRoomStats.time = minutes + ":" + '0' + seconds;
     } else if(minutes < 10){
-        escapeRoomStats.timer = '0' + minutes + ':' + seconds;
+        escapeRoomStats.time = '0' + minutes + ':' + seconds;
     } 
     }, 1000)
       
