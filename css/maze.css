@@ -285,3 +285,11 @@
         border-radius: 8px;
     }
 } 
+
+@media only screen and (max-width: 560px){
+    .maze-page-title-and-desc > h1 {
+        
+        font-size: 6rem;
+        
+    }
+}
