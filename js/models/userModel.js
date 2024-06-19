@@ -108,10 +108,10 @@ export function admin() {
         console.log(admin.email, "admin");
         console.log(loggedUser.email, "loggeUser");
         if(loggedUser.email == admin.email) {
-            // console.log("aaaadmin")
+            console.log("aaaadmin")
             return true;
         } else {
-            // console.log("ffalllllse")
+            console.log("ffalllllse")
             return false;
         }
     })

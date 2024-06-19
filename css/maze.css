@@ -1,10 +1,10 @@
 .maze-page-main {
-    padding: 0 50px;
+    /* padding: 0 50px; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: var(--color-blue);
-    width: 100vw;
+    /* width: 100vw; */
 }
  
 .maze-page-title-and-desc {
@@ -100,8 +100,8 @@
 .maze_page_níveis_left > h2 {
     font-family:'Montserrat', sans-serif;;
     font-size: 1.8rem;
-    color: var(--color-lightblue);
-    font-weight: 500;
+    color: #fff;
+    font-weight: 700;
 }
 .maze_page_níveis_left > img {
     width: 80px;
@@ -154,45 +154,58 @@
 @media only screen and (max-width: 768px) {
 
     .maze-page-title-and-desc > img {
-        margin-top: 50px;
-        width: 70px;
+        margin-top: 0px;
+        width: 133px;
     }
 
     .maze-page-main {
+        /* width: 100vw; */
         padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        /* flex-wrap: wrap; */
+        display: grid;
+        grid-template-rows: 90% 10%;
+        align-items: center;
+        justify-content: flex-start;
     }
     .maze-page-title-and-desc > h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 3em;
+        font-size: 9rem;
         font-weight: 700;
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
 
     .maze-page-title-and-desc > h2 {
-        font-family: var( --font-source);
-        font-size: 16px;
+        display: none;
+        /* font-family: var( --font-source);
+        font-size: 16px; */
     }
     .maze-page-main p {
-        font-size: 15px;
-        width: 50vw;
+       
+        font-size: 1.4rem;
+        width: 70vw;
+        padding-left: 0.8rem;
+        margin: 0;
+        font-weight: 500;
     }
 
     .maze-page-pixels > img {
         width: 50px;
     }
     .maze-page-pixel1,.maze-page-pixel2, .maze-page-pixel3 {
-        z-index:-1
+        /* z-index:-1 */
+        display: none;
     }
     
     .maze-page-pixel2 {
-        width: 100px;
+        display: none;
+        /* width: 100px;
         height: 100px;
         margin-top: -70px;
-        margin-left: 30px;
+        margin-left: 30px; */
     }
 
     .maze-page-pixel4 {
@@ -212,7 +225,7 @@
     .maze_page_nível {
         margin-top: -180px;
         width: 90vw;
-        flex-direction: column;
+        flex-direction: column-reverse;
         display: flex;
         align-items: center;
     }
@@ -243,7 +256,7 @@
     .maze_page_níveis_left h3 {
         font-family:'Montserrat', sans-serif;
         color: #fff;
-        font-size: 12px;
+        font-size: 1.4rem;
     }
     
     .maze_page_níveis_right {
