@@ -95,13 +95,14 @@
 .maze_page_nível p {
     line-height: 25px;
     color: #fff;
+    font-weight: 350;
 }
 
 .maze_page_níveis_left > h2 {
     font-family:'Montserrat', sans-serif;;
     font-size: 1.8rem;
     color: #fff;
-    font-weight: 700;
+    font-weight: 750;
 }
 .maze_page_níveis_left > img {
     width: 80px;
@@ -120,6 +121,7 @@
     font-family:'Montserrat', sans-serif;
     color: #fff;
     font-size: 1.6rem;
+    font-weight: 650;
 }
 
 
@@ -244,7 +246,7 @@
     
     .maze_page_níveis_left > h2 {
         font-family:'Montserrat', sans-serif;
-        font-size: 14px;
+        font-size: 1.6rem;
     }
     
     .maze_page_níveis_left > div {
