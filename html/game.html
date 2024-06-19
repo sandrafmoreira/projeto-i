@@ -12,22 +12,13 @@
     <!-- Allows image maps to be used in a responsive design by recalculating the area coordinates  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js" integrity="sha512-eZB7hQa0bRlrKMQ2njpP0d/Klu6o30Gsr8e5FUCjUT3fSlnVkm/1J14n58BuwgaMuObrGb7SvUfQuF8qFsPU4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
+<body id="mazeGame">
     
-<section id="nav">
+<section id="gameArea">
     <div>
-        <img id="tsiw_maze_logo" src="/img/game/tsiw maze logo.png" alt="">
+        <img id="tsiw_maze_logo" src="/img/game/tsiw maze logo.png" alt="Logo do Escape Room">
         <h2 class="bye_chatgpt">Adeus ChatGPT!!</h2>
     </div>
-    <div class="collectibles">
-       
-    </div>
-    <div id="pause_and_timer">
-        <button class="pause_btn"><img id="pause_icon" src="/img/game/pause.png" alt=""></button>
-        <h2 id="timer" >----</h2>
-    </div>
-</section>
-<section class="game">
     <div class="escape_game">
         <img id="escape_room" usemap="#escapeRoom" class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/escape room.png" alt="Imagem do Escape Room">
 
@@ -39,18 +30,17 @@
             <area shape="poly" coords="72, 183, 171, 169, 180, 248, 81, 271" href="#" alt="Ecrã Secundario" id="secondaryScreen">
         </map>
     </div>
+    <div id="pause_and_timer">
+        <button class="pause_btn"><img id="pause_icon" src="/img/game/pause.png" alt="Icon de pausar"></button>
+        <h2 id="timer" >----</h2>
+    </div>
 </section>
 
-    <!-- TEMPORIZADOR -->
-    <h1 id="timer">----</h1>
-    <button type="button" id="countdownBtn">Começar temporizador</button>
 
     <!-- DESAFIOS COM MODAIS -->
-    <button id="challenge1" class="btn-challenge" onclick="openModal()">1</button>
     <div id="esc_modal" class="modal">
         
     </div>
-    <button id="challenge2" class="btn-challenge">2</button>
     <script type="module" src="/js/game.js"></script>
     <script type="module" src="/js/views/escapeRoomView.js"></script>
 </body>

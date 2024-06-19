@@ -1,7 +1,6 @@
 export default class EscapeRoom {
     pc_password = ''; //Irá conter a password que irá desbloquear o PC!
     player_password = ''; //Para guardar a password que o jogar vai inserindo
-    pc_locked = false; //Para saber se o jogador já desbloqueou o PC
     player_tries = null; //Nº de tentativas que o jogador tem para desbloquear o PC! (3 por default)
     drawerCode = null; //Irá conter a password que irá desbloquear a gaveta!
     playerCode = '0000'; //Para guardar o código da gaveta que o jogador vai inserindo!
@@ -15,10 +14,9 @@ export default class EscapeRoom {
     time = ''; //Tempo que o jogador demora a completar o Escape Room!
 
 
-    constructor(pc_password, player_password, pc_locked, player_tries, drawerCode, playerCode, boxColors, boxColorOrder, playerColorOrder,openDrawer, openBox, postItClicked, memoryGameSolved, time) {
+    constructor(pc_password, player_password, player_tries, drawerCode, playerCode, boxColors, boxColorOrder, playerColorOrder,openDrawer, openBox, postItClicked, memoryGameSolved,gameLost, time) {
         this.pc_password = pc_password;
         this.player_password = player_password;
-        this.pc_locked = pc_locked;
         this.player_tries = player_tries;
         this.drawerCode = drawerCode;
         this.playerCode = playerCode;
@@ -29,6 +27,7 @@ export default class EscapeRoom {
         this.openBox = openBox
         this.postItClicked = postItClicked;
         this.memoryGameSolved = memoryGameSolved;
+        this.gameLost = gameLost;
         this.time = time;
     }
 

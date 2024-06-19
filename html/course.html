@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   </head>
-<body data-page-name="course">
+<body data-page-name="course" id="course_body">
     
   <nav id="navbar"></nav>
   <div class="hamburger" onclick="toggleNavbar()">
@@ -54,14 +54,24 @@
           <div class="carousel-inner">
             <div class="carousel-item active caroussel_item">
               <div class="embed-responsive embed-responsive-16by9  " id="video_caroussel">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qfMwfaaCFNI?si=drEEpB41pYMc6-CN&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <video width="600"  autoplay loop muted class="caroussel_video">
+                  <source src="/media/ESMAD.mp4" type="video/mp4">
+                  video não suportado.
+                </video>
+                <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qfMwfaaCFNI?si=drEEpB41pYMc6-CN&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
               </div>
             </div>
             <div class="carousel-item caroussel_item">
-              <img src="/assets/course/image placeholder.png" class="d-block w-100  caroussel_img" alt="...">
+              <video width="600" autoplay loop muted class="caroussel_video">
+                <source src="/media/TSIW Video Institucional.mp4" type="video/mp4">
+                video não suportado.
+              </video>
             </div>
             <div class="carousel-item  caroussel_item">
-              <img src="/assets/course/image placeholder.png" class="d-block w-100  caroussel_img" alt="...">
+              <video width="600" autoplay loop muted class="caroussel_video">
+                <source src="/media/TSIW Video Institucional.mp4" type="video/mp4">
+                video não suportado.
+              </video>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel" data-bs-slide="prev">

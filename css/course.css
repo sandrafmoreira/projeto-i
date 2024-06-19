@@ -1,3 +1,6 @@
+#course_body nav ul{
+    margin-top: 12.8px;
+}
 
 /*Pixel colors and positions*/
 
@@ -195,16 +198,12 @@ h6 a{
  height: 90vh;
 }
 
-.caroussel_img{
-/* height: 100%; */
-object-fit: cover;
-}
 
 .caroussel_item > #video_caroussel{
     height: 100%;  
     object-fit: cover;
 }
-#video_caroussel iframe{
+.caroussel_video{
     height: 100%;
     width: 100%;
 }
