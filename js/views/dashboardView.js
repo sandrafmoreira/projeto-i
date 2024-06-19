@@ -1,6 +1,5 @@
 import User from "../models/userModel.js"
-import * as user from "../models/userModel.js"
-// import {funct} from "../game.js"
+
 
 let users = []
 
@@ -35,24 +34,34 @@ function loadDashboard() {
   }
 }
 
-
+/*
+Atribuir estatutos especiais e medalhas de acordo com o tempo recorde da escape room
+*/
 function specialStat() {
     let currentUser = JSON.parse(sessionStorage.getItem("loggedUser"));
-
     let recordTime = currentUser.dashboard.time_record;
-    // alert(recordTime);
 
     let specialStatus = document.getElementById("specialStatus");
+    let medal1 = document.querySelector(".medal1");
+    let medal2 = document.querySelector(".medal2");
+    let medal3 = document.querySelector(".medal3");
 
     let time = recordTime.split(":");
 
     if (time[0] <= 1 && time[1] <= 35)  {
         specialStatus.innerHTML = "Finalista de curso";
+        medal3.src = "/assets/dashboard/medal-finalista.png"
+        medal2.src = "/assets/dashboard/medal-sherlock.png"
+        medal1.src = "/assets/dashboard/medal-novato.png"
+
     } else if (time[0] <= 2 && time[1] <= 30) {
         specialStatus.innerHTML = ("Sherlock dos Dados");
+        medal2.src = "/assets/dashboard/medal-sherlock.png"
+        medal1.src = "/assets/dashboard/medal-novato.png"
+
     } else {
         specialStatus.innerHTML = ("Programador novato");
+        medal1.src = "/assets/dashboard/medal-novato.png"
     }
 }
-
 

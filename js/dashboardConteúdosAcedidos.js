@@ -33,7 +33,7 @@ function updateProgressBar(progress) {
         data: {
             labels: ['TSIW', 'Dashboard', "Comunidade", "1º Ano", 'MAZE'],
             datasets: [{
-                label: 'Conteúdos acedidos',
+                label: "Conteúdos Acedidos",
                 data: [progress.tsiw, progress.dashboard, progress.about, progress.course, progress.maze],
                 backgroundColor: ['rgb(158, 204, 250)', 'rgb(201, 77, 36)', 'rgb(255, 243, 106)', 'rgb(255, 255, 255)', 'rgb(58, 155, 149)',],
             }]
@@ -45,15 +45,15 @@ function updateProgressBar(progress) {
                     beginAtZero: true,
                     max: 100,
                     ticks: {
-                        color: 'white' // números no eixo x
+                        color: 'white', font: {size: "14px"} // números no eixo x
                     },
                     grid: {
                         color: 'rgb(16, 76, 100)' // linhas no eixo x
                     }
                 },
-                x: {
+                y: {
                     ticks: {
-                        color: 'white' // números no eixo x
+                        color: 'white', font: {size: "14px"} // números no eixo x
                     },
                     grid: {
                         color: 'rgb(16, 76, 100)' // linhas no eixo x
@@ -88,3 +88,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+function accessedContent() {
+    let medalContent1 = document.querySelector(".medal-content-accessed1");
+    let medalContent2 = document.querySelector(".medal-content-accessed2");
+    let medalContent3 = document.querySelector(".medal-content-accessed3");
+    let medalContent4 = document.querySelector(".medal-content-accessed4");
+    let medalContent5 = document.querySelector(".medal-content-accessed5");
+
+    if()
+}

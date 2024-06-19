@@ -1,3 +1,7 @@
+#dashboard-error-nav nav ul {
+    margin-top: 12.8px;
+}
+
 /* Modal: Edit profile */
 /* .modal {
     display: none; 
@@ -250,6 +254,34 @@
 } */
 
 /*   MAIN PAGE      */
+
+.esc_medals_unlocked {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    text-align: center;
+}
+.esc_medals_unlocked p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.content_medals_unlocked {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    text-align: center;
+}
+.content_medals_unlocked p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.medal1, .medal2, .medal3, .medal-content-accessed1, .medal-content-accessed2, .medal-content-accessed3, .medal-content-accessed4, .medal-content-accessed5 {
+    width: 60px;
+    height: 60px;
+}
+
 #main_messages, #dashboard_info{
     width: 90%;
     margin: 3% auto auto auto;
@@ -526,7 +558,7 @@
     padding: 12px;
 }
 
-.challenge_medals_unlocked, .content_medals_unlocked, .esc_medals_unlocked{
+.challenge_medals_unlocked {
     display: flex;
     gap: 10px;
 }
