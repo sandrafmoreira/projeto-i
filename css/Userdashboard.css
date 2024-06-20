@@ -1,39 +1,3 @@
-.esc_medals_unlocked {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    text-align: center;
-}
-.esc_medals_unlocked p{
-    margin-top: 10px;
-    font-size: 12px;
-}
-.esc_medals_unlocked img{
-    margin-left: 30px;
-    font-size: 10px;
-}
-.esc_medals_unlocked{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 10px;
-    font-size: 12px;
-}
-
-.content_medals_unlocked {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-    text-align: center;
-}
-.content_medals_unlocked p {
-    margin-top: 10px;
-    font-size: 12px;
-}
-
-.medal1, .medal2, .medal3, .medal-content-accessed1, .medal-content-accessed2, .medal-content-accessed3, .medal-content-accessed4, .medal-content-accessed5 {
-    width: 60px;
-    height: 60px;
-}
 
 
 /*   MAIN PAGE      */
@@ -288,7 +252,11 @@
     border-bottom-left-radius: 5px;
     text-align: center;
     color: white;
-    padding: 4px;
+    padding: 10px 0;
+}
+
+#specialStatus {
+    margin: 20px 0 28px 0;
 }
 
 #level1_complete{
@@ -347,7 +315,7 @@
     background-color: rgb(16, 76, 100); /* Cor de fundo branca semi-transparente */
     padding: 10px; /* Espaçamento interno */
     border-radius: 5px; /* Bordas arredondadas, se desejado */
-    width: 120px;
+    /* width: 120px; */
 }
 
 
@@ -515,13 +483,10 @@
         font-size: 0.9rem;
     }
 
-    .time_info h3 span{
-        font-size: 3rem;
+    .time_info h3{
+        font-size: 1rem;
     }
 
-    .time_info h3{
-        font-size: 1.5rem;
-    }
 
     #ranking_title{
         font-size: 1rem;
@@ -546,6 +511,7 @@
     #record h3{
         font-size: 1.8rem;
     }
+
 
     .challenges_complete p, .quizzes_complete p{
         font-size: 0.9rem;

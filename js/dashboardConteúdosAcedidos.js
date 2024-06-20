@@ -60,16 +60,19 @@ function updateProgressBar(progress) {
                     }
                 }
             },
-            // plugins: {
-            //     legend: {
-            //         display: false
-            //     }
-            // }
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "white",
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
         }
     });
 }
-
-// chart.style.width ="110px";
 
 
 

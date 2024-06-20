@@ -209,19 +209,19 @@ function openModal() {
 
 if (document.querySelector('#competitiveMode')) {
     if (!sessionStorage.loggedUser) {
-        document.querySelector('#competitiveMode').addEventListener('click touchstart', () => {
+        document.querySelector('#competitiveMode').addEventListener('click', () => {
             alert('Tens que iniciar sessão para começares a jogar!')
 
         })
-        document.querySelector('#easyMode').addEventListener('click touchstart', () => {
+        document.querySelector('#easyMode').addEventListener('click', () => {
             alert('Tens que iniciar sessão para começares a jogar!')
         })
     } else {
-        document.querySelector('#competitiveMode').addEventListener('click touchstart', () => {
+        document.querySelector('#competitiveMode').addEventListener('click', () => {
             sessionStorage.competitiveMode = true
             window.location.href = 'game.html'
         })
-        document.querySelector('#easyMode').addEventListener('click touchstart', () => {
+        document.querySelector('#easyMode').addEventListener('click', () => {
             sessionStorage.competitiveMode = false
             window.location.href = 'game.html'
         })
