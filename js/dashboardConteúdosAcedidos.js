@@ -96,5 +96,4 @@ function accessedContent() {
     let medalContent4 = document.querySelector(".medal-content-accessed4");
     let medalContent5 = document.querySelector(".medal-content-accessed5");
 
-    if()
 }
