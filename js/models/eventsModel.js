@@ -99,9 +99,9 @@ function adminDashboardLoadEvents(events) {
     
 
     document.querySelectorAll('#delete_icon').forEach(button => {
-        let iconRow = button.closest('tr')
-        rowIndex = iconRow.rowIndex
         button.addEventListener('click', () => {
+            let iconRow = button.closest('tr')
+            rowIndex = iconRow.rowIndex
             events.splice(iconRow.rowIndex,1)
             localStorage.events = JSON.stringify(events)
             adminDashboardLoadEvents(events)
@@ -110,11 +110,10 @@ function adminDashboardLoadEvents(events) {
     })
 
     document.querySelectorAll('#edit_icon').forEach(button => {
-        let iconRow = button.closest('tr')
-        rowIndex = iconRow.rowIndex
         button.addEventListener('click', () => {
+            let iconRow = button.closest('tr')
+            rowIndex = iconRow.rowIndex
             eventSelected = events[rowIndex]
-            console.log(eventSelected);
                 
             document.querySelector('.manege_event_form h3').textContent = 'Editar Evento'
             document.querySelector('#event_name').value = eventSelected.name

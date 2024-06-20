@@ -1,6 +1,5 @@
 import * as User from "/js/models/userModel.js";
 
-console.log(User.users);
 
 export function changePassword() {
 
