@@ -57,7 +57,7 @@
     justify-content: space-evenly;
     align-content: start;
     width: 200px;
-    gap: 20px;
+    gap: 30px;
 }
 
 #timer{
@@ -88,6 +88,46 @@
     border: none;
 }
 
+#homepage_shortcut{
+    display: flex;
+    align-content: start;
+    background-color: unset;
+    border: none;
+    margin-top: 7%
+}
+
+#homepage_shortcut img{
+    width: 64px;
+    height: 64px;
+    align-self: baseline;
+}
+
+#leaveModal h2{
+    font-size: 2.5rem;
+    color: white;
+}
+
+#acess_buttons{
+    display: flex;
+    gap: 30px;
+}
+
+#leaveBtn, #continueGameBtn {
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    background-color: white;
+    color: var(--color-orange);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 20%;
+}
+
+#leaveBtn:hover, #continueGameBtn:hover {
+    background-color: var(--color-orange);
+    color: white;
+    border: 1px solid var(--color-orange);
+}
 
 /*Modal de bem vindo*/
 #welcomeModal {

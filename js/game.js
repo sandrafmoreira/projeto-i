@@ -206,6 +206,34 @@ function openModal() {
     }
 }
 
+if (document.querySelector('#homepage_shortcut')) {
+    document.querySelector('#homepage_shortcut').addEventListener('click', () => {
+        openModal()
+        let modal = `
+        <div class="modal-content">
+            <div class="interactive_section" id="leaveModal">
+                <h2>Queres sair da Escape Room?</h2>
+                <div id="acess_buttons">
+                    <button id="leaveBtn">Sim</button>
+                    <button id="continueGameBtn">Não</button>
+                </div>
+            </div>
+        </div>
+        `
+
+        document.querySelector('#esc_modal').innerHTML = modal
+
+        document.querySelector('#leaveBtn').addEventListener('click', () => {
+            window.location.href = '/index.html'
+        })
+        document.querySelector('#continueGameBtn').addEventListener('click', () => {
+            View.closeModal()
+        })
+
+    })    
+}
+
+//Pagina de acesso ao Escape Room
 
 if (document.querySelector('#competitiveMode')) {
     if (!sessionStorage.loggedUser) {
