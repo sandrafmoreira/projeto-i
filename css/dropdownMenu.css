@@ -1,9 +1,9 @@
 #dropmenu-div {
     width: 300px;
-    height: 230px;
+    height: 200px;
     background-color: var(--color-orange);
     position: fixed;
-    top: 50px;
+    top: 68px;
     right: 0;
     display: grid;
     flex-direction: column;
@@ -24,6 +24,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     margin: 10px 0;
+    font-weight: 500;
 }
 
 
@@ -41,8 +42,7 @@
         
     }
     #dropmenu-div div {
-        gap: 0;
-        
+        gap: 0; 
     }
     }
 
