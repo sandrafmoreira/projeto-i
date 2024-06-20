@@ -218,11 +218,11 @@ if (document.querySelector('#competitiveMode')) {
             alert('Tens que iniciar sessão para começares a jogar!')
         })
     } else {
-        document.querySelector('#competitiveMode').addEventListener('click', () => {
+        document.querySelector('#competitiveMode').addEventListener('onClick', () => {
             sessionStorage.competitiveMode = true
             window.location.href = 'game.html'
         })
-        document.querySelector('#easyMode').addEventListener('click', () => {
+        document.querySelector('#easyMode').addEventListener('onClick', () => {
             sessionStorage.competitiveMode = false
             window.location.href = 'game.html'
         })

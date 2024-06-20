@@ -154,7 +154,6 @@ export function getBox(escapeRoomStats) {
                 escapeRoomStats.playerColorOrder[1] == escapeRoomStats.boxColorOrder[1] &&
                 escapeRoomStats.playerColorOrder[2] == escapeRoomStats.boxColorOrder[2] 
             ) {
-                alert('Caixa aberta!')
                 escapeRoomStats.openBox = true
                 getPostIt(escapeRoomStats)
             }
@@ -406,15 +405,21 @@ export function getMainScreen(escapeRoomStats) {
             <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/windows.jpg" alt="Ecrã de computador" id="mainScreen">
             <form get="#">
                 <label for="password_input" class="password_input_label">Insere a password!</label>
-                <input type="text" placeholder="Insira a password!" name="password_input" id="password_input" value="${escapeRoomStats.player_password}">
+                <input type="text" placeholder="Password com 6 dígitos!" name="password_input" id="password_input" value="${escapeRoomStats.player_password}">
                 <button id="passwordSubmitBtn">Inserir!</button>
             </form>
         </div>
     </div>
     `
 
+    let password = ''
+    setInterval(() => {
+        password = document.querySelector('#password_input').value;
+    }, 100);
+
     document.querySelector('#esc_modal').innerHTML = mainScreen
     document.querySelector('.close').addEventListener('click', () => {
+        escapeRoomStats.player_password = password
         closeModal()
     })
 
@@ -425,7 +430,7 @@ export function getMainScreen(escapeRoomStats) {
         document.querySelector('#passwordSubmitBtn').addEventListener('click', (event) => {
             event.preventDefault()
 
-            let password = document.querySelector('#password_input').value;
+            password = document.querySelector('#password_input').value;
 
             escapeRoomStats.player_password = password
             if (password == escapeRoomStats.pc_password) {

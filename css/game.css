@@ -436,4 +436,16 @@
         width: 80%;
     }
     
+    #welcomeModal h4{
+        font-size: 0.8rem;
+    }
+
+    #welcomeModal button{
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    #esc_modal .modal-content{
+        left: 46.5%
+    }
 }

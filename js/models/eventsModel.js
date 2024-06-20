@@ -114,7 +114,8 @@ function adminDashboardLoadEvents(events) {
         rowIndex = iconRow.rowIndex
         button.addEventListener('click', () => {
             eventSelected = events[rowIndex]
-            
+            console.log(eventSelected);
+                
             document.querySelector('.manege_event_form h3').textContent = 'Editar Evento'
             document.querySelector('#event_name').value = eventSelected.name
         })
