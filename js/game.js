@@ -56,13 +56,13 @@ if(document.querySelector('#timer')) {
 function countdown(competitiveMode){
     //Esta função faz a contagem decrescente, que é o tempo que o jogador tem para completar o Escape Room (apenas para o modo competitivo)
 
-    //Por default, o jogador tem 5 minutos!
     let minutes = 0; 
     let seconds = 0;
     let countdownTimer = ''
 
     if (competitiveMode) {
-    minutes = 5;
+    //Por default, o jogador tem 10 minutos!
+    minutes = 10;
     //Atualizar o tempo a cada segundo!
     countdownTimer = setInterval(function() {
         timer.textContent = minutes + ':' + seconds;
@@ -209,19 +209,19 @@ function openModal() {
 
 if (document.querySelector('#competitiveMode')) {
     if (!sessionStorage.loggedUser) {
-        document.querySelector('#competitiveMode').addEventListener('click touchstart', () => {
+        document.querySelector('#competitiveMode').addEventListener('click', () => {
             alert('Tens que iniciar sessão para começares a jogar!')
 
         })
-        document.querySelector('#easyMode').addEventListener('click touchstart', () => {
+        document.querySelector('#easyMode').addEventListener('click', () => {
             alert('Tens que iniciar sessão para começares a jogar!')
         })
     } else {
-        document.querySelector('#competitiveMode').addEventListener('click touchstart', () => {
+        document.querySelector('#competitiveMode').addEventListener('click', () => {
             sessionStorage.competitiveMode = true
             window.location.href = 'game.html'
         })
-        document.querySelector('#easyMode').addEventListener('click touchstart', () => {
+        document.querySelector('#easyMode').addEventListener('click', () => {
             sessionStorage.competitiveMode = false
             window.location.href = 'game.html'
         })

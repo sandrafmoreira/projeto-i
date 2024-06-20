@@ -560,7 +560,7 @@
     background-color: rgb(16, 76, 100); /* Cor de fundo branca semi-transparente */
     padding: 10px; /* Espaçamento interno */
     border-radius: 5px; /* Bordas arredondadas, se desejado */
-    width: 120px;
+    /* width: 120px; */
 }
 
 
