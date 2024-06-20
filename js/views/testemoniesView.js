@@ -33,7 +33,6 @@ function updateTestimonies(){
             }
         } else{
             get_div_class = document.querySelector(`.index_Testimonies_${testimony.testimony_number}`)
-            console.log(get_div_class);
             if(get_div_class){
                 newTestimony = `
                     <img class="index_testimonies_img" src="/assets/index/${testimony.image_src}" alt = "Fotografia de ${testimony.name}">

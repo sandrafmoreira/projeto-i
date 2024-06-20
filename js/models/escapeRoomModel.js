@@ -2,8 +2,8 @@ export default class EscapeRoom {
     pc_password = ''; //Irá conter a password que irá desbloquear o PC!
     player_password = ''; //Para guardar a password que o jogar vai inserindo
     player_tries = null; //Nº de tentativas que o jogador tem para desbloquear o PC! (3 por default)
-    drawerCode = null; //Irá conter a password que irá desbloquear a gaveta!
-    playerCode = '0000'; //Para guardar o código da gaveta que o jogador vai inserindo!
+    drawerCode = ''; //Irá conter a password que irá desbloquear a gaveta!
+    playerCode = ''; //Para guardar o código da gaveta que o jogador vai inserindo!
     boxColors = []; //Irá conter as cores dos quadrados para desbloquear o cofre (As cores já são escolhidas por default!)
     boxColorOrder = []; //A ordem correta das cores que irá abrir o cofre
     playerColorOrder = []; //Ordem das cores que o jogador vai inserindo!
