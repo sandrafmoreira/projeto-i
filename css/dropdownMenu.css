@@ -1,6 +1,6 @@
 #dropmenu-div {
     width: 300px;
-    height: 230px;
+    height: 200px;
     background-color: var(--color-orange);
     position: fixed;
     top: 50px;
@@ -24,6 +24,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     margin: 10px 0;
+    font-weight: 500;
 }
 
 

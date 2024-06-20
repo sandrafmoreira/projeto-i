@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <a id="editPasswordLink" href="">Editar Palavra-Passe</a>
                                 </div>
                                 <div>
-                                    <img src="/assets/navbar/dropdownMenu/ajuda.png" alt="icon ajuda">
-                                    <a href="">Ajuda</a>
-                                </div>
-                                <div>
                                     <img src="/assets/navbar/dropdownMenu/logout.png" alt="icon logout">
                                     <a id="logout-btn" href="">Terminar Sessão</a>
                                 </div>
