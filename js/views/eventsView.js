@@ -14,7 +14,6 @@ function updateEvents(){
             `
 
             get_div_class.innerHTML += new_image
-            console.log(get_div_class);
         }
     });
 }

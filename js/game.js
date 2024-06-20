@@ -127,7 +127,7 @@ function welcomeModal() {
                     <img src="../assets/maze/prof_Cyberino.png" class="avatar">
                     <h4>Bem vindo ao TSIW Maze! O professor Cyberino pretende 
                     acabar com todas as ferramentas de inteligência artificial... e o teu objetivo é pará-lo o mais rápido possível!
-                    Não te demores, tens 5 minutos para sair da sala e salvar as IAs! Boa sorte! </h4>
+                    Não te demores, tens 10 minutos para sair da sala e salvar as IAs! Boa sorte! </h4>
                     <button class="startGame">Começar!</button>
                 </div>
             </div>

@@ -1,13 +1,5 @@
 /*   MAIN PAGE      */
-/* body{
-    background-color: red;
-} */
-/* #addTestimony, #addEvents{
-    display: none;
-}
-label, button{
-    display: block;
-} */
+
 
 .welcome_admin{
     margin: 7rem 3rem 2rem  ;
@@ -25,7 +17,6 @@ label, button{
 .admin_button_grid {
     display:grid;
     grid-template-columns: auto auto auto  ;
-   /* justify-content: space-between; */
     gap: 4rem;
     max-width: 93vw;
     margin: auto;
@@ -161,8 +152,6 @@ label, button{
     margin: 1rem auto;  
     background-color: var(--color-blue);
     padding: 2rem;
-    /* gap: 2rem; */
-
 }
 
 .manege_event_form h3{
@@ -171,6 +160,7 @@ label, button{
     padding: 0;
     font-family: var( --font-raleway);
     font-weight:800;
+    margin: 10px;
 }
 .events_form_data{
     display: flex;

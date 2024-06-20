@@ -10,7 +10,6 @@
     align-content: center;
     padding-bottom: 6rem;
     background-color: var(--color-blue);
-    /* z-index: -1; */
 }
 
 .index_main_text {
@@ -489,7 +488,7 @@
     border-radius:0.15rem;
     color: var(--color-blue);
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     padding: 1.5rem ;
     

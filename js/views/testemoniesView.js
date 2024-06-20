@@ -5,7 +5,6 @@ function updateTestimonies(){
     if (localStorage.testemunhos) {
         testemunhos = JSON.parse(localStorage.testemunhos)
     }
-    console.log(testemunhos);
     testemunhos.forEach(testimony => {
         if(testimony.placement == 'course'){
             get_div_class = document.querySelector(`.testimony${testimony.testimony_number}`)
@@ -28,7 +27,6 @@ function updateTestimonies(){
                         </ul>
                     </h6>
                 `
-                console.log(get_div_class);
                 get_div_class.innerHTML = newTestimony
             }
         } else{
@@ -53,7 +51,6 @@ function updateTestimonies(){
                     </div>
             `
 
-            console.log(get_div_class);
             get_div_class.innerHTML = newTestimony
             }
         }

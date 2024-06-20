@@ -96,8 +96,6 @@ let divs = document.querySelectorAll("#adminDasboard > div")
 if(document.querySelector('#openEventDiv')) {
     openDivBtn.addEventListener('click', () => {
         for (let i = 0; i < divs.length; i++){
-            console.log("Hiding div", i); 
-            // divs[i].style.display = "none"
 
             if (divs[i] == document.querySelector('#addTestimony'))
             {

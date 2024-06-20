@@ -1,6 +1,3 @@
-
-
-
 const carousel = document.querySelector(".carousel");
 const icons = document.querySelectorAll(".wrapper i")
 const firstImag = document.querySelectorAll("img")[0]
@@ -8,12 +5,10 @@ const firstImag = document.querySelectorAll("img")[0]
 
 let isSliderStart = false, prevpageX, prevscrollleft;
 let firstImgWidth =firstImag.clientWidth + 8;
-console.log(firstImgWidth)
 
 icons.forEach(function(icon) {
     
     icon .addEventListener("click",()=>{
-        console.log(icon)
         if (icon.id == "left"){
             carousel.scrollLeft -= firstImgWidth
         } else{
@@ -50,7 +45,6 @@ const dragging= (e) => {
     // diferençã entra a posição atual e inical do scroll de forma amover no sentido contrario do mouse 
     // e dar a sensasão de arrasto
     carousel.scrollLeft = prevscrollleft-positiondiff;
-    console.log(e.pageX)
 }
 
 

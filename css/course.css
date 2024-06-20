@@ -182,6 +182,7 @@ h6 a{
 #section7_subtitle{
     color: var(--color-blue);
     padding: 100px;
+    margin-top: 20%;
 }
 
 /*Section 1 - Welcome message */
@@ -297,53 +298,6 @@ h6 a{
     margin-left: 0px;
 }
 
-/* 
-#motivating_sentence{
-    color: var(--color-blue);
-    margin-right: 50%;
-    margin-top: 2%;
-}
-
-.course_info{
-    display: flex;
-    flex-direction: column;
-    margin-top: 13%; To have more spacing between this section and the section above
-    color: var(--color-blue);
-}
-
-.course_info_section1{
-    display: flex;
-    flex-direction: row;
-}
-    
-.graduate_posters{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    margin-left: 10%;
-}
-
-#project-posters{
-    width: 15vw;
-    height: 45vh;
-}
-
-.course_about1{
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.course_info_section2{
-    display: flex;
-    flex-direction: row;
-    margin-top: 8%;
-}
-
-.course_info_section2 img{
-    margin-right: 20%;
-} */
-
 .course_about2{
     display: flex;
     flex-direction: column;
@@ -355,7 +309,6 @@ h6 a{
 }
 
 .course_about2 p{
-    /* margin-right: 15%; */
     text-align: cen;
 }
 
@@ -600,6 +553,7 @@ h6 a{
 
 .testimony1 p{
     margin-top: 5%;
+    font-size: 1rem;
 }
 
 .testimony1 img, .testimony3 img{
@@ -614,6 +568,7 @@ h6 a{
 
 .testimony2 p{
     margin-top: 3%;
+    font-size: 1rem;
 }
 
 .testimony2 img{
@@ -628,15 +583,20 @@ h6 a{
 
 .testimony3 p{
     margin-top: 5%;
+    font-size: 1rem;
 }
 
-.testimony1_graduate, .testimony3_graduate{
-    height: 270px;
+.testimony1_graduate{
+    height: 250px;
 
+}
+
+.testimony3_graduate{
+    height: 320px;
 }
 
 .testimony2_graduate{
-    height: 300px;
+    height: 340px;
 }
 
 .testimony1_graduate, .testimony2_graduate, .testimony3_graduate{
@@ -662,7 +622,6 @@ h6 a{
 
 .testimony1_graduate{
     margin-left: 33%;
-    margin-top: -14%;
 }
 
 .testimony2_graduate{
@@ -672,7 +631,7 @@ h6 a{
 
 .testimony3_graduate{
     margin-left: 34%;
-    margin-top: -10%;
+    margin-top: 0%;
 }
 
 

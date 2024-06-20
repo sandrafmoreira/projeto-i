@@ -768,7 +768,6 @@ function quizGame(escapeRoomStats, questionsList, iteration) {
                 iteration += 1
                 questionsList.splice(chooseQuestion, 1)
                 if (iteration == 5) {
-                    alert(`SAISTE DA SALA! PARABENS! Acabaste o Escape Room em: ${escapeRoomStats.time}`)
                     if (competitiveMode) {
                         saveStats(escapeRoomStats)
                     } else {
