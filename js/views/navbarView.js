@@ -146,11 +146,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Local Storage: obter a src nova do avatar
         const newAvatarImageSrc = localStorage.getItem('avatarImageSrc');
         // mudar a src do avatar da navbar para a nova src
-        const avatarProfile = document.getElementById("nav_profile_pic");
-        if (newAvatarImageSrc) {
-            avatarProfile.src = newAvatarImageSrc;
-            avatarProfile.style.width = "40px";
+        if(document.getElementById("nav_profile_pic")) {
+            const avatarProfile = document.getElementById("nav_profile_pic");
+            if (newAvatarImageSrc) {
+                avatarProfile.src = newAvatarImageSrc;
+                avatarProfile.style.width = "40px";
+            }
         }
+        
 
 
 
