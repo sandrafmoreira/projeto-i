@@ -38,7 +38,7 @@ export function userEmail() {
     for (let key in userObject) {
         // console.log(key);
         if (key == "email") {
-            return console.log(userObject[key]);
+            return userObject[key];
         }
     }
 }
