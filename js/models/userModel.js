@@ -31,6 +31,18 @@ if (!localStorage.users) {
     localStorage.users = JSON.stringify(users)
 }
 
+export function userEmail() {
+    const userObj = sessionStorage.getItem("loggedUser");
+    let userObject = JSON.parse(userObj)
+    // console.log(userObj);
+    for (let key in userObject) {
+        // console.log(key);
+        if (key == "email") {
+            return console.log(userObject[key]);
+        }
+    }
+}
+
 if(document.querySelector('#openUserDiv')) {
     let openDivBtn = document.querySelector('#openUserDiv');
     let divs = document.querySelectorAll("#adminDasboard > div")
@@ -105,13 +117,13 @@ export function admin() {
     }
 
     const isAdmin = admins.some(admin => {
-        console.log(admin.email, "admin");
-        console.log(loggedUser.email, "loggeUser");
+        // console.log(admin.email, "admin");
+        // console.log(loggedUser.email, "loggeUser");
         if(loggedUser.email == admin.email) {
-            console.log("aaaadmin")
+            console.log("logged admin")
             return true;
         } else {
-            console.log("ffalllllse")
+            console.log("logged user")
             return false;
         }
     })
