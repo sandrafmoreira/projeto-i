@@ -42,12 +42,6 @@
     height: 26px;
 }
 
-/* .modal_Profile_form_avatars > h4{
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-} */
 .modal_Profile_form_avatars p{
     padding: 5px;
     font-size: 0.8rem;
@@ -81,26 +75,6 @@
     width: 80%;
 } 
 
-/* modal pixels */
-/* .modal_edit_pixel_1{
-    background-color: var(--color-lightblue);
-    border-radius: 0.05rem;
-    position: relative;
-    right: -100px;
-    bottom: 110px;
-    width: 6%;
-    padding-top: 1.8rem;
-}
-
-.modal_edit_pixel_2{
-    background-color: var(--color-yellow);
-    border-radius: 0.05rem;
-    position: relative;
-    left: 464px;
-    bottom: 454px;
-    width: 8%;
-    padding-top: 2.6rem;
-} */
 
 .avatar_description:focus {
     border: 2px solid lightblue;

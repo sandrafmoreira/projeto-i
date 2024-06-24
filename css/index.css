@@ -97,9 +97,6 @@
     font-weight: 700;
     color: #fff;
     padding-top: 5rem;
-    /* padding-left: 2rem; */
-    
- 
 }
 
 .index_site_tour_section  ul li{
@@ -109,17 +106,11 @@
     margin-top: 0.5rem;
     width: 100%;
     list-style-type: square;
-    /* align-items: left;
-    display: flex;
-    flex-direction: column; */
     margin-left: auto;
   
  
    
 }
-
-
-
 
 /* Section about TSIW */
 .index_about_tsiw_section{
@@ -182,6 +173,7 @@
     font-size: 1.4rem;
     
 }
+
 /* Section tools slideshow  */
 .index_tools_sladeshow{
     background-color: var(--color-blue);
@@ -315,7 +307,6 @@
     color:var(--color-blue);
     width: 100%;
     height: auto;
-    /* padding: 2rem ; */
     margin: 5rem 4rem 4rem 0rem  ;
     padding: 4rem 0 2rem 0;
 }
@@ -855,41 +846,3 @@
         text-align: end;
     }
 }
-/* 
-@media screen and (max-width:600px) {
-    body {
-        overflow-x: none;
-    }
-    .index_main{
-       
-        grid-template-columns: 1fr;
-        padding-top: 4rem;
-        padding:4rem 0 4rem 0
-    }
-
-    .index_main_text h1{
-        font-size: 3rem;
-        
-    }
-
-    .index_main_text h4{
-        font-size: 1.4rem;
-        width: 90%;
-        margin: 0;
-    }
-
-    .index_main_img{
-        width: 50%;
-        position: static;
-    }
-}
-@media screen and (max-width:900px) {
-    .carousel img {
-        width: calc(100%/2);
-    }
-}
-@media screen and (max-width:550px) {
-    .carousel img {
-        width: calc(100%);
-    }
-} */

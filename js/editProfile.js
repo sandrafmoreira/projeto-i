@@ -13,27 +13,18 @@ export function editProfile() {
         editProfileAvatar.src = "/img/Avatars/scrum.png";
         editProfileAvatar.style.width = "75px"
         selectedAvatarSrc = editProfileAvatar.src;
-        // localStorage.setItem('avatarImageSrc', editProfileAvatar.src);
     }) 
     avatarSherlock.addEventListener("click", () => {
         editProfileAvatar.src = "/img/Avatars/expert.png";
         editProfileAvatar.style.width = "75px"
         selectedAvatarSrc = editProfileAvatar.src;
-        // localStorage.setItem('avatarImageSrc', editProfileAvatar.src);
     }) 
     avatarCaloiro.addEventListener("click", () => {
         editProfileAvatar.src = "/img/Avatars/caloiro.png";
         editProfileAvatar.style.width = "75px"
         selectedAvatarSrc = editProfileAvatar.src;
-        // localStorage.setItem('avatarImageSrc', editProfileAvatar.src);
     }) 
-    // avatarFinalista.addEventListener("click", () => {
-
-    //     editProfileAvatar.src = "/img/Avatars/dev.png";
-    //     editProfileAvatar.style.width = "75px"
-    //     selectedAvatarSrc = editProfileAvatar.src;
-    //     // localStorage.setItem('avatarImageSrc', editProfileAvatar.src);
-    // });
+    
 
     changeAvatarButton.addEventListener("click", () => {
         if(selectedAvatarSrc) {

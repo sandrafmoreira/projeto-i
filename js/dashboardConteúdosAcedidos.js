@@ -22,7 +22,6 @@ function getProgress() {
     let progress = localStorage.getItem(`pageProgress_${userEmail}`);
     return progress ? JSON.parse(progress) : { tsiw: 0, dashboard: 0, about: 0, course: 0, maze: 0 }; //return progress ou return 0
 }
-console.log(getProgress());
 User.userEmail()
 
 

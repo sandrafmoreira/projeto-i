@@ -34,9 +34,7 @@ if (!localStorage.users) {
 export function userEmail() {
     const userObj = sessionStorage.getItem("loggedUser");
     let userObject = JSON.parse(userObj)
-    // console.log(userObj);
     for (let key in userObject) {
-        // console.log(key);
         if (key == "email") {
             return userObject[key];
         }
@@ -48,11 +46,9 @@ if(document.querySelector('#openUserDiv')) {
     let divs = document.querySelectorAll("#adminDasboard > div")
 
     let loggedUser = JSON.parse(sessionStorage.loggedUser)
-    console.log(loggedUser);
     document.querySelector('.welcome_admin').innerHTML = `<h1>Olá ${loggedUser.name}!</h1>`
     openDivBtn.addEventListener('click', () => {
         for (let i = 0; i < divs.length; i++){
-            console.log("Hiding div", i); 
             // divs[i].style.display = "none"
 
             if (divs[i] == document.querySelector('.deleteUsers'))
@@ -167,6 +163,5 @@ export function add(name, surname, email, password) {
         // atualizar a local storage:
         localStorage.setItem("users", JSON.stringify(users));
     }
-    console.log(users);
 }
 

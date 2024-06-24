@@ -2,7 +2,6 @@ import * as User from "/js/models/userModel.js";
 import { editProfile } from '/js/editProfile.js';
 import { changePassword } from '/js/editPassword.js';
 
-// alert(User.admin());
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,10 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (User.admin()) {
                 result += `<li><a href="/html/adminDashboard.html">DASHBOARD</a></li>`
-                // alert(User.admin())
             } else if (!User.admin(), "navbar") {
                 result += `<li><a href="/html/dashboard.html">DASHBOARD</a></li>`
-                // alert(User.admin(), "navbar")
 
             }
 
@@ -73,11 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let navbar = document.getElementById("navbar");
         navbar.innerHTML = result;
 
-        if (!User.isLogged()) {
-            // alert("WARNING YOU ARE NOT LOGGED WARNING WARNING WARNING");
-        } else {
-            alert("YOU ARE LOGGED YOU ARE LOGGED YOU ARE LOGGED");
-        }
 
         modals();
 
@@ -188,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
                 let email = document.getElementById("login-email").value;
                 let password = document.getElementById("login-password").value;
-                console.log(email, password); //teste
                 User.login(email, password); //Chamar a funcao do login
                 
                 if (User.isLogged()) {

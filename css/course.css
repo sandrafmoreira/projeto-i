@@ -132,7 +132,7 @@
 /*Titles and subtitles*/
 
 .header1{
-    position: absolute; /*For the spacing between the header and the video*/
+    position: absolute; 
     font-family: var( --font-raleway);
     padding: 20px 40px;
     margin-right: 70%;
@@ -208,15 +208,6 @@ h6 a{
     height: 100%;
     width: 100%;
 }
-
-/*Placeholder for the promotional video!!*/
-/* #video{
-    height: 45vh;
-    width: 40vw;
-    margin-top: 5%;
-    margin-left: 50%;
-} */
-
 
 /* Section 2 - Graduate posters & course info */
 .index_grade_projects_section{
@@ -669,43 +660,6 @@ h6 a{
     }
 }
 
-
-/* .quiz_suggestion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 170px;
-    margin-top: 10%;
-    border-radius: 6px;
-    background-color: var(--color-lightblue);
-}
-
-.quiz_suggestion h3{
-    font-family: var( --font-raleway);
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--color-blue);
-}
-
-.quiz_suggestion button{
-    padding: 15px 40px;
-    margin: 10px;
-    border: 3px solid var(--color-orange);
-    border-radius: 6px;
-    font-family: var( --font-raleway);
-    font-weight: 600;
-    background-color: var(--color-orange);
-    color: white;
-}
-
-.quiz_suggestion button:hover{
-    background-color: white;
-    color: var(--color-orange);
-    border: 2px solid var(--color-orange);
-} */
 
 @media only screen and (max-width: 768px){
         

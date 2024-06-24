@@ -12,7 +12,6 @@ export function changePassword() {
     
         const savedPassword = localStorage.getItem("userPassword");
 
-        console.log(currentPassword, newPassword, confirmNewPassword, savedPassword);
 
         if(currentPassword == newPassword) {
             alert("Insere uma nova palavra-passe.")
@@ -27,16 +26,12 @@ export function changePassword() {
         
         // obter o user através do email para guardar na localstorage a newPassword
         const loggedUser = JSON.parse(sessionStorage.getItem("loggedUser"));
-        console.log(loggedUser);
         if(loggedUser) {
             const userEmail = loggedUser.email;
-            console.log(userEmail);
             User.users.forEach(user => {
                 if(user.email == userEmail) {
                     user.password = newPassword;
-                    console.log(user.password);
                     localStorage.setItem("users", JSON.stringify(User.users));
-                    console.log(User.users);
                 }
             })
         }

@@ -137,40 +137,6 @@ editBtn.addEventListener('click', (event) => {
 })
 
 
-function renderTable(eventos) {
-    let adicionarFila = ''
-
-    //Reinicar tabela para cada vez que for renderizada 
-    document.querySelector('table').innerHTML = ''
-
-    eventos.forEach(evento => {
-        adicionarFila += `
-            <tr>
-                <td>
-                
-                    
-
-                    <div class="manege_icons_content">
-                        <i  class="material-symbols-outlined"> 
-                            edit_square                    
-                        </i>
-                        <i id="delete_icon"  class="material-symbols-outlined">
-                            delete
-                        </i>
-        
-                    </div>
-                </td>
-            </tr>
-        `
-
-        document.querySelector('table').innerHTML += adicionarFila
-        adicionarFila = ''
-    })
-
-
-}
-
-
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -195,6 +161,8 @@ function addEvent(name, image){
 
     events.push(new Event(name, image))
     localStorage.eventos = JSON.stringify(events)
+    alert('Evento adicionado com sucesso!')
+    adminDashboardLoadEvents(events)
 }
 
 

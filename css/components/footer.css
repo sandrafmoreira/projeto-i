@@ -1,7 +1,6 @@
 footer {
     background-color: #333;
     display: flex;
-    /* grid-template-columns: repeat(3, 10vw); */
     flex-wrap: wrap;
 
     justify-content: center;
