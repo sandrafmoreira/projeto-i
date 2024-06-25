@@ -392,7 +392,11 @@ h6 a{
     text-align: center;
     font-size: 1.2rem;
 }
-
+.collapse p{
+    font-weight: 100;
+    text-align: left;
+    padding: 1rem;
+}
 
 /*Section 4 - Professional outings */
 
