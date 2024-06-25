@@ -146,7 +146,7 @@
 .header3, .header4, .header5, .header6, .paragraph{
     font-family: var(--font-source);
     line-height: 150%;
-    text-align: center;
+    text-align: left;
 }
 
 h6 a{
@@ -207,6 +207,7 @@ h6 a{
 .caroussel_video{
     height: 100%;
     width: 100%;
+    
 }
 
 /* Section 2 - Graduate posters & course info */
@@ -785,7 +786,7 @@ h6 a{
     }
 
     .header6{
-        font-size: 0.7rem;
+        font-size: 1.2rem;
     }
 
     .graduate_posters{
@@ -802,8 +803,40 @@ h6 a{
     }
 
     .how_to_enter h5{
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin-left: -20%;
+    }
+    .index_grade_projects_section{
+       
+        display: flex;
+        flex-wrap: wrap;
+         text-align: center;
+    }
+
+    .index_grade_projects_text{
+        padding: 0;
+
+       
+    }
+
+    .index_grade_projects_text h2{
+        font-size: 2.8rem;
+
+       
+    }
+    .projects_wrapper{
+        width: 90vw;
+        padding-right: 0;
+    }
+
+    .projects_wrapper i:last-child{
+        right: -0.8rem;
+    }
+
+    .projects_wrapper img{
+        width: 40vw;
+     
+        width: calc(50%/1);
     }
 
     .classes_info button{
@@ -841,7 +874,7 @@ h6 a{
     }
 
     .job_description p{
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 
     .ui_ux_definitions{
@@ -857,7 +890,7 @@ h6 a{
     }
 
     .ui p, .ux p{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
         
     .employability h4{
@@ -917,20 +950,8 @@ h6 a{
         }
     }
 
-    .quiz_suggestion{
-        margin-top: 15%;
-        border-radius: 4px;
-    }
-
-    .quiz_suggestion h3{
-        font-size: 1.1rem;
-        padding: 20px;
-    }
-
-    .quiz_suggestion button{
-        padding: 8px 25px;
-        border-radius: 4px;
-    }
+   
+  
 
 }
 

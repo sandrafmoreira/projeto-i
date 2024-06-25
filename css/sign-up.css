@@ -50,7 +50,7 @@
     margin-bottom: 1.2rem;
     width: 60%;
     border: none;    
-    align-items: left;
+    text-align: left;
 }
 
 .form_credential label{

@@ -87,11 +87,7 @@
     
 }
 
-.index_intel{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
+
 .index_intel h3{
     font-family: var( --font-raleway);
     font-weight: 700;
@@ -117,6 +113,7 @@
    height: auto;
     display: flex;
     flex-direction: row;
+   
     align-items: center;
     padding:8rem 2rem 6rem 2rem;
     color: var(--color-blue);
@@ -246,6 +243,8 @@
     font-family: var(--font-source);
     font-size: 1.4rem;
     font-weight: 350; 
+    list-style: square;
+    width: 100%;
 }
 
 .wrapper{
@@ -336,7 +335,7 @@
     margin-right: 6rem;
 }
 .index_escaperoom_section p{
-   font-size: 1.4rem;
+ 
     width: 100%;
     font-weight: 350;
 }
@@ -479,13 +478,19 @@
     border-radius:0.15rem;
     color: var(--color-blue);
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 350;
     padding: 1.5rem ;
     
 }
+
+.index_Testimonies_perfil ul li {
+    width: 100%;
+    list-style: square;
+}
 .index_Testimonies_perfil h4{
     margin: 0;
+    font-size: 1.6rem;
 }
 .index_application_incentive{
     color: var(--color-blue);
@@ -509,14 +514,40 @@
 
 /* ------------MEDIA QUERIES------------- */
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1500px){
     .index_main{
         padding-top: 3rem;
         padding-bottom: 3rem;
+        display: grid;
+        grid-template-columns: auto;
+    }
+   
+   
+    .wrapper img{
+        
+     
+        width: calc(90%);
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px){
+    .index_main{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: grid;
+        grid-template-columns: auto;
     }
 
     .index_main_img{
-        width: 40%;
+        width: 50%;
     }
 
     .index_main_text h1{
@@ -529,20 +560,27 @@
 
     .index_site_tour_section{
         padding: 2rem 0;
-        height: 28rem;
+        height: 50%;
+        display: grid;
+        grid-template-columns: auto;
+       
     }
 
     .index_site_tour_section h2{
-        font-size: 2.1rem;
+        font-size: 2.5rem;
     }
 
-    .video{
-        width: 70%;
-        height: 15rem;
+    .video_teaser{
+        width: 100%;
+        height: 30rem;
     }
 
     .index_intel{
         height: 18rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
 
     }
 
@@ -556,29 +594,19 @@
     }
 
     .index_intel ul li{
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 0.2rem 0 0 1.4rem;
         line-height: 180%;
     }
 
-    .index_follow_us_incentive{
-        left: 70.5%;
-        bottom: -61.5%;
-    }
-
-    .index_follow_us_incentive p{
-        font-size: 1rem;
-    }
-
-    .index_follow_us_incentive_icons_wrapper{
-        width: 100%;
-    }
-
+    
     .index_about_tsiw_section{
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem 2rem 3rem 1rem;
-        width: 90%;
+      
+        width: 100%;
+        flex-wrap:wrap-reverse;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 2rem;
     }
 
     .index_about_tsiw_section_img{
@@ -588,23 +616,24 @@
 
     .img_button_index_about_tsiw_section{
         margin: -1rem 4rem;
+       
     }
 
     .index_about_tsiw_section_text{
         margin: 6.5rem 4rem 2rem;
     }
 
-    .index_about_tsiw_section_text h2, .index_grade_activities_text h2{
+    .index_about_tsiw_section_text h2, .index_grade_activities_text h2,.index_video_teaser h2{
         font-size: 2.5rem;
     }
 
     .index_about_tsiw_section_text p{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .index_grade_activities_section{
         padding: 3rem 0;    
-        gap: 0.8rem;
+        gap: 2rem;
         flex-direction: column;
     }
 
@@ -623,7 +652,8 @@
 
     .wrapper img{
         width: 40vw;
-        height: 40vh;
+     
+        width: calc(50%/1);
     }
 
     .index_escaperoom_section h2{
@@ -636,10 +666,13 @@
 
     .index_escaperoom_section_body{
         margin: auto;
+        display: flex;
+       
     }
 
     .index_maze_icon_2{
-        left: 25rem;
+       
+        display: none;
     }
 
     .index_maze_icon_1{

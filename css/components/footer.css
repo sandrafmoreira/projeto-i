@@ -2,9 +2,9 @@ footer {
     background-color: #333;
     display: flex;
     flex-wrap: wrap;
-
-    justify-content: center;
-    gap: 150px;
+    /* justify-content: center; */
+    justify-content: space-around;
+    gap: 50px;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     padding: 0 30px;
@@ -33,17 +33,21 @@ footer h2{
 .footer_sitemap > a {
     color: #fff;
     margin: 10px 0;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-decoration: none;
 }
 .footer_info > a {
     color: #fff;
     margin: 10px 0;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-decoration: none;
 }
 
 .footer_contactos > p {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 1.4rem;
 }
 
 .footer_contactos_icons {
@@ -51,8 +55,11 @@ footer h2{
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    text-align: center;
 }
 .footer_contactos_icons p {
     font-size: 13px;
 }
+
+
 

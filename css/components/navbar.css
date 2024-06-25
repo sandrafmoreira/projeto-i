@@ -7,13 +7,13 @@
 }
 
 ul {
-    list-style-type: none;
+    /* list-style-type: none; */
 }
 
 
 li {
     width: 120px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 }
 
