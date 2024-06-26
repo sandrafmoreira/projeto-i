@@ -73,7 +73,7 @@ export function getDrawer(escapeRoomStats) {
                     escapeRoomStats.playerCode.charAt(1) == escapeRoomStats.drawerCode.charAt(1) &&
                     escapeRoomStats.playerCode.charAt(2) == escapeRoomStats.drawerCode.charAt(2) &&
                     escapeRoomStats.playerCode.charAt(3) == escapeRoomStats.drawerCode.charAt(3)) {
-                        alert('Drawer open! :D')
+                        alert('Gaveta aberta! :D ')
                         escapeRoomStats.openDrawer = true
                         getBox(escapeRoomStats)
                     }
