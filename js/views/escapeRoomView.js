@@ -73,7 +73,7 @@ export function getDrawer(escapeRoomStats) {
                     escapeRoomStats.playerCode.charAt(1) == escapeRoomStats.drawerCode.charAt(1) &&
                     escapeRoomStats.playerCode.charAt(2) == escapeRoomStats.drawerCode.charAt(2) &&
                     escapeRoomStats.playerCode.charAt(3) == escapeRoomStats.drawerCode.charAt(3)) {
-                        alert('Drawer open! :D')
+                        alert('Gaveta aberta! :D')
                         escapeRoomStats.openDrawer = true
                         getBox(escapeRoomStats)
                     }
@@ -273,14 +273,7 @@ export function getSecondaryScreen(escapeRoomStats) {
     /**
      * Função que renderiza o ecrã da esquerda!
      * JOGO DA MEMÓRIA!
-     */
-    // <div class="modal-content">
-    //     <button class="close">X</button>
-    //     <div class="interactive_section" id="postIt_img" style="display: none">
-    //         <img class="img-fluid img-responsive rounded mx-auto d-block" src="/img/game/post-it.png" alt="Post It" id="modal_main_img">
-    //         <h4>${escapeRoomStats.pc_password.slice(3, 6)}</h4>
-    //     </div>
-    // </div>    
+     */  
     let secondaryScreen = ''
 
     if(!escapeRoomStats.memoryGameSolved) {
@@ -329,7 +322,6 @@ export function getSecondaryScreen(escapeRoomStats) {
 
         divs.forEach(div => {
             div.addEventListener('click', () => {
-                // div.style.backgroundColor = "pink";
                 if (!clickedFirstCode) {
                     if (div == divs[pos1]) {
                         showFirstCode(divs, pos1);
@@ -338,7 +330,6 @@ export function getSecondaryScreen(escapeRoomStats) {
                 }
                 
                 if (clickedFirstCode) {
-                    // div.style.backgroundColor = "lightblue";
                     if (div == divs[pos2]) {
                         divs[pos2].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
                         clickedSecondCode = true;
@@ -346,7 +337,6 @@ export function getSecondaryScreen(escapeRoomStats) {
                 }
 
                 if (clickedSecondCode) {
-                    // div.style.backgroundColor = "orange";
                     if (div == divs[pos1]) {
                         divs[pos1].innerHTML = `<img style="width:80px" src="/assets/game/memoryGame/computer-code.png">`;
                         setTimeout(() => {

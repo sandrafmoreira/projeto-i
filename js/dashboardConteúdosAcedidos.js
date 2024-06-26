@@ -59,10 +59,10 @@ function updateProgressBar(progress) {
                 },
                 y: {
                     ticks: {
-                        color: 'white', font: {size: "14px"} // números no eixo x
+                        color: 'white', font: {size: "14px"} // números no eixo y
                     },
                     grid: {
-                        color: 'rgb(16, 76, 100)' // linhas no eixo x
+                        color: 'rgb(16, 76, 100)' // linhas no eixo y
                     }
                 }
             },
@@ -107,9 +107,7 @@ function accessedContent() {
     let medalContent5 = document.querySelector(".medal-content-accessed5");
 
     for (let key in getProgress()) {
-        // console.log(key);
         if (medalContent1 && key == "tsiw" && getProgress()[key] == 100) {
-            // console.log(getProgress()[key]);
             medalContent1.src = "/assets/dashboard/quality-control.png"}
         if (key == "about" && getProgress()[key] == 100) {
             medalContent3.src = "/assets/dashboard/quality-control.png"}

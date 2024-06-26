@@ -19,7 +19,6 @@ let dashboard = {
     status: []
 }
 
-// localStorage.clear();
 export let users = [];
 let admin1 = new User("Sandra", "Moreira", "sandra@123", "123", true, dashboard);
 let admin2 = new User("Nuno", "Nogueira", "nuno@123", "123", true, dashboard);
@@ -113,8 +112,6 @@ export function admin() {
     }
 
     const isAdmin = admins.some(admin => {
-        // console.log(admin.email, "admin");
-        // console.log(loggedUser.email, "loggeUser");
         if(loggedUser.email == admin.email) {
             console.log("logged admin")
             return true;
@@ -123,7 +120,6 @@ export function admin() {
             return false;
         }
     })
-    // console.log(isAdmin, "result");
     return isAdmin;
 }
 
